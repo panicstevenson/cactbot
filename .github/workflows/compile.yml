@@ -15,6 +15,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v1
     - name: Docker build
-      uses: actions/docker/cli-multi@master
+      uses: actions/docker/cli@master
       with:
-        args: [ "build -t cactbot .", "run cactbot" ]
+        args: build -t cactbot .
+    - name: Docker run
+      uses: actions/docker/cli@master
+      with:
+        args: run cactbot
