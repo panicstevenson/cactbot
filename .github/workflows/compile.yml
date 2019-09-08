@@ -17,6 +17,4 @@ jobs:
     - name: Docker build
       uses: actions/docker/cli-multi@master
       with:
-        args:
-          - build -t cactbot .
-          - run cactbot
+        args: [ "build -t cactbot .", "run cactbot" ]
