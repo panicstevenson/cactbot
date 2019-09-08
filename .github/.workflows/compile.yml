@@ -1,0 +1,21 @@
+name: Compile
+
+on:
+  pull_request:
+    paths:
+    - 'CactbotOverlay/*'
+    - 'Cactbot.csproj'
+    - 'Cactbot.sln'
+
+jobs:
+  compile:
+    name: Compile
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+    - name: Docker build
+      uses: actions/docker/cli-multi@master
+      args: 
+        - build -t cactbot .
+        - run cactbot
