@@ -139,20 +139,20 @@ namespace Cactbot {
       Advanced_Combat_Tracker.ActGlobals.oFormActMain.OnLogLineRead += OnLogLineRead;
 
       // Outgoing JS events.
-      OnGameExists += (e) => DispatchToJS(e);
-      OnGameActiveChanged += (e) => DispatchToJS(e);
-      OnZoneChanged += (e) => DispatchToJS(e);
+      OnGameExists += DispatchToJS;
+      OnGameActiveChanged += DispatchToJS;
+      OnZoneChanged += DispatchToJS;
       if (this.Config.LogUpdatesEnabled) {
-        OnLogsChanged += (e) => DispatchToJS(e);
-        OnImportLogsChanged += (e) => DispatchToJS(e);
+        OnLogsChanged += DispatchToJS;
+        OnImportLogsChanged += DispatchToJS;
       }
-      OnPlayerChanged += (e) => DispatchToJS(e);
-      OnTargetChanged += (e) => DispatchToJS(e);
-      OnFocusChanged += (e) => DispatchToJS(e);
-      OnInCombatChanged += (e) => DispatchToJS(e);
-      OnPlayerDied += (e) => DispatchToJS(e);
-      OnPartyWipe += (e) => DispatchToJS(e);
-      OnDataFilesRead += (e) => DispatchToJS(e);
+      OnPlayerChanged += DispatchToJS;
+      OnTargetChanged += DispatchToJS;
+      OnFocusChanged += DispatchToJS;
+      OnInCombatChanged += DispatchToJS;
+      OnPlayerDied += DispatchToJS;
+      OnPartyWipe += DispatchToJS;
+      OnDataFilesRead += DispatchToJS;
 
       fast_update_timer_.Interval = kFastTimerMilli;
       fast_update_timer_.Start();
