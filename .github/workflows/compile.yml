@@ -9,16 +9,59 @@ on:
 
 jobs:
   compile:
-    name: Compile
-    runs-on: ubuntu-18.04
+    name: Compile Cactbot Release Against Merge Commit
+    runs-on: windows-2019
     steps:
-    - name: Checkout code
+    - name: Checkout Pull Request Merge Commit
       uses: actions/checkout@v1
-    - name: Docker build
-      uses: actions/docker/cli@master
-      with:
-        args: build -t cactbot .
-    - name: Docker run
-      uses: actions/docker/cli@master
-      with:
-        args: run cactbot
+    - name: Download Advanced Combat Tracker Executable
+      run: |
+        Write-Host Downloading latest version of Advanced Combat Tracker
+        Invoke-WebRequest -Uri ${env:actDownloadUri} -OutFile ACTv3.zip
+
+        Write-Host Extracting Advanced Combat Tracker executable to $env:actThirdPartyPath
+        Expand-Archive -Path ACTv3.zip -DestinationPath $env:actThirdPartyPath
+      shell: powershell
+      env:
+        actDownloadUri: https://advancedcombattracker.com/includes/page-download.php?id=57
+        actThirdPartyPath: ./CactbotOverlay/ThirdParty/ACT/
+    - name: Download FFXIV ACT Plugin Library File
+      run: |
+        Write-Host Determining latest release of $env:ffxivPluginRepository
+        $ffxivPluginLatestRelease = "https://api.github.com/repos/${env:ffxivPluginRepository}/releases/latest"
+        $downloadUrl = (Invoke-WebRequest -Uri $ffxivPluginLatestRelease | ConvertFrom-Json)[0].assets[0].browser_download_url
+        $filename = $downloadUrl.Split("/")[-1]
+
+        Write-Host Downloading $filename
+        Invoke-WebRequest -Uri $downloadUrl -OutFile $filename
+
+        Write-Host Extracting FFXIV ACT Plugin library file to $env:actThirdPartyPath
+        Expand-Archive -Path $filename -DestinationPath $env:actThirdPartyPath
+      shell: powershell
+      env:
+        ffxivPluginRepository: ravahn/FFXIV_ACT_Plugin
+        actThirdPartyPath: ./CactbotOverlay/ThirdParty/ACT/
+    - name: Download OverlayPlugin Library Files
+      run: |
+        Write-Host Determining latest release of $env:overlayPluginRepository
+        $overlayPluginLatestRelease = "https://api.github.com/repos/${env:overlayPluginRepository}/releases/latest"
+        $downloadUrl = (Invoke-WebRequest -Uri $overlayPluginLatestRelease | ConvertFrom-Json)[0].assets[0].browser_download_url
+        $filename = $downloadUrl.Split("/")[-1]
+
+        Write-Host Downloading $filename
+        Invoke-WebRequest -Uri $downloadUrl -OutFile $filename
+
+        Write-Host Extracting OverlayPlugin library files to $env:overlayPluginThirdPartyPath
+        Expand-Archive -Path $filename -DestinationPath $env:overlayPluginThirdPartyPath
+      shell: powershell
+      env:
+        overlayPluginRepository: hibiyasleep/OverlayPlugin
+        overlayPluginThirdPartyPath: ./CactbotOverlay/ThirdParty/OverlayPlugin/
+    - name: Build CactbotOverlay
+      run: |
+        Write-Host Adding MSBuild.exe to Path
+        $env:Path += ";${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin"
+
+        Write-Host Building Cactbot
+        MSBuild.exe Cactbot.sln /p:Configuration=Release /p:Platform=x64
+      shell: powershell
