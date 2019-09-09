@@ -53,3 +53,4 @@ jobs:
         run: |
           echo "v$(grep -oP 'AssemblyFileVersion\("\K\d+\.\d+\.\d' ./CactbotOverlay/AssemblyInfo.cs)" > RELEASE
           cat RELEASE
+          ls
