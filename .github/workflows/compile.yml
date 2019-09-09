@@ -8,18 +8,9 @@ on:
     - 'Cactbot.sln'
 
 jobs:
-  checkout:
-    name: Checkout Pull Request Merge Commit
+  compile:
+    name: Compile CactbotOverlay Against Pull Request Merge Commit
     runs-on: ubuntu-18.04
-
-    steps:
-      - uses: actions/checkout@master
-
-  download_libraries:
-    name: Download Third Party Libraries
-    runs-on: ubuntu-18.04
-    needs:
-      - checkout
 
     container:
       # Ubuntu 18.04 LTS image is the latest Minimal Ubuntu 18.04 image
@@ -32,6 +23,8 @@ jobs:
         OVERLAY_PLUGIN_THIRD_PARTY_PATH: ./CactbotOverlay/ThirdParty/OverlayPlugin/
 
     steps:
+      - name: Checkout Pull Request Merge Commit
+        uses: actions/checkout@master
       - name: Install APT Packages
         run: |
           apt-get update && apt-get install --assume-yes --no-install-recommends \
@@ -39,9 +32,6 @@ jobs:
             ca-certificates \
             jq \
             wget
-      - name: lookup
-        run: |
-          ls
       - name: Download Advanced Combat Tracker Executable
         run: |
           wget -qO- $ACT_DOWNLOAD_URL | busybox unzip -d $ACT_THIRD_PARTY_PATH -
@@ -53,16 +43,8 @@ jobs:
         run: |
           export OVERLAY_PLUGIN_URL=$(wget -qO- "https://api.github.com/repos/${OVERLAY_PLUGIN_REPOSITORY}/releases/latest"
           wget -qO- $OVERLAY_PLUGIN_URL | jq --raw-output '.assets[0].browser_download_url') | busybox unzip -d $OVERLAY_PLUGIN_THIRD_PARTY_PATH -
-
-  build_cactbot_overlay:
-    name: Build Cactbot Overlay
-    runs-on: windows-2019
-    needs:
-      - checkout
-      - download_libraries
-
-    steps:
       - name: Build Cactbot Overlay
-        run: |
-          "%PROGRAMFILES(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" Cactbot.sln /p:Configuration=Release /p:Platform=x64
-        shell: cmd
+        uses: docker://mono:6.0
+        with:
+          entrypoint: msbuild
+          args: Cactbot.sln /p:Configuration=Release /p:Platform=x64
