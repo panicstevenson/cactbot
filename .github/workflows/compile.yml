@@ -49,15 +49,11 @@ jobs:
         with:
           entrypoint: msbuild
           args: Cactbot.sln /p:Configuration=Release /p:Platform=x64
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
       - name: Create Release Artifact
         if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
         run: |
           export RELEASE=$(grep -oP 'AssemblyFileVersion\("\K\d+\.\d+\.\d' ./CactbotOverlay/Properties/AssemblyInfo.cs)
-          mkdir -p "./release/OverlayPlugin/addon" !#$/../cactbot
+          mkdir -p release/OverlayPlugin/addons release/OverlayPlugin/cactbot
           cp AdvancedCactbot.md README.md release/
           cp bin/x64/Release/CactbotOverlay.dll release/OverlayPlugin/addons/
           cp -r resources/ ui/ user/ release/OverlayPlugin/cactbot/
