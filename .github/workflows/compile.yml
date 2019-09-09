@@ -39,6 +39,9 @@ jobs:
             ca-certificates \
             jq \
             wget
+      - name: lookup
+        run: |
+          ls
       - name: Download Advanced Combat Tracker Executable
         run: |
           wget -qO- $ACT_DOWNLOAD_URL | busybox unzip -d $ACT_THIRD_PARTY_PATH -
