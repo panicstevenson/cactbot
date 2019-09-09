@@ -59,7 +59,7 @@ jobs:
           cp bin/x64/Release/CactbotOverlay.dll release/OverlayPlugin/addons/
           cp -r resources/ ui/ user/ release/OverlayPlugin/cactbot/
           mv release/ cacbot-$RELEASE/
-          zip -r release cactbot-$RELEASE
+          zip -r release.zip cactbot-$RELEASE/
           mkdir -p staging
           mv release.zip staging/
       - uses: actions/upload-artifact@master
