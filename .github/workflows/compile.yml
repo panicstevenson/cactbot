@@ -32,7 +32,8 @@ jobs:
             busybox \
             ca-certificates \
             jq \
-            wget
+            wget \
+            zip
       - name: Download Advanced Combat Tracker Executable
         run: |
           wget -qO- $ACT_DOWNLOAD_URL | busybox unzip -d $ACT_THIRD_PARTY_PATH -
@@ -59,8 +60,10 @@ jobs:
           cp -r resources/ ui/ user/ release/OverlayPlugin/cactbot/
           mv release/ cacbot-$RELEASE/
           zip -r release cactbot-$RELEASE
+          mkdir -p staging
+          mv release.zip staging/
       - uses: actions/upload-artifact@master
         if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
         with:
-          name: release.zip
-          path: release.zip
+          name: '*'
+          path: staging/
