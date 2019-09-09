@@ -52,7 +52,7 @@ jobs:
       - name: Dump job context
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT
+        run: echo "$JOB_CONTEXT"
       - name: Create Release Artifact
         if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
         run: |
