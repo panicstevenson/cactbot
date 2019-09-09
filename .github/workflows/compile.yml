@@ -52,6 +52,7 @@ jobs:
       - name: Dump steps context
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
       - name: Create Release Artifact
         if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
         run: |
