@@ -51,6 +51,5 @@ jobs:
       - name: Determine Plugin Version
         if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
         run: |
-          echo "v$(grep -oP 'AssemblyFileVersion\("\K\d+\.\d+\.\d' ./CactbotOverlay/AssemblyInfo.cs)" > RELEASE
+          echo "v$(grep -oP 'AssemblyFileVersion\("\K\d+\.\d+\.\d' ./CactbotOverlay/Properties/AssemblyInfo.cs)" > RELEASE
           cat RELEASE
-          ls
