@@ -21,6 +21,7 @@ jobs:
         OVERLAY_PLUGIN_REPOSITORY: hibiyasleep/OverlayPlugin
         ACT_THIRD_PARTY_PATH: ./CactbotOverlay/ThirdParty/ACT/
         OVERLAY_PLUGIN_THIRD_PARTY_PATH: ./CactbotOverlay/ThirdParty/OverlayPlugin/
+        RELEASE: ${{ null }}
 
     steps:
       - name: Checkout Pull Request Merge Commit
@@ -48,8 +49,21 @@ jobs:
         with:
           entrypoint: msbuild
           args: Cactbot.sln /p:Configuration=Release /p:Platform=x64
-      - name: Determine Plugin Version
+      - name: Dump steps context
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+      - name: Create Release Artifact
         if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
         run: |
-          grep -oP 'AssemblyFileVersion\("\K\d+\.\d+\.\d' ./CactbotOverlay/Properties/AssemblyInfo.cs > RELEASE
-          cat RELEASE
+          export RELEASE=grep -oP 'AssemblyFileVersion\("\K\d+\.\d+\.\d' ./CactbotOverlay/Properties/AssemblyInfo.cs
+          mkdir -p "./release/OverlayPlugin/addon" !#$/../cactbot
+          cp AdvancedCactbot.md README.md release/
+          cp bin/x64/Release/CactbotOverlay.dll release/OverlayPlugin/addons/
+          cp -r resources/ ui/ user/ release/OverlayPlugin/cactbot/
+          mv release/ cacbot-$RELEASE/
+          zip -r release cactbot-$RELEASE
+      - uses: actions/upload-artifact@master
+        if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
+        with:
+          name: release.zip
+          path: release.zip
