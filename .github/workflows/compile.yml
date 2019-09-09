@@ -43,8 +43,13 @@ jobs:
         run: |
           export OVERLAY_PLUGIN_URL=$(wget -qO- "https://api.github.com/repos/${OVERLAY_PLUGIN_REPOSITORY}/releases/latest" | jq --raw-output '.assets[0].browser_download_url')
           wget -qO- $OVERLAY_PLUGIN_URL | busybox unzip -d $OVERLAY_PLUGIN_THIRD_PARTY_PATH -
-      - name: Build Cactbot Overlay
+      - name: Build Cactbot Overlay Release
         uses: docker://mono:6.0
         with:
           entrypoint: msbuild
           args: Cactbot.sln /p:Configuration=Release /p:Platform=x64
+      - name: Determine Plugin Version
+        if: startsWith(github.event.pull_request.title, 'release:') && github.event.pull_request.author_association == 'OWNER'
+        run: |
+          echo "v$(grep -oP 'AssemblyFileVersion\("\K\d+\.\d+\.\d' ./CactbotOverlay/AssemblyInfo.cs)" > RELEASE
+          cat RELEASE
