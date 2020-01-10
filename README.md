@@ -21,7 +21,7 @@ cactbot provides these modules:
 
 * raidboss: built-in timelines and triggers:
 
-![timeline screenshot](screenshots/promo_raidboss_timeline.png)
+![timeline screenshot](https://i.imgur.com/XkW3XtT.gif)
 ![triggers screenshot](screenshots/promo_raidboss_triggers.png)
 
 * oopsyraidsy: mistake and death reporting
