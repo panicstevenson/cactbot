@@ -1,4 +1,4 @@
-name: Test
+name: Markdown Lint
 
 on: 
   pull_request:
@@ -7,20 +7,16 @@ on:
       - reopened
       - edited
       - synchronize
-    paths:
-      - 'sub-project/**'
-      - '!sub-project/docs/**'
+      paths:
+        - '**/*.md'
 
 jobs:
-  test:
+  markdownlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.7'
       - run: npm install
-      - run: npm test
+      - run: npm run markdownlint
