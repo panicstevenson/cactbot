@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
+      - run: npm install
       - run: npm run lint
       - run: npm run stylelint
       - run: npm run markdownlint
@@ -28,7 +29,8 @@ jobs:
           python-version: '3.7'
       - run: pip install pylint==2.2.3 requests==2.22.0 PyYAML==5.1.2 black==19.10b0
       - run: pylint **/*.py --errors-only
-      - run: black **/*.py --line-length 100 --check --diff
+      # MAJOR TODO: INCLUDE --CHECK
+      - run: black **/*.py --line-length 100 --diff
   test:
     runs-on: ubuntu-latest
     steps:
@@ -39,4 +41,5 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.7'
+      - run: npm install
       - run: npm test
