@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
       - run: npm run lint
@@ -28,12 +28,12 @@ jobs:
           python-version: '3.7'
       - run: pip install pylint==2.2.3 requests==2.22.0 PyYAML==5.1.2 black==19.10b0
       - run: pylint **/*.py --errors-only
-      - run: black **/*.py --line-length 100 --diff
+      - run: black **/*.py --line-length 100 --check --diff
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
       - uses: actions/setup-python@v2
