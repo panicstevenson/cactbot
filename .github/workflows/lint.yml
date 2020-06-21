@@ -1,13 +1,17 @@
 name: Run Python Lint
 
-on: pull_request
+on: [pull_request]
 
-steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.7'
-    - run: |
-        pip install pylint==2.2.3 requests==2.22.0 PyYAML==5.1.2 black==19.10b0
-        pylint **/*.py --errors-only
-        black **/*.py --line-length 100 --diff
+jobs:
+  lint:
+    name: Run Python Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+      - run: |
+          pip install pylint==2.2.3 requests==2.22.0 PyYAML==5.1.2 black==19.10b0
+          pylint **/*.py --errors-only
+          black **/*.py --line-length 100 --diff
