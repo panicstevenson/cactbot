@@ -1,17 +1,19 @@
-name: CSS Lint
+name: Markdown Lint
 
-on: 
+on:
+  push:
+    paths:
+      - '**/*.md'
   pull_request:
     types:
       - opened
       - reopened
-      - edited
       - synchronize
     paths:
-      - '**/*.css'
+      - '**/*.md'
 
 jobs:
-  stylelint:
+  markdownlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,4 +21,4 @@ jobs:
         with:
           node-version: '12'
       - run: npm install
-      - run: npm run stylelint
+      - run: npm run markdownlint

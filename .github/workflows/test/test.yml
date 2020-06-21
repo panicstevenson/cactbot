@@ -1,22 +1,29 @@
-name: Markdown Lint
+name: Test
 
-on: 
+on:
+  push:
+    paths:
+      - '**/*.py'
+      - 'ui/raidboss/**'
   pull_request:
     types:
       - opened
       - reopened
-      - edited
       - synchronize
     paths:
-      - '**/*.md'
+      - '**/*.py'
+      - 'ui/raidboss/**'
 
 jobs:
-  markdownlint:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
       - run: npm install
-      - run: npm run markdownlint
+      - run: npm test

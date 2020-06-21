@@ -1,11 +1,13 @@
 name: Python Lint
 
-on: 
+on:
+  push:
+    paths:
+      - '**/*.py'
   pull_request:
     types:
       - opened
       - reopened
-      - edited
       - synchronize
     paths:
       - '**/*.py'

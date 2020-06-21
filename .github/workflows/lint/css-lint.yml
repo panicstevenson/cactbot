@@ -1,17 +1,19 @@
-name: JavaScript Lint
+name: CSS Lint
 
-on: 
+on:
+  push:
+    paths:
+      - '**/*.css'
   pull_request:
     types:
       - opened
       - reopened
-      - edited
       - synchronize
     paths:
-      - '**/*.js'
+      - '**/*.css'
 
 jobs:
-  eslint:
+  stylelint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,4 +21,4 @@ jobs:
         with:
           node-version: '12'
       - run: npm install
-      - run: npm run lint
+      - run: npm run stylelint
