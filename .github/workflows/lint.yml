@@ -1,4 +1,4 @@
-name: Run Python Lint
+name: Run Lints
 
 on: 
   pull_request:
@@ -9,7 +9,7 @@ on:
       - synchronize
 
 jobs:
-  javascript-lint:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,9 +18,25 @@ jobs:
           node-version: '12'
       - run: npm install
       - run: npm run lint
-      - run: npm run stylelint
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - run: npm install
       - run: npm run markdownlint
-  python-lint:
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - run: npm install
+      - run: npm run stylelint
+  pylint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,17 +45,13 @@ jobs:
           python-version: '3.7'
       - run: pip install pylint==2.2.3 requests==2.22.0 PyYAML==5.1.2 black==19.10b0
       - run: pylint **/*.py --errors-only
-      # MAJOR TODO: INCLUDE --CHECK
-      - run: black **/*.py --line-length 100 --diff
-  test:
+  black:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: '12'
       - uses: actions/setup-python@v2
         with:
           python-version: '3.7'
-      - run: npm install
-      - run: npm test
+      - run: pip install pylint==2.2.3 requests==2.22.0 PyYAML==5.1.2 black==19.10b0
+      # MAJOR TODO: INCLUDE --CHECK
+      - run: black **/*.py --line-length 100 --diff
