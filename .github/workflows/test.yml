@@ -8,8 +8,8 @@ on:
       - edited
       - synchronize
     paths:
-      - 'sub-project/**'
-      - '!sub-project/docs/**'
+      - '**/*.py'
+      - 'ui/raidboss/**'
 
 jobs:
   test:

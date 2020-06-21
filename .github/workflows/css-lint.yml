@@ -7,8 +7,8 @@ on:
       - reopened
       - edited
       - synchronize
-      paths:
-        - '**/*.css'
+    paths:
+      - '**/*.css'
 
 jobs:
   stylelint:
