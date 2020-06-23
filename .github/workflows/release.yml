@@ -1,9 +1,11 @@
 name: Create Release Artifact
 
 on:
-  release:
+  pull_request:
     types:
-      - created
+      - opened
+      - reopened
+      - synchronize    
 
 jobs:
   markdownlint:
