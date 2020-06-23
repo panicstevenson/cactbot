@@ -20,5 +20,5 @@ jobs:
           python-version: '3.7'
       - run: ls
       - run: ./util/fetch_deps.py
-      - run: dotnet build /p:Configuration=Release /p:Platform=x64
+      - run: dotnet build plugin/Cactbot.sln /p:Configuration=Release /p:Platform=x64
       - run: ls
