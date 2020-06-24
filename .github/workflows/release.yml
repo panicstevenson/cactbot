@@ -22,4 +22,8 @@ jobs:
       - run: python util/fetch_deps.py
       - run: dotnet build plugin/Cactbot.sln /p:Configuration=Release /p:Platform=x64
       - run: bash util/publish.sh
-      - run: ls publish/cactbot-release/cactbot
+      - run: zip -r cactbot.zip publish/cactbot-release/
+      - uses: actions/upload-artifact@v2
+        with:
+          name: cactapot-0.1.23.zip
+          path: cactbot.zip
