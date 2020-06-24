@@ -10,7 +10,7 @@ on:
 jobs:
   create-release:
     runs-on: windows-latest
-    if: ${{ github.repository == 'panicstevenson/cactapot' }}
+    if: ${{ github.repository == 'panicstevenson/cactbot' }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
