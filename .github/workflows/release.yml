@@ -19,19 +19,17 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.7'
+      # Gets the numerical output of the git tag and assigns it to an environment variable
       - name: Get tag version
         id: tag_version
-        # run: |
-        #    # Gets the numerical output of the git tag and assigns that to an environment variable
-        #    echo ::set-output name=VERSION::cactbot-${GITHUB_REF#refs/tags/v}
+        #    echo ::set-env name=CACTBOT_RELEASE::cactbot-${GITHUB_REF#refs/tags/v}
         run: echo ::set-env name=CACTBOT_RELEASE::cactbot-0.1.23
         shell: bash
-      - run: python util/fetch_deps.py
-      - run: dotnet build plugin/Cactbot.sln /p:Configuration=Release /p:Platform=x64
-      - run: bash util/publish.sh
-      - name: print it but bash
+      - name: Build Cactbot plugin
         run: |
-          echo $CACTBOT_RELEASE
+          ./util/fetch_deps.py
+          dotnet build plugin/Cactbot.sln /p:Configuration=Release /p:Platform=x64
+          ./util/publish.sh
         shell: bash
       - name: Create release artifact
         run: |
@@ -42,4 +40,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           path: ${{ env.CACTBOT_RELEASE }}.zip
-          name: ${{ env.CACTBOT_RELEASE }}.zip
+          name: ${{ env.CACTBOT_RELEASE }}
