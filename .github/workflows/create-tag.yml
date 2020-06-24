@@ -11,13 +11,26 @@ jobs:
   create-tag:
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'panicstevenson/cactbot' }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Create Tag
         run: |
+          # Parse new tag from AssemblyFileVersion
           VERSION="v$(cat plugin/CactbotOverlay/Properties/AssemblyInfo.cs | sed -ne 's/.*AssemblyFileVersion.*"\([0-9]*\.[0-9]*\.[0-9]*\)\.0".*/\1/p')"
-          git tag -a $VERSION
-          git push $VERSION
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Get current commit hash
+          commit=$(git rev-parse HEAD)
+
+          # POST a new ref to repo via Github API
+          curl -s -X POST https://api.github.com/repos/panicstevenson/cactbot/git/refs \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -d @- << EOF
+          {
+            "ref": "refs/tags/$VERSION",
+            "sha": "$commit"
+          }
+          EOF
+        shell: bash
