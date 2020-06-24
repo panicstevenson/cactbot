@@ -33,4 +33,3 @@ jobs:
             "sha": "$commit"
           }
           EOF
-        shell: bash

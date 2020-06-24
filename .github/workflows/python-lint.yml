@@ -22,9 +22,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
-      - name: black
+      - name: Install Dependencies
         run: |
           pip install black==19.10b0 PyYAML==5.1.2 requests==2.22.0
+      - run: |
           black **/*.py --line-length 100 --check --diff
   pylint:
     runs-on: ubuntu-latest
@@ -35,7 +36,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
-      - name: pylint
+      - name: Install Dependencies
         run: |
           pip install pylint==2.2.3 PyYAML==5.1.2 requests==2.22.0
+      - run: |
           pylint **/*.py --errors-only
