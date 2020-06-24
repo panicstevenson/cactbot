@@ -21,5 +21,5 @@ jobs:
           python-version: '3.7'
       - run: python util/fetch_deps.py
       - run: dotnet build plugin/Cactbot.sln /p:Configuration=Release /p:Platform=x64
-      - run: ./util/publish.sh
+      - run: bash util/publish.sh
       - run: ls publish/cactbot-release/cactbot
