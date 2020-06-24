@@ -2,7 +2,6 @@ name: JavaScript Lint
 
 on:
   push:
-    branches:
     paths:
       - '**/*.js'
   pull_request:

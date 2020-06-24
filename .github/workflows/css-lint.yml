@@ -2,7 +2,6 @@ name: CSS Lint
 
 on:
   push:
-    branches:
     paths:
       - '**/*.css'
   pull_request:
