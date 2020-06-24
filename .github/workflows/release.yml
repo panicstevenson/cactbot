@@ -10,6 +10,7 @@ on:
 jobs:
   create-release:
     runs-on: windows-latest
+    if: ${{ github.repository == 'panicstevenson/cactapot' }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
@@ -18,7 +19,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.7'
-      - run: python util/fetch_deps.py
-      - run: ls plugin
+      - run: ./util/fetch_deps.py
       - run: dotnet build plugin/Cactbot.sln /p:Configuration=Release /p:Platform=x64
-      - run: ls
+      - run: ./util/publish.sh
