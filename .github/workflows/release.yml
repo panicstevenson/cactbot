@@ -25,7 +25,7 @@ jobs:
       - run: |
           mkdir cactapot-0.1.23/
           mv publish/cactbot-release/cactbot/ cactapot-0.1.23/
-          Compress-Archive -Path cactapot-0.1.23/
+          compress-archive cactapot-0.1.23 cactapot-0.1.23.zip
       - uses: actions/upload-artifact@v2
         with:
           path: cactapot-0.1.23.zip
