@@ -35,11 +35,11 @@ jobs:
         shell: bash
       - name: Create release artifact
         run: |
-          mkdir $CACTBOT_RELEASE
-          mv publish/cactbot-release/cactbot/ $CACTBOT_RELEASE
-          compress-archive $CACTBOT_RELEASE $CACTBOT_RELEASE.zip
+          mkdir ${{ env.CACTBOT_RELEASE }}
+          mv publish/cactbot-release/cactbot/ ${{ env.CACTBOT_RELEASE }}
+          compress-archive ${{ env.CACTBOT_RELEASE }} ${{ env.CACTBOT_RELEASE }}.zip
         shell: pwsh
       - uses: actions/upload-artifact@v2
         with:
-          path: $CACTBOT_RELEASE.zip
-          name: $CACTBOT_RELEASE
+          path: ${{ env.CACTBOT_RELEASE }}.zip
+          name: ${{ env.CACTBOT_RELEASE }}.zip
