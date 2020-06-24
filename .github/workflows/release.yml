@@ -21,20 +21,18 @@ jobs:
           python-version: '3.7'
       - name: Get tag version
         id: tag_version
-        # run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/v}
-        run: echo ::set-output name=VERSION::0.1.23
+        # run: echo ::set-output name=VERSION::cactbot-${GITHUB_REF#refs/tags/v}
+        run: echo ::set-env name=CACTBOT_RELEASE::cactbot-0.1.23
         shell: bash
       - run: python util/fetch_deps.py
       - run: dotnet build plugin/Cactbot.sln /p:Configuration=Release /p:Platform=x64
       - run: bash util/publish.sh
       - name: Create release artifact
         run: |
-          CACTBOT_RELEASE="cactbot-${{ steps.tag_version.outputs.VERSION }}"
           mkdir $CACTBOT_RELEASE
           mv publish/cactbot-release/cactbot/ $CACTBOT_RELEASE
-          zip -r $CACTBOT_RELEASE $CACTBOT_RELEASE.zip
-        shell: bash
+          compress-archive $CACTBOT_RELEASE $CACTBOT_RELEASE.zip
       - uses: actions/upload-artifact@v2
         with:
-          path: cactbot-*.zip
-          name: cactapot-${{ steps.tag_version.outputs.VERSION }}
+          path: $CACTBOT_RELEASE.zip
+          name: $CACTBOT_RELEASE
