@@ -73,7 +73,7 @@ let parseHelper = (params, funcName, fields) => {
   return Regexes.parse(str);
 };
 
-export class NetRegexes {
+export default class NetRegexes {
   // matches: https://github.com/quisquous/cactbot/blob/main/docs/LogGuide.md#14-networkstartscasting
   static startsUsing(params) {
     return parseHelper(params, 'startsUsing', {
