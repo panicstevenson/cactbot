@@ -191,6 +191,8 @@ Options.Triggers.push({
             return;
           }
         }
+        if (data.options.Debug)
+          console.log(`Unknown CE: ${ceId}`);
       },
     },
     {
@@ -841,6 +843,7 @@ Options.Triggers.push({
         'Fire IV': 'Feuka',
         'Flare': 'Flare',
         'Frigid Pulse': 'Froststoß',
+        'Frigid/': 'Frost/',
         'Heart Of Nature': 'Puls der Erde',
         'Holy IV': 'Giga-Sanctus',
         'Lightburst': 'Lichtstoß',

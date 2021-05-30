@@ -133,7 +133,7 @@ Options.Triggers.push({
           fr: 'À droite',
           ja: '右',
           cn: '右',
-          ko: '오른',
+          ko: '오른쪽',
         },
         south: {
           en: 'Back',
@@ -149,7 +149,7 @@ Options.Triggers.push({
           fr: 'À gauche',
           ja: '左',
           cn: '左',
-          ko: '왼',
+          ko: '왼쪽',
         },
         double: {
           en: '${dir1} > ${dir2}',
@@ -375,14 +375,14 @@ Options.Triggers.push({
     // *** Dahu ***
     {
       id: 'Delubrum Dahu Shockwave',
-      netRegex: NetRegexes.startsUsing({ source: 'Dahu', id: ['5761', '5762'] }),
-      netRegexDe: NetRegexes.startsUsing({ source: 'Dahu', id: ['5761', '5762'] }),
-      netRegexFr: NetRegexes.startsUsing({ source: 'Dahu', id: ['5761', '5762'] }),
-      netRegexJa: NetRegexes.startsUsing({ source: 'ダウー', id: ['5761', '5762'] }),
+      netRegex: NetRegexes.startsUsing({ source: 'Dahu', id: ['5760', '5761', '5762', '5763'] }),
+      netRegexDe: NetRegexes.startsUsing({ source: 'Dahu', id: ['5760', '5761', '5762', '5763'] }),
+      netRegexFr: NetRegexes.startsUsing({ source: 'Dahu', id: ['5760', '5761', '5762', '5763'] }),
+      netRegexJa: NetRegexes.startsUsing({ source: 'ダウー', id: ['5760', '5761', '5762', '5763'] }),
       // There's a 3s slow windup on the first, then a 1s opposite cast.
       suppressSeconds: 10,
       alertText: (_data, matches, output) => {
-        if (matches.id === '5761')
+        if (matches.id === '5761' || matches.id === '5763')
           return output.leftThenRight();
         return output.rightThenLeft();
       },
