@@ -163,9 +163,7 @@ Options.Triggers.push({
       // Although this is a swap, use `tankBuster` here to give the off tank a warning and a chance
       // to shield the main tank.  The offtank swap is delayed into the swap trigger below.
       response: Responses.tankBuster(),
-      run: (data, matches) => {
-        data.umbraTarget = matches.target;
-      },
+      run: (data, matches) => data.umbraTarget = matches.target,
     },
     {
       id: 'E10S Umbra Smash Offtank Swap',
@@ -186,9 +184,7 @@ Options.Triggers.push({
       // TODO: verify that the 4th hit is locked in with this delay (or if it could be shorter)
       delaySeconds: 8.5,
       response: Responses.tankBusterSwap('alert', 'alert'),
-      run: (data, matches) => {
-        data.umbraTarget = matches.target;
-      },
+      run: (data, matches) => data.umbraTarget = matches.target,
     },
     {
       id: 'E10S Darkness Unleashed',
@@ -432,7 +428,7 @@ Options.Triggers.push({
         '1': Outputs.num1,
         '2': Outputs.num2,
         '3': Outputs.num3,
-        'unknown': Outputs.unknownTarget,
+        'unknown': Outputs.unknown,
       },
     },
     {

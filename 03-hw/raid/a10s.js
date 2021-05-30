@@ -1,14 +1,7 @@
 // Notes:
 // Ignoring Gobsway Rumblerocks (1AA0) aoe trigger, as it is small and frequent.
 const chargeOutputStrings = {
-  getIn: {
-    en: 'In',
-    de: 'Rein',
-    fr: 'Intérieur',
-    ja: '中へ',
-    cn: '靠近',
-    ko: '안으로',
-  },
+  getIn: Outputs.in,
   getOut: {
     en: 'Out',
     de: 'Raus',
@@ -267,9 +260,7 @@ Options.Triggers.push({
       netRegexKo: NetRegexes.ability({ source: '용병 레임브릭스', id: '1AA9', capture: false }),
       delaySeconds: 20,
       suppressSeconds: 20,
-      run: (data) => {
-        delete data.seenBrighteyes;
-      },
+      run: (data) => delete data.seenBrighteyes,
     },
     {
       id: 'A10S Brighteyes Prey Marker',
