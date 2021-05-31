@@ -958,10 +958,7 @@ Options.Triggers.push({
       id: 'TEA Compressed Water Explode',
       netRegex: NetRegexes.gainsEffect({ effectId: '85E' }),
       condition: Conditions.targetIsYou(),
-      delaySeconds: (_data, matches) => {
-        // 5 second warning.
-        return parseFloat(matches.duration) - 5;
-      },
+      delaySeconds: (_data, matches) => parseFloat(matches.duration) - 5,
       alertText: (data, _matches, output) => {
         if (data.seenGavel)
           return;
@@ -998,10 +995,7 @@ Options.Triggers.push({
       id: 'TEA Compressed Lightning Explode',
       netRegex: NetRegexes.gainsEffect({ effectId: '85F' }),
       condition: Conditions.targetIsYou(),
-      delaySeconds: (_data, matches) => {
-        // 5 second warning.
-        return parseFloat(matches.duration) - 5;
-      },
+      delaySeconds: (_data, matches) => parseFloat(matches.duration) - 5,
       alertText: (data, _matches, output) => {
         if (data.seenGavel)
           return;
@@ -2529,11 +2523,9 @@ Options.Triggers.push({
       netRegexFr: NetRegexes.ability({ source: 'Alexander parfait', id: '4B14', capture: false }),
       netRegexJa: NetRegexes.ability({ source: 'パーフェクト・アレキサンダー', id: '4B14', capture: false }),
       netRegexKo: NetRegexes.ability({ source: '완전체 알렉산더', id: '4B14', capture: false }),
+      condition: (data) => data.radiantOutputStringKey,
       delaySeconds: 16,
-      alertText: (data, _matches, output) => {
-        if (data.radiantOutputStringKey)
-          return output[data.radiantOutputStringKey]();
-      },
+      alertText: (data, _matches, output) => output[data.radiantOutputStringKey](),
       outputStrings: radiantOutputStrings,
     },
     {
