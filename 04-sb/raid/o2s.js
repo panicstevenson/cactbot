@@ -319,6 +319,7 @@ Options.Triggers.push({
         'Fleshy Member': 'Tentakel',
       },
       'replaceText': {
+        '\\(ground\\)': '(Boden)',
         '-100 Gs': 'Minus 100 G',
         '(?<!-)100 Gs': '100 G',
         'Antilight': 'Dunkellicht',
@@ -349,7 +350,6 @@ Options.Triggers.push({
         'Fleshy Member': 'tentacule',
       },
       'replaceText': {
-        '\\(center\\)': '(centre)',
         '\\(ground\\)': 'sol',
         '-100 Gs': 'Gravité -100',
         '(?<!-)100 Gs': 'Gravité 100',
@@ -380,7 +380,6 @@ Options.Triggers.push({
         'Fleshy Member': '触手',
       },
       'replaceText': {
-        '\\(center\\)': '(中央)',
         '\\(T/H\\)': '(タンク/ヒラ)',
         '-100 Gs': '重力マイナス100',
         '(?<!-)100 Gs': '重力100',
@@ -412,7 +411,6 @@ Options.Triggers.push({
         'Fleshy Member': '触手',
       },
       'replaceText': {
-        '\\(center\\)': '(中央)',
         '\\(T/H\\)': '(T/奶)',
         '-100 Gs': '重力-100',
         '(?<!-)100 Gs': '重力100',

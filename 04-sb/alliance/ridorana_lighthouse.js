@@ -506,6 +506,12 @@ Options.Triggers.push({
         'Yiazmat': 'Yiasmat',
       },
       'replaceText': {
+        '\\(close\\)': '(Nahe)',
+        '\\(cross\\)': '(Kreuz)',
+        '\\(combo\\)': '(Kombo)',
+        '\\(orbit\\)': '(Orbit)',
+        '\\(far\\)': '(Entfernt)',
+        '\\(single\\)': '(Einzeln)',
         'Accelerate': 'Beschleunigen',
         'Annihilation Mode': 'Auslöschungsmodul',
         'Archaeodemon spawn': 'Archaeodämon erscheint',
@@ -648,7 +654,6 @@ Options.Triggers.push({
       'replaceText': {
         '\\(close\\)': '(近い)',
         '\\(combo\\)': '(コンボ)',
-        '\\(cross\\)': '(十字)',
         '\\(orbit\\)': '(曲線)',
         '\\(far\\)': '(遠い)',
         '\\(single\\)': '(一撃)',
@@ -844,7 +849,6 @@ Options.Triggers.push({
         'Ventilate': '냉각',
         'Water IV': '워터쟈',
         'White Breath': '하얀 숨결',
-        'cross': '지나감',
         'orbit': '떠있음',
         'close': '가까이',
         'far': '멀리',

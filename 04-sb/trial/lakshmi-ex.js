@@ -293,6 +293,8 @@ Options.Triggers.push({
         'Lakshmi': 'Lakshmi',
       },
       'replaceText': {
+        '--chanchala end--': '--Chanchala endet--',
+        '\\(mid\\)': '(Mitte)',
         '/dance': '/tanz',
         'Adds Appear': 'Adds erscheinen',
         'Alluring Arm': 'Anziehender Arm',
@@ -321,7 +323,6 @@ Options.Triggers.push({
         '--chanchala end--': '--fin de chanchala--',
         '/dance': '/danse',
         '\\(mid\\)': '(milieu)',
-        '\\(out\\)': '(extérieur)',
         'Adds Appear': 'Apparition d\'adds',
         'Alluring Arm': 'Bras séduisants',
         'Blissful Spear': 'Épieu béatifiant',
@@ -348,7 +349,6 @@ Options.Triggers.push({
       'replaceText': {
         '/dance': '/dance',
         '\\(mid\\)': '(中央)',
-        '\\(out\\)': '(外)',
         'Adds Appear': '雑魚',
         'Alluring Arm': '魅惑の腕',
         'Blissful Spear': '聖なる槍',
