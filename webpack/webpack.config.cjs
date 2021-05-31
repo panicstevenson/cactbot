@@ -3,25 +3,129 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const cactbotModules = {
+  config: 'ui/config/config',
+  coverage: 'util/coverage/coverage',
+  rdmty: 'ui/dps/rdmty/dps',
+  xephero: 'ui/dps/xephero/xephero',
+  eureka: 'ui/eureka/eureka',
+  fisher: 'ui/fisher/fisher',
+  jobs: 'ui/jobs/jobs',
+  oopsyraidsy: 'ui/oopsyraidsy/oopsyraidsy',
+  pullcounter: 'ui/pullcounter/pullcounter',
+  radar: 'ui/radar/radar',
+  raidboss: 'ui/raidboss/raidboss',
+  raidemulator: 'ui/raidboss/raidemulator',
+  test: 'ui/test/test',
+};
+
+const cactbotChunks = {
+  raidbossData: 'ui/common/raidboss_data',
+  oopsyraidsyData: 'ui/common/oopsyraidsy_data',
+};
+
+const cactbotHtmlChunksMap = {
+  'ui/config/config.html': {
+    chunks: [
+      cactbotChunks.raidbossData,
+      cactbotChunks.oopsyraidsyData,
+      cactbotModules.config,
+    ],
+  },
+  'util/coverage/coverage.html': {
+    chunks: [
+      cactbotChunks.raidbossData,
+      cactbotChunks.oopsyraidsyData,
+      cactbotModules.coverage,
+    ],
+  },
+  'ui/dps/rdmty/dps.html': {
+    chunks: [
+      cactbotModules.rdmty,
+    ],
+  },
+  'ui/dps/xephero/xephero-cactbot.html': {
+    chunks: [
+      cactbotModules.xephero,
+    ],
+  },
+  'ui/eureka/eureka.html': {
+    chunks: [
+      cactbotModules.eureka,
+    ],
+  },
+  'ui/fisher/fisher.html': {
+    chunks: [
+      cactbotModules.fisher,
+    ],
+  },
+  'ui/jobs/jobs.html': {
+    chunks: [
+      cactbotModules.jobs,
+    ],
+  },
+  'ui/oopsyraidsy/oopsyraidsy.html': {
+    chunks: [
+      cactbotChunks.oopsyraidsyData,
+      cactbotModules.oopsyraidsy,
+    ],
+  },
+  'ui/pullcounter/pullcounter.html': {
+    chunks: [
+      cactbotModules.pullcounter,
+    ],
+  },
+  'ui/radar/radar.html': {
+    chunks: [
+      cactbotModules.radar,
+    ],
+  },
+  'ui/raidboss/raidboss.html': {
+    chunks: [
+      cactbotChunks.raidbossData,
+      cactbotModules.raidboss,
+    ],
+  },
+  'ui/raidboss/raidemulator.html': {
+    chunks: [
+      cactbotChunks.raidbossData,
+      cactbotModules.raidemulator,
+    ],
+  },
+  'ui/test/test.html': {
+    chunks: [
+      cactbotModules.test,
+    ],
+  },
+};
 
 module.exports = function(env, argv) {
   const dev = argv.mode === 'development';
 
+  const entries = {};
+  Object.entries(cactbotModules).forEach(([key, module]) => {
+    // TDOO: Remove when everything is TypeScript, convert to:
+    // entries[module] = `./${module}.ts`;
+    let extension = 'js';
+    if (['radar', 'raidboss', 'test'].includes(key))
+      extension = 'ts';
+    entries[module] = `./${module}.${extension}`;
+  });
+
+  const htmlPluginRules = Object.entries(cactbotHtmlChunksMap).map(([file, config]) => {
+    return new HtmlWebpackPlugin({
+      template: file,
+      filename: file,
+      ...config,
+    });
+  });
+
   return {
     entry: {
-      config: './ui/config/config.js',
-      coverage: './util/coverage/coverage.js',
-      rdmty: './ui/dps/rdmty/dps.js',
-      xephero: './ui/dps/xephero/xephero.js',
-      eureka: './ui/eureka/eureka.js',
-      fisher: './ui/fisher/fisher.js',
-      jobs: './ui/jobs/jobs.js',
-      oopsyraidsy: './ui/oopsyraidsy/oopsyraidsy.js',
-      pullcounter: './ui/pullcounter/pullcounter.js',
-      radar: './ui/radar/radar.ts',
-      raidboss: './ui/raidboss/raidboss.ts',
-      raidemulator: './ui/raidboss/raidemulator.js',
-      test: './ui/test/test.ts',
+      ...entries,
       ...(() => dev ? ({ timerbar: './resources/timerbar.ts' }) : ({}))(),
     },
     optimization: {
@@ -29,12 +133,12 @@ module.exports = function(env, argv) {
         cacheGroups: {
           'raidboss_data': {
             test: /[\\/]ui[\\/]raidboss[\\/]data[\\/]/,
-            name: 'raidboss_data',
+            name: cactbotChunks.raidbossData,
             chunks: 'all',
           },
           'oopsyraidsy_data': {
             test: /[\\/]ui[\\/]oopsyraidsy[\\/]data[\\/]/,
-            name: 'oopsyraidsy_data',
+            name: cactbotChunks.oopsyraidsyData,
             chunks: 'all',
           },
         },
@@ -73,6 +177,7 @@ module.exports = function(env, argv) {
         {
           // this will allow importing without extension in js files.
           test: /\.m?js$/,
+          exclude: /node_modules/,
           resolve: {
             fullySpecified: false,
           },
@@ -83,7 +188,26 @@ module.exports = function(env, argv) {
         },
         {
           test: /\.css$/,
+          exclude: /(pullcounter)\.css$/,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          // TODO: Convert all css to use these loaders
+          test: /(pullcounter)\.css$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '',
+              },
+            },
+            {
+              loader: 'css-loader',
+              options: {
+                url: false,
+              },
+            },
+          ],
         },
         {
           test: /data[\\\/]\w*_manifest\.txt$/,
@@ -109,6 +233,11 @@ module.exports = function(env, argv) {
     plugins: [
       new webpack.ProgressPlugin({}),
       new CleanWebpackPlugin(),
+      new MiniCssExtractPlugin({
+        // TODO: Update to [name].css
+        filename: 'pullcounter.css',
+      }),
+      ...htmlPluginRules,
     ],
     stats: {
       children: true,
