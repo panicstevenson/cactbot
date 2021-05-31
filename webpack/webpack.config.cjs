@@ -146,7 +146,7 @@ module.exports = function(env, argv) {
     },
     devtool: dev ? 'source-map' : undefined,
     output: {
-      filename: '[name].bundle.js',
+      filename: '[name].js',
       path: path.resolve(__dirname, '../dist'),
     },
     devServer: { writeToDisk: true },
