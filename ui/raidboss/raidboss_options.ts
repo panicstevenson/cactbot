@@ -77,6 +77,7 @@ const defaultRaidbossConfigOptions = {
   TimelineLanguage: undefined as (Lang | undefined),
   TimelineEnabled: true,
   AlertsEnabled: true,
+  TimelineAnimationsEnabled: true,
   ShowTimerBarsAtSeconds: 30,
   KeepExpiredTimerBarsForSeconds: 0.7,
   BarExpiresSoonSeconds: 6,

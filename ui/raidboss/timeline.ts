@@ -1029,8 +1029,15 @@ export class TimelineUI {
       delete this.activeBars[e.id];
     };
 
-    if (!force)
-      element.classList.add('animate-timer-bar-removed');
+    // Remove the bar immediately if we're certain the animation isn't wanted.
+    if (force || !this.options.TimelineAnimationsEnabled) {
+      removeBar();
+      return;
+    }
+
+    // Add timerbar animation class and determine if the animation actually exists.
+    // Used in the case of skins or overrides where the animation may be disabled in CSS.
+    element.classList.add('animate-timer-bar-removed');
     if (window.getComputedStyle(element).animationName !== 'none') {
       // Wait for animation to finish
       element.addEventListener('animationend', removeBar);

@@ -1262,6 +1262,14 @@ const templateOptions = {
       default: true,
     },
     {
+      id: 'TimelineAnimationsEnabled',
+      name: {
+        en: 'Timeline animations enabled',
+      },
+      type: 'checkbox',
+      default: true,
+    },
+    {
       id: 'ShowTimerBarsAtSeconds',
       name: {
         en: 'Timer bar show window (seconds)',
