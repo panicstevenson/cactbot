@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 760:
+/***/ 152:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -31,7 +31,7 @@
 
 /***/ }),
 
-/***/ 873:
+/***/ 5:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -70,13 +70,13 @@ const data = {
 
 /***/ }),
 
-/***/ 641:
+/***/ 381:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (/* binding */ NetRegexes)
 /* harmony export */ });
-/* harmony import */ var _regexes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(911);
+/* harmony import */ var _regexes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(201);
 
 // Differences from Regexes:
 // * may have more fields
@@ -515,7 +515,7 @@ NetRegexes.flagTranslationsNeeded = false;
 
 /***/ }),
 
-/***/ 509:
+/***/ 500:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -539,7 +539,7 @@ class UnreachableCode extends Error {
 
 /***/ }),
 
-/***/ 970:
+/***/ 273:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1263,7 +1263,7 @@ const numberToOutputString = function (n) {
 
 /***/ }),
 
-/***/ 511:
+/***/ 906:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1443,7 +1443,7 @@ const init = () => {
 
 /***/ }),
 
-/***/ 911:
+/***/ 201:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -2117,14 +2117,14 @@ class Regexes {
 
 /***/ }),
 
-/***/ 667:
+/***/ 163:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "n3": () => (/* binding */ Responses)
 /* harmony export */ });
 /* unused harmony exports builtInResponseStr, triggerFunctions, triggerTextOutputFunctions, triggerOutputFunctions, severityMap */
-/* harmony import */ var _outputs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(970);
+/* harmony import */ var _outputs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(273);
 // This is meant to be used in a trigger as such:
 // {
 //   id: 'Some tankbuster',
@@ -2564,23 +2564,23 @@ console.assert(responseMapTypeAssertion);
 
 /***/ }),
 
-/***/ 633:
+/***/ 970:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _overlay_plugin_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(511);
-/* harmony import */ var _not_reached__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(509);
-/* harmony import */ var _conditions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(760);
-/* harmony import */ var _content_type__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(873);
-/* harmony import */ var _netregexes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(641);
-/* harmony import */ var _regexes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(911);
-/* harmony import */ var _responses__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(667);
-/* harmony import */ var _outputs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(970);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(556);
-/* harmony import */ var _zone_id__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(248);
-/* harmony import */ var _zone_info__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(524);
+/* harmony import */ var _overlay_plugin_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(906);
+/* harmony import */ var _not_reached__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(500);
+/* harmony import */ var _conditions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(152);
+/* harmony import */ var _content_type__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _netregexes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(381);
+/* harmony import */ var _regexes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(201);
+/* harmony import */ var _responses__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(163);
+/* harmony import */ var _outputs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(273);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(779);
+/* harmony import */ var _zone_id__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(438);
+/* harmony import */ var _zone_info__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(810);
 
 
 // TODO:
@@ -2991,7 +2991,7 @@ if (typeof document !== 'undefined') {
 
 /***/ }),
 
-/***/ 556:
+/***/ 779:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3101,7 +3101,7 @@ const Util = {
 
 /***/ }),
 
-/***/ 248:
+/***/ 438:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3578,7 +3578,7 @@ const data = {
 
 /***/ }),
 
-/***/ 524:
+/***/ 810:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -11046,7 +11046,7 @@ var __webpack_exports__ = {};
 (() => {
 
 // EXTERNAL MODULE: ./resources/overlay_plugin_api.ts
-var overlay_plugin_api = __webpack_require__(511);
+var overlay_plugin_api = __webpack_require__(906);
 ;// CONCATENATED MODULE: ./resources/effect_id.ts
 // Auto-generated from gen_effect_id.py
 // DO NOT EDIT THIS FILE DIRECTLY
@@ -12419,15 +12419,15 @@ const data = {
 /* harmony default export */ const effect_id = (data);
 
 // EXTERNAL MODULE: ./resources/content_type.ts
-var content_type = __webpack_require__(873);
+var content_type = __webpack_require__(5);
 // EXTERNAL MODULE: ./resources/user_config.ts
-var user_config = __webpack_require__(633);
+var user_config = __webpack_require__(970);
 // EXTERNAL MODULE: ./resources/util.ts
-var util = __webpack_require__(556);
+var util = __webpack_require__(779);
 // EXTERNAL MODULE: ./resources/zone_info.ts
-var zone_info = __webpack_require__(524);
+var zone_info = __webpack_require__(810);
 // EXTERNAL MODULE: ./resources/zone_id.ts
-var zone_id = __webpack_require__(248);
+var zone_id = __webpack_require__(438);
 ;// CONCATENATED MODULE: ./ui/jobs/constants.ts
 
 const kMeleeWithMpJobs = ['PLD', 'DRK'];
@@ -12812,9 +12812,9 @@ const kLevelMod = [[0, 0],
     [372, 2790], [374, 2910], [376, 3034], [378, 3164], [380, 3300]];
 
 // EXTERNAL MODULE: ./resources/netregexes.ts
-var netregexes = __webpack_require__(641);
+var netregexes = __webpack_require__(381);
 // EXTERNAL MODULE: ./resources/regexes.ts
-var regexes = __webpack_require__(911);
+var regexes = __webpack_require__(201);
 ;// CONCATENATED MODULE: ./resources/translations.ts
 
 
@@ -12961,176 +12961,169 @@ const regexSet = new RegexSet();
 const LocaleRegex = regexSet.localeRegex;
 const LocaleNetRegex = regexSet.localeNetRegex;
 
-;// CONCATENATED MODULE: ./ui/jobs/utils.js
+// EXTERNAL MODULE: ./resources/not_reached.ts
+var not_reached = __webpack_require__(500);
+;// CONCATENATED MODULE: ./ui/jobs/utils.ts
 
 
 
 
 
 
-const getLocaleRegex = (locale, regexes) => regexes[locale] || regexes['en'];
-
+const getLocaleRegex = (locale, regexes) => { var _a; return (_a = regexes[locale]) !== null && _a !== void 0 ? _a : regexes['en']; };
 class RegexesHolder {
-  constructor(lang, playerName) {
-    this.StatsRegex = regexes/* default.statChange */.Z.statChange();
-
-    this.YouGainEffectRegex = netregexes/* default.gainsEffect */.Z.gainsEffect({ target: playerName });
-    this.YouLoseEffectRegex = netregexes/* default.losesEffect */.Z.losesEffect({ target: playerName });
-    this.YouUseAbilityRegex = netregexes/* default.ability */.Z.ability({ source: playerName });
-    this.AnybodyAbilityRegex = netregexes/* default.ability */.Z.ability();
-    this.MobGainsEffectRegex = netregexes/* default.gainsEffect */.Z.gainsEffect({ targetId: '4.{7}' });
-    this.MobLosesEffectRegex = netregexes/* default.losesEffect */.Z.losesEffect({ targetId: '4.{7}' });
-    this.MobGainsEffectFromYouRegex = netregexes/* default.gainsEffect */.Z.gainsEffect({ targetId: '4.{7}', source: playerName });
-    this.MobLosesEffectFromYouRegex = netregexes/* default.losesEffect */.Z.losesEffect({ targetId: '4.{7}', source: playerName });
-    // use of GP Potion
-    this.cordialRegex = regexes/* default.ability */.Z.ability({ source: playerName, id: '20(017FD|F5A3D|F844F|0420F|0317D)' });
-
-    const getCurrentRegex = getLocaleRegex.bind(this, lang);
-    this.countdownStartRegex = getCurrentRegex(LocaleRegex.countdownStart);
-    this.countdownCancelRegex = getCurrentRegex(LocaleRegex.countdownCancel);
-    this.craftingStartRegexes = [
-      LocaleRegex.craftingStart,
-      LocaleRegex.trialCraftingStart,
-    ].map(getCurrentRegex);
-    this.craftingFinishRegexes = [
-      LocaleRegex.craftingFinish,
-      LocaleRegex.trialCraftingFinish,
-    ].map(getCurrentRegex);
-    this.craftingStopRegexes = [
-      LocaleRegex.craftingFail,
-      LocaleRegex.craftingCancel,
-      LocaleRegex.trialCraftingFail,
-      LocaleRegex.trialCraftingCancel,
-    ].map(getCurrentRegex);
-  }
+    constructor(lang, playerName) {
+        this.StatsRegex = regexes/* default.statChange */.Z.statChange();
+        this.YouGainEffectRegex = netregexes/* default.gainsEffect */.Z.gainsEffect({ target: playerName });
+        this.YouLoseEffectRegex = netregexes/* default.losesEffect */.Z.losesEffect({ target: playerName });
+        this.YouUseAbilityRegex = netregexes/* default.ability */.Z.ability({ source: playerName });
+        this.AnybodyAbilityRegex = netregexes/* default.ability */.Z.ability();
+        this.MobGainsEffectRegex = netregexes/* default.gainsEffect */.Z.gainsEffect({ targetId: '4.{7}' });
+        this.MobLosesEffectRegex = netregexes/* default.losesEffect */.Z.losesEffect({ targetId: '4.{7}' });
+        this.MobGainsEffectFromYouRegex = netregexes/* default.gainsEffect */.Z.gainsEffect({
+            targetId: '4.{7}',
+            source: playerName,
+        });
+        this.MobLosesEffectFromYouRegex = netregexes/* default.losesEffect */.Z.losesEffect({
+            targetId: '4.{7}',
+            source: playerName,
+        });
+        // use of GP Potion
+        this.cordialRegex = regexes/* default.ability */.Z.ability({
+            source: playerName,
+            id: '20(017FD|F5A3D|F844F|0420F|0317D)',
+        });
+        const getCurrentRegex = getLocaleRegex.bind(this, lang);
+        this.countdownStartRegex = getCurrentRegex(LocaleRegex.countdownStart);
+        this.countdownCancelRegex = getCurrentRegex(LocaleRegex.countdownCancel);
+        this.craftingStartRegexes = [
+            LocaleRegex.craftingStart,
+            LocaleRegex.trialCraftingStart,
+        ].map(getCurrentRegex);
+        this.craftingFinishRegexes = [
+            LocaleRegex.craftingFinish,
+            LocaleRegex.trialCraftingFinish,
+        ].map(getCurrentRegex);
+        this.craftingStopRegexes = [
+            LocaleRegex.craftingFail,
+            LocaleRegex.craftingCancel,
+            LocaleRegex.trialCraftingFail,
+            LocaleRegex.trialCraftingCancel,
+        ].map(getCurrentRegex);
+    }
 }
-
-function doesJobNeedMPBar(job) {
-  return util/* default.isCasterDpsJob */.Z.isCasterDpsJob(job) || util/* default.isHealerJob */.Z.isHealerJob(job) || kMeleeWithMpJobs.includes(job);
-}
-
+const doesJobNeedMPBar = (job) => util/* default.isCasterDpsJob */.Z.isCasterDpsJob(job) || util/* default.isHealerJob */.Z.isHealerJob(job) || kMeleeWithMpJobs.includes(job);
 // Source: http://theoryjerks.akhmorning.com/guide/speed/
-function calcGCDFromStat(bars, stat, actionDelay) {
-  // default calculates for a 2.50s recast
-  actionDelay = actionDelay || 2500;
-
-  // If stats haven't been updated, use a reasonable default value.
-  if (stat === 0)
-    return actionDelay / 1000;
-
-
-  let type1Buffs = 0;
-  let type2Buffs = 0;
-  if (bars.job === 'BLM') {
-    type1Buffs += bars.speedBuffs.circleOfPower ? 15 : 0;
-  } else if (bars.job === 'WHM') {
-    type1Buffs += bars.speedBuffs.presenceOfMind ? 20 : 0;
-  } else if (bars.job === 'SAM') {
-    if (bars.speedBuffs.shifu) {
-      if (bars.level > 77)
-        type1Buffs += 13;
-      else
-        type1Buffs += 10;
+const calcGCDFromStat = (bars, stat, actionDelay = 2500) => {
+    // If stats haven't been updated, use a reasonable default value.
+    if (stat === 0)
+        return actionDelay / 1000;
+    let type1Buffs = 0;
+    let type2Buffs = 0;
+    if (bars.job === 'BLM') {
+        type1Buffs += bars.speedBuffs.circleOfPower ? 15 : 0;
     }
-  }
-
-  if (bars.job === 'NIN') {
-    type2Buffs += bars.speedBuffs.huton ? 15 : 0;
-  } else if (bars.job === 'MNK') {
-    type2Buffs += 5 * bars.speedBuffs.lightningStacks;
-  } else if (bars.job === 'BRD') {
-    type2Buffs += 4 * bars.speedBuffs.paeonStacks;
-    switch (bars.speedBuffs.museStacks) {
-    case 1:
-      type2Buffs += 1;
-      break;
-    case 2:
-      type2Buffs += 2;
-      break;
-    case 3:
-      type2Buffs += 4;
-      break;
-    case 4:
-      type2Buffs += 12;
-      break;
+    else if (bars.job === 'WHM') {
+        type1Buffs += bars.speedBuffs.presenceOfMind ? 20 : 0;
     }
-  }
-  // TODO: this probably isn't useful to track
-  const astralUmbralMod = 100;
-
-  const gcdMs = Math.floor(1000 - Math.floor(130 * (stat - kLevelMod[bars.level][0]) /
-    kLevelMod[bars.level][1])) * actionDelay / 1000;
-  const a = (100 - type1Buffs) / 100;
-  const b = (100 - type2Buffs) / 100;
-  const gcdC = Math.floor(Math.floor((a * b) * gcdMs / 10) * astralUmbralMod / 100);
-  return gcdC / 100;
-}
-
-function computeBackgroundColorFrom(element, classList) {
-  const div = document.createElement('div');
-  const classes = classList.split('.');
-  for (let i = 0; i < classes.length; ++i)
-    div.classList.add(classes[i]);
-  element.appendChild(div);
-  const color = window.getComputedStyle(div).backgroundColor;
-  element.removeChild(div);
-  return color;
-}
-
-function makeAuraTimerIcon(name, seconds, opacity, iconWidth, iconHeight, iconText,
-    barHeight, textHeight, textColor, borderSize, borderColor, barColor, auraIcon) {
-  const div = document.createElement('div');
-  div.style.opacity = opacity;
-
-  const icon = document.createElement('timer-icon');
-  icon.width = iconWidth;
-  icon.height = iconHeight;
-  icon.bordersize = borderSize;
-  icon.textcolor = textColor;
-  div.appendChild(icon);
-
-  const barDiv = document.createElement('div');
-  barDiv.style.position = 'relative';
-  barDiv.style.top = iconHeight;
-  div.appendChild(barDiv);
-
-  if (seconds >= 0) {
-    const bar = document.createElement('timer-bar');
-    bar.width = iconWidth;
-    bar.height = barHeight;
-    bar.fg = barColor;
-    bar.duration = seconds;
-    barDiv.appendChild(bar);
-  }
-
-  if (textHeight > 0) {
-    const text = document.createElement('div');
-    text.classList.add('text');
-    text.style.width = iconWidth;
-    text.style.height = textHeight;
-    text.style.overflow = 'hidden';
-    text.style.fontSize = textHeight - 1;
-    text.style.whiteSpace = 'pre';
-    text.style.position = 'relative';
-    text.style.top = iconHeight;
-    text.style.fontFamily = 'arial';
-    text.style.fontWeight = 'bold';
-    text.style.color = textColor;
-    text.style.textShadow = '-1px 0 3px black, 0 1px 3px black, 1px 0 3px black, 0 -1px 3px black';
-    text.style.paddingBottom = textHeight / 4;
-
-    text.innerText = name;
-    div.appendChild(text);
-  }
-
-  if (iconText)
-    icon.text = iconText;
-  icon.bordercolor = borderColor;
-  icon.icon = auraIcon;
-  icon.duration = seconds;
-
-  return div;
-}
+    else if (bars.job === 'SAM') {
+        if (bars.speedBuffs.shifu) {
+            if (bars.level > 77)
+                type1Buffs += 13;
+            else
+                type1Buffs += 10;
+        }
+    }
+    if (bars.job === 'NIN') {
+        type2Buffs += bars.speedBuffs.huton ? 15 : 0;
+    }
+    else if (bars.job === 'MNK') {
+        type2Buffs += 5 * bars.speedBuffs.lightningStacks;
+    }
+    else if (bars.job === 'BRD') {
+        type2Buffs += 4 * bars.speedBuffs.paeonStacks;
+        switch (bars.speedBuffs.museStacks) {
+            case 1:
+                type2Buffs += 1;
+                break;
+            case 2:
+                type2Buffs += 2;
+                break;
+            case 3:
+                type2Buffs += 4;
+                break;
+            case 4:
+                type2Buffs += 12;
+                break;
+        }
+    }
+    // TODO: this probably isn't useful to track
+    const astralUmbralMod = 100;
+    const mod = kLevelMod[bars.level];
+    if (!mod)
+        throw new not_reached/* UnreachableCode */.$();
+    const gcdMs = Math.floor(1000 - Math.floor(130 * (stat - mod[0]) / mod[1])) * actionDelay / 1000;
+    const a = (100 - type1Buffs) / 100;
+    const b = (100 - type2Buffs) / 100;
+    const gcdC = Math.floor(Math.floor((a * b) * gcdMs / 10) * astralUmbralMod / 100);
+    return gcdC / 100;
+};
+const computeBackgroundColorFrom = (element, classList) => {
+    const div = document.createElement('div');
+    classList.split('.').forEach((item) => {
+        div.classList.add(item);
+    });
+    element.appendChild(div);
+    const color = window.getComputedStyle(div).backgroundColor;
+    element.removeChild(div);
+    return color;
+};
+const makeAuraTimerIcon = (name, seconds, opacity, iconWidth, iconHeight, iconText, barHeight, textHeight, textColor, borderSize, borderColor, barColor, auraIcon) => {
+    const div = document.createElement('div');
+    div.style.opacity = opacity.toString();
+    const icon = document.createElement('timer-icon');
+    icon.width = iconWidth.toString();
+    icon.height = iconHeight.toString();
+    icon.bordersize = borderSize.toString();
+    icon.textcolor = textColor;
+    div.appendChild(icon);
+    const barDiv = document.createElement('div');
+    barDiv.style.position = 'relative';
+    barDiv.style.top = iconHeight.toString();
+    div.appendChild(barDiv);
+    if (seconds >= 0) {
+        const bar = document.createElement('timer-bar');
+        bar.width = iconWidth.toString();
+        bar.height = barHeight.toString();
+        bar.fg = barColor;
+        bar.duration = seconds.toString();
+        barDiv.appendChild(bar);
+    }
+    if (textHeight > 0) {
+        const text = document.createElement('div');
+        text.classList.add('text');
+        text.style.width = iconWidth.toString();
+        text.style.height = textHeight.toString();
+        text.style.overflow = 'hidden';
+        text.style.fontSize = (textHeight - 1).toString();
+        text.style.whiteSpace = 'pre';
+        text.style.position = 'relative';
+        text.style.top = iconHeight.toString();
+        text.style.fontFamily = 'arial';
+        text.style.fontWeight = 'bold';
+        text.style.color = textColor;
+        text.style.textShadow = '-1px 0 3px black, 0 1px 3px black, 1px 0 3px black, 0 -1px 3px black';
+        text.style.paddingBottom = (textHeight / 4).toString();
+        text.innerText = name;
+        div.appendChild(text);
+    }
+    if (iconText)
+        icon.text = iconText;
+    icon.bordercolor = borderColor;
+    icon.icon = auraIcon;
+    icon.duration = seconds.toString();
+    return div;
+};
 
 ;// CONCATENATED MODULE: ./ui/jobs/buff_tracker.ts
 
@@ -14075,6 +14068,7 @@ function setup(bars) {
 
   const goreBox = bars.addProcBox({
     fgColor: 'pld-color-gore',
+    notifyWhenExpired: true,
   });
 
   bars.onCombo((skill) => {
@@ -14147,6 +14141,7 @@ function war_setup(bars) {
 
   const eyeBox = bars.addProcBox({
     fgColor: 'war-color-eye',
+    notifyWhenExpired: true,
   });
 
   const comboTimer = bars.addTimerBar({
@@ -14212,235 +14207,218 @@ function war_reset(bars) {
     war_resetFunc(bars);
 }
 
-;// CONCATENATED MODULE: ./ui/jobs/components/drk.js
+;// CONCATENATED MODULE: ./ui/jobs/components/drk.ts
 
 
-
-let drk_resetFunc = null;
+let drk_resetFunc = (_bars) => undefined;
 let tid1;
 let tid2;
 let tid3;
-
-function drk_setup(bars) {
-  const bloodBox = bars.addResourceBox({
-    classList: ['drk-color-blood'],
-  });
-
-  const darksideBox = bars.addProcBox({
-    fgColor: 'drk-color-darkside',
-    threshold: 10,
-  });
-
-  bars.onJobDetailUpdate((jobDetail) => {
-    const blood = jobDetail.blood;
-    if (bloodBox.innerText === blood)
-      return;
-    bloodBox.innerText = blood;
-    const p = bloodBox.parentNode;
-    if (blood < 50) {
-      p.classList.add('low');
-      p.classList.remove('mid');
-    } else if (blood < 90) {
-      p.classList.remove('low');
-      p.classList.add('mid');
-    } else {
-      p.classList.remove('low');
-      p.classList.remove('mid');
-    }
-
-    const oldSeconds = parseFloat(darksideBox.duration) - parseFloat(darksideBox.elapsed);
-    const seconds = jobDetail.darksideMilliseconds / 1000.0;
-    if (!darksideBox.duration || seconds > oldSeconds) {
-      darksideBox.duration = 0;
-      darksideBox.duration = seconds;
-    }
-  });
-
-  const comboTimer = bars.addTimerBar({
-    id: 'drk-timers-combo',
-    fgColor: 'combo-color',
-  });
-
-  bars.onCombo((skill) => {
-    comboTimer.duration = 0;
-    if (bars.combo.isFinalSkill)
-      return;
-    if (skill)
-      comboTimer.duration = 15;
-  });
-
-  const bloodWeapon = bars.addProcBox({
-    id: 'drk-procs-bloodweapon',
-    fgColor: 'drk-color-bloodweapon',
-  });
-  bars.onUseAbility(kAbility.BloodWeapon, () => {
-    bloodWeapon.duration = 0;
-    bloodWeapon.duration = 10;
-    bloodWeapon.threshold = 10;
-    bloodWeapon.fg = computeBackgroundColorFrom(bloodWeapon, 'drk-color-bloodweapon.active');
-    tid1 = setTimeout(() => {
-      bloodWeapon.duration = 50;
-      bloodWeapon.threshold = bars.gcdSkill * 2;
-      bloodWeapon.fg = computeBackgroundColorFrom(bloodWeapon, 'drk-color-bloodweapon');
-    }, 10000);
-  });
-
-  const delirium = bars.addProcBox({
-    id: 'drk-procs-delirium',
-    fgColor: 'drk-color-delirium',
-  });
-  bars.onUseAbility(kAbility.Delirium, () => {
-    delirium.duration = 0;
-    delirium.duration = 10 + 0.5;
-    delirium.threshold = 20;
-    delirium.fg = computeBackgroundColorFrom(delirium, 'drk-color-delirium.active');
-    tid2 = setTimeout(() => {
-      delirium.duration = 80 - 0.5;
-      delirium.threshold = bars.gcdSkill * 2;
-      delirium.fg = computeBackgroundColorFrom(delirium, 'drk-color-delirium');
-    }, 10000);
-  });
-
-  const livingShadow = bars.addProcBox({
-    id: 'drk-procs-livingshadow',
-    fgColor: 'drk-color-livingshadow',
-  });
-  bars.onUseAbility(kAbility.LivingShadow, () => {
-    livingShadow.duration = 0;
-    livingShadow.duration = 24;
-    livingShadow.threshold = 24;
-    livingShadow.fg = computeBackgroundColorFrom(livingShadow, 'drk-color-livingshadow.active');
-    tid3 = setTimeout(() => {
-      livingShadow.duration = 96;
-      livingShadow.threshold = bars.gcdSkill * 4;
-      livingShadow.fg = computeBackgroundColorFrom(livingShadow, 'drk-color-livingshadow');
-    }, 24000);
-  });
-
-  drk_resetFunc = (bars) => {
-    comboTimer.duration = 0;
-    bloodWeapon.duration = 0;
-    bloodWeapon.threshold = bars.gcdSkill * 2;
-    bloodWeapon.fg = computeBackgroundColorFrom(bloodWeapon, 'drk-color-bloodweapon');
-    delirium.duration = 0;
-    delirium.threshold = bars.gcdSkill * 2;
-    delirium.fg = computeBackgroundColorFrom(delirium, 'drk-color-delirium');
-    livingShadow.duration = 0;
-    livingShadow.threshold = bars.gcdSkill * 4;
-    livingShadow.fg = computeBackgroundColorFrom(livingShadow, 'drk-color-livingshadow');
-    darksideBox.duration = 0;
-    clearTimeout(tid1);
-    clearTimeout(tid2);
-    clearTimeout(tid3);
-  };
-}
-
-function drk_reset(bars) {
-  if (drk_resetFunc)
+const drk_setup = (bars) => {
+    const bloodBox = bars.addResourceBox({
+        classList: ['drk-color-blood'],
+    });
+    const darksideBox = bars.addProcBox({
+        fgColor: 'drk-color-darkside',
+        threshold: 10,
+    });
+    bars.onJobDetailUpdate((jobDetail) => {
+        var _a, _b;
+        const blood = jobDetail.blood;
+        if (bloodBox.innerText === blood.toString())
+            return;
+        bloodBox.innerText = blood.toString();
+        const p = bloodBox.parentNode;
+        if (blood < 50) {
+            p.classList.add('low');
+            p.classList.remove('mid');
+        }
+        else if (blood < 90) {
+            p.classList.remove('low');
+            p.classList.add('mid');
+        }
+        else {
+            p.classList.remove('low');
+            p.classList.remove('mid');
+        }
+        const oldSeconds = parseFloat((_a = darksideBox.duration) !== null && _a !== void 0 ? _a : '0') - parseFloat(darksideBox.elapsed);
+        const seconds = jobDetail.darksideMilliseconds / 1000.0;
+        if ((_b = !darksideBox.duration) !== null && _b !== void 0 ? _b : seconds > oldSeconds) {
+            darksideBox.duration = '0';
+            darksideBox.duration = seconds.toString();
+        }
+    });
+    const comboTimer = bars.addTimerBar({
+        id: 'drk-timers-combo',
+        fgColor: 'combo-color',
+    });
+    bars.onCombo((skill) => {
+        comboTimer.duration = '0';
+        if (bars.combo.isFinalSkill)
+            return;
+        if (skill)
+            comboTimer.duration = '15';
+    });
+    const bloodWeapon = bars.addProcBox({
+        id: 'drk-procs-bloodweapon',
+        fgColor: 'drk-color-bloodweapon',
+    });
+    bars.onUseAbility(kAbility.BloodWeapon, () => {
+        bloodWeapon.duration = '0';
+        bloodWeapon.duration = '10';
+        bloodWeapon.threshold = '10';
+        bloodWeapon.fg = computeBackgroundColorFrom(bloodWeapon, 'drk-color-bloodweapon.active');
+        tid1 = setTimeout(() => {
+            bloodWeapon.duration = '50';
+            bloodWeapon.threshold = (bars.gcdSkill * 2).toString();
+            bloodWeapon.fg = computeBackgroundColorFrom(bloodWeapon, 'drk-color-bloodweapon');
+        }, 10000);
+    });
+    const delirium = bars.addProcBox({
+        id: 'drk-procs-delirium',
+        fgColor: 'drk-color-delirium',
+    });
+    bars.onUseAbility(kAbility.Delirium, () => {
+        delirium.duration = '0';
+        delirium.duration = '10.5';
+        delirium.threshold = '20';
+        delirium.fg = computeBackgroundColorFrom(delirium, 'drk-color-delirium.active');
+        tid2 = setTimeout(() => {
+            delirium.duration = '79.5';
+            delirium.threshold = (bars.gcdSkill * 2).toString();
+            delirium.fg = computeBackgroundColorFrom(delirium, 'drk-color-delirium');
+        }, 10000);
+    });
+    const livingShadow = bars.addProcBox({
+        id: 'drk-procs-livingshadow',
+        fgColor: 'drk-color-livingshadow',
+    });
+    bars.onUseAbility(kAbility.LivingShadow, () => {
+        livingShadow.duration = '0';
+        livingShadow.duration = '24';
+        livingShadow.threshold = '24';
+        livingShadow.fg = computeBackgroundColorFrom(livingShadow, 'drk-color-livingshadow.active');
+        tid3 = setTimeout(() => {
+            livingShadow.duration = '96';
+            livingShadow.threshold = (bars.gcdSkill * 4).toString();
+            livingShadow.fg = computeBackgroundColorFrom(livingShadow, 'drk-color-livingshadow');
+        }, 24000);
+    });
+    drk_resetFunc = (bars) => {
+        comboTimer.duration = '0';
+        bloodWeapon.duration = '0';
+        bloodWeapon.threshold = (bars.gcdSkill * 2).toString();
+        bloodWeapon.fg = computeBackgroundColorFrom(bloodWeapon, 'drk-color-bloodweapon');
+        delirium.duration = '0';
+        delirium.threshold = (bars.gcdSkill * 2).toString();
+        delirium.fg = computeBackgroundColorFrom(delirium, 'drk-color-delirium');
+        livingShadow.duration = '0';
+        livingShadow.threshold = (bars.gcdSkill * 4).toString();
+        livingShadow.fg = computeBackgroundColorFrom(livingShadow, 'drk-color-livingshadow');
+        darksideBox.duration = '0';
+        clearTimeout(tid1);
+        clearTimeout(tid2);
+        clearTimeout(tid3);
+    };
+};
+const drk_reset = (bars) => {
     drk_resetFunc(bars);
-}
+};
 
-;// CONCATENATED MODULE: ./ui/jobs/components/gnb.js
+;// CONCATENATED MODULE: ./ui/jobs/components/gnb.ts
 
 
-
-let gnb_resetFunc = null;
+let gnb_resetFunc = (_bars) => undefined;
 let gnb_tid1;
-
-function gnb_setup(bars) {
-  const cartridgeBox = bars.addResourceBox({
-    classList: ['gnb-color-cartridge'],
-  });
-
-  const noMercyBox = bars.addProcBox({
-    id: 'gnb-procs-nomercy',
-    fgColor: 'gnb-color-nomercy',
-  });
-  bars.onUseAbility(kAbility.NoMercy, () => {
-    noMercyBox.duration = 0;
-    noMercyBox.duration = 20;
-    noMercyBox.threshold = 1000;
-    noMercyBox.fg = computeBackgroundColorFrom(noMercyBox, 'gnb-color-nomercy.active');
-    gnb_tid1 = setTimeout(() => {
-      noMercyBox.duration = 40;
-      noMercyBox.threshold = bars.gcdSkill + 1;
-      noMercyBox.fg = computeBackgroundColorFrom(noMercyBox, 'gnb-color-nomercy');
-    }, 20000);
-  });
-
-  const bloodfestBox = bars.addProcBox({
-    id: 'gnb-procs-bloodfest',
-    fgColor: 'gnb-color-bloodfest',
-  });
-  bars.onUseAbility(kAbility.Bloodfest, () => {
-    bloodfestBox.duration = 0;
-    bloodfestBox.duration = 90;
-  });
-
-  bars.onStatChange('GNB', () => {
-    gnashingFangBox.valuescale = bars.gcdSkill;
-    gnashingFangBox.threshold = bars.gcdSkill * 3;
-    noMercyBox.valuescale = bars.gcdSkill;
-    bloodfestBox.valuescale = bars.gcdSkill;
-    bloodfestBox.threshold = bars.gcdSkill * 2 + 1;
-  });
-  // Combos
-  const gnashingFangBox = bars.addProcBox({
-    id: 'gnb-procs-gnashingfang',
-    fgColor: 'gnb-color-gnashingfang',
-  });
-  const comboTimer = bars.addTimerBar({
-    id: 'gnb-timers-combo',
-    fgColor: 'combo-color',
-  });
-  const cartridgeComboTimer = bars.addTimerBar({
-    id: 'gnb-timers-cartridgecombo',
-    fgColor: 'gnb-color-gnashingfang',
-  });
-  bars.onUseAbility(kAbility.GnashingFang, () => {
-    gnashingFangBox.duration = 0;
-    gnashingFangBox.duration = calcGCDFromStat(bars, bars.skillSpeed, 30000);
-    cartridgeComboTimer.duration = 0;
-    cartridgeComboTimer.duration = 15;
-  });
-  bars.onUseAbility(kAbility.SavageClaw, () => {
-    cartridgeComboTimer.duration = 0;
-    cartridgeComboTimer.duration = 15;
-  });
-  bars.onUseAbility(kAbility.WickedTalon, () => cartridgeComboTimer.duration = 0);
-  bars.onCombo((skill) => {
-    comboTimer.duration = 0;
-    cartridgeComboTimer.duration = 0;
-    if (bars.combo.isFinalSkill)
-      return;
-    if (skill)
-      comboTimer.duration = 15;
-  });
-
-  bars.onJobDetailUpdate((jobDetail) => {
-    cartridgeBox.innerText = jobDetail.cartridges;
-    if (jobDetail.cartridges === 2)
-      cartridgeBox.parentNode.classList.add('full');
-    else
-      cartridgeBox.parentNode.classList.remove('full');
-  });
-
-  gnb_resetFunc = (bars) => {
-    noMercyBox.duration = 0;
-    noMercyBox.threshold = bars.gcdSkill + 1;
-    noMercyBox.fg = computeBackgroundColorFrom(noMercyBox, 'gnb-color-nomercy');
-    bloodfestBox.duration = 0;
-    gnashingFangBox.duration = 0;
-    cartridgeComboTimer.duration = 0;
-    comboTimer.duration = 0;
-    clearTimeout(gnb_tid1);
-  };
-}
-
-function gnb_reset(bars) {
-  if (gnb_resetFunc)
+const gnb_setup = (bars) => {
+    const cartridgeBox = bars.addResourceBox({
+        classList: ['gnb-color-cartridge'],
+    });
+    const noMercyBox = bars.addProcBox({
+        id: 'gnb-procs-nomercy',
+        fgColor: 'gnb-color-nomercy',
+    });
+    bars.onUseAbility(kAbility.NoMercy, () => {
+        noMercyBox.duration = '0';
+        noMercyBox.duration = '20';
+        noMercyBox.threshold = '1000';
+        noMercyBox.fg = computeBackgroundColorFrom(noMercyBox, 'gnb-color-nomercy.active');
+        gnb_tid1 = setTimeout(() => {
+            noMercyBox.duration = '40';
+            noMercyBox.threshold = (bars.gcdSkill + 1).toString();
+            noMercyBox.fg = computeBackgroundColorFrom(noMercyBox, 'gnb-color-nomercy');
+        }, 20000);
+    });
+    const bloodfestBox = bars.addProcBox({
+        id: 'gnb-procs-bloodfest',
+        fgColor: 'gnb-color-bloodfest',
+    });
+    bars.onUseAbility(kAbility.Bloodfest, () => {
+        bloodfestBox.duration = '0';
+        bloodfestBox.duration = '90';
+    });
+    bars.onStatChange('GNB', () => {
+        gnashingFangBox.valuescale = bars.gcdSkill.toString();
+        gnashingFangBox.threshold = (bars.gcdSkill * 3).toString();
+        noMercyBox.valuescale = bars.gcdSkill.toString();
+        bloodfestBox.valuescale = bars.gcdSkill.toString();
+        bloodfestBox.threshold = (bars.gcdSkill * 2 + 1).toString();
+    });
+    // Combos
+    const gnashingFangBox = bars.addProcBox({
+        id: 'gnb-procs-gnashingfang',
+        fgColor: 'gnb-color-gnashingfang',
+    });
+    const comboTimer = bars.addTimerBar({
+        id: 'gnb-timers-combo',
+        fgColor: 'combo-color',
+    });
+    const cartridgeComboTimer = bars.addTimerBar({
+        id: 'gnb-timers-cartridgecombo',
+        fgColor: 'gnb-color-gnashingfang',
+    });
+    bars.onUseAbility(kAbility.GnashingFang, () => {
+        gnashingFangBox.duration = '0';
+        gnashingFangBox.duration = calcGCDFromStat(bars, bars.skillSpeed, 30000).toString();
+        cartridgeComboTimer.duration = '0';
+        cartridgeComboTimer.duration = '15';
+    });
+    bars.onUseAbility(kAbility.SavageClaw, () => {
+        cartridgeComboTimer.duration = '0';
+        cartridgeComboTimer.duration = '15';
+    });
+    bars.onUseAbility(kAbility.WickedTalon, () => {
+        cartridgeComboTimer.duration = '0';
+    });
+    bars.onCombo((skill) => {
+        comboTimer.duration = '0';
+        cartridgeComboTimer.duration = '0';
+        if (bars.combo.isFinalSkill)
+            return;
+        if (skill)
+            comboTimer.duration = '15';
+    });
+    bars.onJobDetailUpdate((jobDetail) => {
+        cartridgeBox.innerText = jobDetail.cartridges.toString();
+        if (jobDetail.cartridges === 2)
+            cartridgeBox.parentNode.classList.add('full');
+        else
+            cartridgeBox.parentNode.classList.remove('full');
+    });
+    gnb_resetFunc = (bars) => {
+        noMercyBox.duration = '0';
+        noMercyBox.threshold = (bars.gcdSkill + 1).toString();
+        noMercyBox.fg = computeBackgroundColorFrom(noMercyBox, 'gnb-color-nomercy');
+        bloodfestBox.duration = '0';
+        gnashingFangBox.duration = '0';
+        cartridgeComboTimer.duration = '0';
+        comboTimer.duration = '0';
+        clearTimeout(gnb_tid1);
+    };
+};
+const gnb_reset = (bars) => {
     gnb_resetFunc(bars);
-}
+};
 
 ;// CONCATENATED MODULE: ./ui/jobs/components/whm.js
 
@@ -14459,6 +14437,7 @@ function whm_setup(bars) {
   const diaBox = bars.addProcBox({
     id: 'whm-procs-dia',
     fgColor: 'whm-color-dia',
+    notifyWhenExpired: true,
   });
   const assizeBox = bars.addProcBox({
     id: 'whm-procs-assize',
@@ -14567,6 +14546,7 @@ function sch_setup(bars) {
   const bioBox = bars.addProcBox({
     id: 'sch-procs-bio',
     fgColor: 'sch-color-bio',
+    notifyWhenExpired: true,
   });
 
   const aetherflowBox = bars.addProcBox({
@@ -14663,6 +14643,7 @@ function ast_setup(bars) {
   const combustBox = bars.addProcBox({
     id: 'ast-procs-combust',
     fgColor: 'ast-color-combust',
+    notifyWhenExpired: true,
   });
 
   const drawBox = bars.addProcBox({
@@ -14905,6 +14886,7 @@ function drg_setup(bars) {
   const disembowelBox = bars.addProcBox({
     id: 'drg-procs-disembowel',
     fgColor: 'drg-color-disembowel',
+    notifyWhenExpired: true,
   });
   bars.onCombo((skill) => {
     if (skill === kAbility.Disembowel) {
@@ -15191,6 +15173,7 @@ function sam_setup(bars) {
   const shifu = bars.addProcBox({
     id: 'sam-procs-shifu',
     fgColor: 'sam-color-shifu',
+    notifyWhenExpired: true,
   });
   bars.onYouGainEffect(effect_id.Shifu, (id, matches) => {
     shifu.duration = 0;
@@ -15205,6 +15188,7 @@ function sam_setup(bars) {
   const jinpu = bars.addProcBox({
     id: 'sam-procs-jinpu',
     fgColor: 'sam-color-jinpu',
+    notifyWhenExpired: true,
   });
   bars.onYouGainEffect(effect_id.Jinpu, (id, matches) => {
     jinpu.duration = 0;
@@ -15230,6 +15214,7 @@ function sam_setup(bars) {
   const higanbana = bars.addProcBox({
     id: 'sam-procs-higanbana',
     fgColor: 'sam-color-higanbana',
+    notifyWhenExpired: true,
   });
   bars.onMobGainsEffectFromYou(effect_id.Higanbana, () => {
     higanbana.duration = 0;
@@ -15283,10 +15268,12 @@ function brd_setup(bars) {
   const causticBiteBox = bars.addProcBox({
     id: 'brd-procs-causticbite',
     fgColor: 'brd-color-causticbite',
+    notifyWhenExpired: true,
   });
   const stormBiteBox = bars.addProcBox({
     id: 'brd-procs-stormbite',
     fgColor: 'brd-color-stormbite',
+    notifyWhenExpired: true,
   });
   // Iron jaws just refreshes these effects by gain once more,
   // so it doesn't need to be handled separately.
@@ -15745,6 +15732,7 @@ function blm_setup(bars) {
     id: 'blm-dot-thunder',
     fgColor: 'blm-color-dot',
     threshold: 4,
+    notifyWhenExpired: true,
   });
   const thunderProc = bars.addProcBox({
     id: 'blm-procs-thunder',
@@ -15905,11 +15893,13 @@ function smn_setup(bars) {
   const miasmaBox = bars.addProcBox({
     id: 'smn-procs-miasma',
     fgColor: 'smn-color-miasma',
+    notifyWhenExpired: true,
   });
 
   const bioSmnBox = bars.addProcBox({
     id: 'smn-procs-biosmn',
     fgColor: 'smn-color-biosmn',
+    notifyWhenExpired: true,
   });
 
   const energyDrainBox = bars.addProcBox({
@@ -16522,6 +16512,15 @@ user_config/* default.registerOptions */.Z.registerOptions('jobs', {
             },
             type: 'float',
             default: 0.8,
+        },
+        {
+            id: 'NotifyExpiredProcsInCombat',
+            name: {
+                en: 'Flash procs boxes of inactive dots/etc. up to n times while in combat. (-1: disabled, 0: infinite)',
+                de: 'Dot/etc. boxen blinken bis zu n mal wenn im Kampf und dot ist nicht aktiv. (-1: deaktiviert, 0: ohne Limit)',
+            },
+            type: 'integer',
+            default: -1,
         },
     ],
 });
@@ -17837,6 +17836,7 @@ class TimerBox extends HTMLElement {
         this._hideTimer = null;
         clearTimeout((_b = this._timer) !== null && _b !== void 0 ? _b : 0);
         this._timer = null;
+        this.classList.remove('expired');
         this._start = new Date().getTime();
         this.advance();
     }
@@ -17847,6 +17847,7 @@ class TimerBox extends HTMLElement {
             // Sets the attribute to 0 so users can see the counter is done, and
             // if they set the same duration again it will count.
             this._duration = 0;
+            this.classList.add('expired');
             if (this._hideAfter > 0)
                 this._hideTimer = window.setTimeout(this.hide.bind(this), this._hideAfter);
             else if (this._hideAfter === 0)
@@ -18661,6 +18662,16 @@ class Bars {
     this.contentType = 0;
     this.isPVPZone = false;
     this.crafting = false;
+
+    this.updateProcBoxNotifyRepeat();
+  }
+
+  updateProcBoxNotifyRepeat() {
+    if (this.options.NotifyExpiredProcsInCombat >= 0) {
+      const repeats = this.options.NotifyExpiredProcsInCombat === 0 ? 'infinite' : this.options.NotifyExpiredProcsInCombat;
+
+      document.documentElement.style.setProperty('--proc-box-notify-repeat', repeats);
+    }
   }
 
   get gcdSkill() {
@@ -18953,6 +18964,7 @@ class Bars {
     fgColor,
     threshold,
     scale,
+    notifyWhenExpired,
   }) {
     const elementId = this.job.toLowerCase() + '-procs';
 
@@ -18979,6 +18991,8 @@ class Bars {
       timerBox.id = id;
       timerBox.classList.add('timer-box');
     }
+    if (notifyWhenExpired)
+      timerBox.classList.add('notify-when-expired');
     return timerBox;
   }
 
@@ -19100,6 +19114,21 @@ class Bars {
       this.o.healthBar.fg = computeBackgroundColorFrom(this.o.healthBar, 'hp-color.mid');
     else
       this.o.healthBar.fg = computeBackgroundColorFrom(this.o.healthBar, 'hp-color');
+  }
+
+  _updateProcBoxNotifyState() {
+    if (this.options.NotifyExpiredProcsInCombat >= 0) {
+      const boxes = document.getElementsByClassName('proc-box');
+      for (const box of boxes) {
+        if (this.inCombat) {
+          box.classList.add('in-combat');
+          for (const child of box.children)
+            child.classList.remove('expired');
+        } else {
+          box.classList.remove('in-combat');
+        }
+      }
+    }
   }
 
   _updateMPTicker() {
@@ -19272,6 +19301,7 @@ class Bars {
     this._updateOpacity();
     this._updateFoodBuff();
     this._updateMPTicker();
+    this._updateProcBoxNotifyState();
   }
 
   _onChangeZone(e) {
@@ -19405,6 +19435,7 @@ class Bars {
       this._updateJob();
       // On reload, we need to set the opacity after setting up the job bars.
       this._updateOpacity();
+      this._updateProcBoxNotifyState();
       // Set up the buff tracker after the job bars are created.
       this.buffTracker = new BuffTracker(
           this.options, this.me, this.o.leftBuffsList, this.o.rightBuffsList, this.partyTracker);
