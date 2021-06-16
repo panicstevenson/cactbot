@@ -10997,7 +10997,7 @@ const data = {
 
 /***/ }),
 
-/***/ 448:
+/***/ 550:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -11148,7 +11148,7 @@ var responses = __webpack_require__(163);
 // EXTERNAL MODULE: ./resources/user_config.ts
 var user_config = __webpack_require__(970);
 // EXTERNAL MODULE: ./ui/raidboss/data/raidboss_manifest.txt + 328 modules
-var raidboss_manifest = __webpack_require__(556);
+var raidboss_manifest = __webpack_require__(484);
 ;// CONCATENATED MODULE: ./ui/raidboss/raidboss_options.ts
 
 // These options are ones that are not auto-defined by raidboss_config.js.
@@ -11164,7 +11164,6 @@ const defaultRaidbossNonConfigOptions = {
     PerTriggerAutoConfig: {},
     PerTriggerOptions: {},
     Triggers: [],
-    PlayerNameOverride: null,
     IsRemoteRaidboss: false,
     TransformTts: (t) => t,
 };
@@ -11208,15 +11207,13 @@ const Options = {
 
 
 
-
 const kOptionKeys = {
   output: 'Output',
   duration: 'Duration',
   beforeSeconds: 'BeforeSeconds',
-  outputStrings: 'OutputStrings',
-};
+  outputStrings: 'OutputStrings'
+}; // No sound only option, because that's silly.
 
-// No sound only option, because that's silly.
 const kTriggerOptions = {
   default: {
     label: {
@@ -11225,8 +11222,8 @@ const kTriggerOptions = {
       fr: '✔ Défauts',
       ja: '✔ 初期設定',
       cn: '✔ 默认设置',
-      ko: '✔ 기본',
-    },
+      ko: '✔ 기본'
+    }
   },
   textAndSound: {
     label: {
@@ -11235,8 +11232,8 @@ const kTriggerOptions = {
       fr: '🆙🔊 Texte et son',
       ja: '🆙🔊 テキストと音声',
       cn: '🆙🔊 文字显示与提示音',
-      ko: '🆙🔊 텍스트와 소리',
-    },
+      ko: '🆙🔊 텍스트와 소리'
+    }
   },
   ttsAndText: {
     label: {
@@ -11245,8 +11242,8 @@ const kTriggerOptions = {
       fr: '🆙💬 Texte et TTS',
       ja: '🆙💬 テキストとTTS',
       cn: '🆙💬 文字显示与TTS',
-      ko: '🆙💬 텍스트와 TTS',
-    },
+      ko: '🆙💬 텍스트와 TTS'
+    }
   },
   ttsOnly: {
     label: {
@@ -11255,8 +11252,8 @@ const kTriggerOptions = {
       fr: '💬 TTS Seulement',
       ja: '💬 TTSのみ',
       cn: '💬 只使用TTS',
-      ko: '💬 TTS만',
-    },
+      ko: '💬 TTS만'
+    }
   },
   textOnly: {
     label: {
@@ -11265,8 +11262,8 @@ const kTriggerOptions = {
       fr: '🆙 Texte seulement',
       ja: '🆙 テキストのみ',
       cn: '🆙 只使用文字显示',
-      ko: '🆙 텍스트만',
-    },
+      ko: '🆙 텍스트만'
+    }
   },
   disabled: {
     label: {
@@ -11275,11 +11272,10 @@ const kTriggerOptions = {
       fr: '❌ Désactivé',
       ja: '❌ 無効',
       cn: '❌ 禁用',
-      ko: '❌ 비활성화',
-    },
-  },
+      ko: '❌ 비활성화'
+    }
+  }
 };
-
 const kDetailKeys = {
   'triggerRegex': {
     label: {
@@ -11288,10 +11284,10 @@ const kDetailKeys = {
       fr: 'regex',
       ja: '正規表現',
       cn: '正则表达式',
-      ko: '정규식',
+      ko: '정규식'
     },
     cls: 'regex-text',
-    debugOnly: true,
+    debugOnly: true
   },
   'triggerNetRegex': {
     label: {
@@ -11299,10 +11295,10 @@ const kDetailKeys = {
       de: 'netregex',
       fr: 'netregex',
       ja: 'ネット正規表現',
-      cn: '网络日志正则表达式',
+      cn: '网络日志正则表达式'
     },
     cls: 'regex-text',
-    debugOnly: true,
+    debugOnly: true
   },
   'timelineRegex': {
     label: {
@@ -11311,10 +11307,10 @@ const kDetailKeys = {
       fr: 'timeline',
       ja: 'タイムライン',
       cn: '时间轴',
-      ko: '타임라인',
+      ko: '타임라인'
     },
     cls: 'regex-text',
-    debugOnly: true,
+    debugOnly: true
   },
   'beforeSeconds': {
     label: {
@@ -11323,10 +11319,10 @@ const kDetailKeys = {
       fr: 'avant (seconde)',
       ja: 'その前に (秒)',
       cn: '提前 (秒)',
-      ko: '앞당김 (초)',
+      ko: '앞당김 (초)'
     },
     cls: 'before-seconds-text',
-    generatedManually: true,
+    generatedManually: true
   },
   'condition': {
     label: {
@@ -11335,10 +11331,10 @@ const kDetailKeys = {
       fr: 'condition',
       ja: '条件',
       cn: '条件',
-      ko: '조건',
+      ko: '조건'
     },
     cls: 'condition-text',
-    debugOnly: true,
+    debugOnly: true
   },
   'duration': {
     label: {
@@ -11347,10 +11343,10 @@ const kDetailKeys = {
       fr: 'Durée (secondes)',
       ja: '存続時間 (秒)',
       cn: '持续时间 (秒)',
-      ko: '지속 시간 (초)',
+      ko: '지속 시간 (초)'
     },
     cls: 'duration-text',
-    generatedManually: true,
+    generatedManually: true
   },
   'preRun': {
     label: {
@@ -11359,10 +11355,10 @@ const kDetailKeys = {
       fr: 'preRun',
       ja: 'プレ実行',
       cn: '预运行',
-      ko: '사전 실행',
+      ko: '사전 실행'
     },
     cls: 'prerun-text',
-    debugOnly: true,
+    debugOnly: true
   },
   'alarmText': {
     label: {
@@ -11371,9 +11367,9 @@ const kDetailKeys = {
       fr: 'alarme',
       ja: '警報',
       cn: '警报文本',
-      ko: '경고',
+      ko: '경고'
     },
-    cls: 'alarm-text',
+    cls: 'alarm-text'
   },
   'alertText': {
     label: {
@@ -11382,9 +11378,9 @@ const kDetailKeys = {
       fr: 'alerte',
       ja: '警告',
       cn: '警告文本',
-      ko: '주의',
+      ko: '주의'
     },
-    cls: 'alert-text',
+    cls: 'alert-text'
   },
   'infoText': {
     label: {
@@ -11393,9 +11389,9 @@ const kDetailKeys = {
       fr: 'info',
       ja: '情報',
       cn: '信息文本',
-      ko: '안내',
+      ko: '안내'
     },
-    cls: 'info-text',
+    cls: 'info-text'
   },
   'tts': {
     label: {
@@ -11404,9 +11400,9 @@ const kDetailKeys = {
       fr: 'tts',
       ja: 'TTS',
       cn: 'TTS',
-      ko: 'TTS',
+      ko: 'TTS'
     },
-    cls: 'tts-text',
+    cls: 'tts-text'
   },
   'sound': {
     label: {
@@ -11415,9 +11411,9 @@ const kDetailKeys = {
       fr: 'son',
       ja: '音声',
       cn: '提示音',
-      ko: '소리',
+      ko: '소리'
     },
-    cls: 'sound-text',
+    cls: 'sound-text'
   },
   'run': {
     label: {
@@ -11426,13 +11422,12 @@ const kDetailKeys = {
       fr: 'run',
       ja: '実行',
       cn: '运行',
-      ko: '실행',
+      ko: '실행'
     },
     cls: 'run-text',
-    debugOnly: true,
-  },
+    debugOnly: true
+  }
 };
-
 const kMiscTranslations = {
   // Shows up for un-set values.
   valueDefault: {
@@ -11441,7 +11436,7 @@ const kMiscTranslations = {
     fr: '(Défaut)',
     ja: '(初期値)',
     cn: '(默认值)',
-    ko: '(기본값)',
+    ko: '(기본값)'
   },
   // Shown when the UI can't decipher the output of a function.
   valueIsFunction: {
@@ -11450,7 +11445,7 @@ const kMiscTranslations = {
     fr: '(Fonction)',
     ja: '(関数)',
     cn: '(函数)',
-    ko: '(함수)',
+    ko: '(함수)'
   },
   // Warning label for triggers without ids or overridden triggers.
   warning: {
@@ -11459,7 +11454,7 @@ const kMiscTranslations = {
     fr: '⚠️ Attention',
     ja: '⚠️ 警告',
     cn: '⚠️ 警告',
-    ko: '⚠️ 주의',
+    ko: '⚠️ 주의'
   },
   // Shows up for triggers without ids.
   missingId: {
@@ -11468,7 +11463,7 @@ const kMiscTranslations = {
     fr: 'Champ ID manquant',
     ja: 'idがありません',
     cn: '缺少id属性',
-    ko: 'ID 필드값 없음',
+    ko: 'ID 필드값 없음'
   },
   // Shows up for triggers that are overridden by other triggers.
   overriddenByFile: {
@@ -11477,7 +11472,7 @@ const kMiscTranslations = {
     fr: 'Écrasé(e) par "${file}"',
     ja: '"${file}"に上書きました',
     cn: '被"${file}"文件覆盖',
-    ko: '"${file}" 파일에서 덮어씌움',
+    ko: '"${file}" 파일에서 덮어씌움'
   },
   // Opens trigger file on Github.
   viewTriggerSource: {
@@ -11485,40 +11480,35 @@ const kMiscTranslations = {
     de: 'Zeige Trigger Quelle',
     ja: 'トリガーのコードを表示',
     cn: '显示触发器源码',
-    ko: '트리거 출처 열기',
-  },
+    ko: '트리거 출처 열기'
+  }
 };
 
-const validDurationOrUndefined = (val) => {
+const validDurationOrUndefined = val => {
   val = parseFloat(val);
-  if (!isNaN(val) && val >= 0)
-    return val;
+  if (!isNaN(val) && val >= 0) return val;
   return undefined;
 };
 
-const canBeConfigured = (trig) => !trig.isMissingId && !trig.overriddenByFile;
+const canBeConfigured = trig => !trig.isMissingId && !trig.overriddenByFile;
 
 const addTriggerDetail = (container, labelText, detailText, detailCls) => {
   const label = document.createElement('div');
   label.innerText = labelText;
   label.classList.add('trigger-label');
   container.appendChild(label);
-
   const detail = document.createElement('div');
   detail.classList.add('trigger-detail');
   detail.innerText = detailText;
   container.appendChild(detail);
-
-  if (detailCls)
-    detail.classList.add(detailCls);
-};
-
-// This is used both for top level Options and for PerTriggerAutoConfig settings.
+  if (detailCls) detail.classList.add(detailCls);
+}; // This is used both for top level Options and for PerTriggerAutoConfig settings.
 // Unfortunately due to poor decisions in the past, PerTriggerOptions has different
 // fields here.  This should be fixed.
+
+
 function setOptionsFromOutputValue(options, value) {
-  if (value === 'default') {
-    // Nothing.
+  if (value === 'default') {// Nothing.
   } else if (value === 'textAndSound') {
     options.TextAlertsEnabled = true;
     options.SoundAlertsEnabled = true;
@@ -11542,10 +11532,10 @@ function setOptionsFromOutputValue(options, value) {
   } else {
     console.error('unknown output type: ' + value);
   }
-}
-
-// Helper for doing nothing during trigger eval, but still recording any
+} // Helper for doing nothing during trigger eval, but still recording any
 // calls to `output.responseOutputStrings = x;` via callback.
+
+
 class DoNothingFuncProxy {
   constructor(outputStringsCallback) {
     return new Proxy(this, {
@@ -11553,73 +11543,70 @@ class DoNothingFuncProxy {
         if (property === 'responseOutputStrings') {
           outputStringsCallback(value);
           return true;
-        }
+        } // Ignore other property setting here.
 
-        // Ignore other property setting here.
       },
 
       get(target, name) {
         return () => {};
-      },
+      }
+
     });
   }
+
 }
 
 class RaidbossConfigurator {
   constructor(cactbotConfigurator) {
-    this.base = cactbotConfigurator;
-
-    // TODO: is it worth adding the complexity to reflect this change in triggers that use it?
+    this.base = cactbotConfigurator; // TODO: is it worth adding the complexity to reflect this change in triggers that use it?
     // This is probably where using something like vue or react would be easier.
     // For the moment, folks can just reload, for real.
+
     this.alertsLang = this.base.getOption('raidboss', 'AlertsLanguage', this.base.lang);
     this.timelineLang = this.base.getOption('raidboss', 'TimelineLanguage', this.base.lang);
   }
 
   buildUI(container, raidbossFiles, userOptions) {
     const fileMap = this.processRaidbossFiles(raidbossFiles, userOptions);
-
     const expansionDivs = {};
 
     for (const key in fileMap) {
-      const info = fileMap[key];
-      // "expansion" here is technically section, which includes "general triggers"
+      const info = fileMap[key]; // "expansion" here is technically section, which includes "general triggers"
       // and one section per user file.
-      const expansion = info.section;
 
-      if (Object.keys(info.triggers).length === 0)
-        continue;
+      const expansion = info.section;
+      if (Object.keys(info.triggers).length === 0) continue;
 
       if (!expansionDivs[expansion]) {
         const expansionContainer = document.createElement('div');
         expansionContainer.classList.add('trigger-expansion-container', 'collapsed');
         container.appendChild(expansionContainer);
-
         const expansionHeader = document.createElement('div');
         expansionHeader.classList.add('trigger-expansion-header');
+
         expansionHeader.onclick = () => {
           expansionContainer.classList.toggle('collapsed');
         };
+
         expansionHeader.innerText = expansion;
         expansionContainer.appendChild(expansionHeader);
-
         expansionDivs[expansion] = expansionContainer;
       }
 
       const triggerContainer = document.createElement('div');
       triggerContainer.classList.add('trigger-file-container', 'collapsed');
       expansionDivs[expansion].appendChild(triggerContainer);
-
       const headerDiv = document.createElement('div');
       headerDiv.classList.add('trigger-file-header');
+
       headerDiv.onclick = () => {
         triggerContainer.classList.toggle('collapsed');
       };
 
       const parts = [info.title, info.type, info.prefix];
+
       for (let i = 0; i < parts.length; ++i) {
-        if (!parts[i])
-          continue;
+        if (!parts[i]) continue;
         const partDiv = document.createElement('div');
         partDiv.classList.add('trigger-file-header-part');
         partDiv.innerText = parts[i];
@@ -11627,64 +11614,52 @@ class RaidbossConfigurator {
       }
 
       triggerContainer.appendChild(headerDiv);
-
       const triggerOptions = document.createElement('div');
       triggerOptions.classList.add('trigger-file-options');
       triggerContainer.appendChild(triggerOptions);
 
       for (const id in info.triggers) {
-        const trig = info.triggers[id];
+        const trig = info.triggers[id]; // Don't construct triggers that won't show anything.
 
-        // Don't construct triggers that won't show anything.
         let hasOutputFunc = false;
+
         for (const func of responses/* triggerOutputFunctions */.ug) {
           if (trig[func]) {
             hasOutputFunc = true;
             break;
           }
         }
-        if (!hasOutputFunc && !this.base.developerOptions)
-          continue;
 
-        // Build the trigger label.
+        if (!hasOutputFunc && !this.base.developerOptions) continue; // Build the trigger label.
+
         const triggerDiv = document.createElement('div');
         triggerDiv.innerHTML = trig.isMissingId ? '(???)' : trig.id;
-
         triggerDiv.classList.add('trigger');
-        triggerOptions.appendChild(triggerDiv);
+        triggerOptions.appendChild(triggerDiv); // Container for the right side ui (select boxes, all of the info).
 
-        // Container for the right side ui (select boxes, all of the info).
         const triggerDetails = document.createElement('div');
         triggerDetails.classList.add('trigger-details');
         triggerOptions.appendChild(triggerDetails);
-
-        if (canBeConfigured(trig))
-          triggerDetails.appendChild(this.buildTriggerOptions(trig, triggerDiv));
+        if (canBeConfigured(trig)) triggerDetails.appendChild(this.buildTriggerOptions(trig, triggerDiv));
 
         if (trig.isMissingId) {
-          addTriggerDetail(triggerDetails,
-              this.base.translate(kMiscTranslations.warning),
-              this.base.translate(kMiscTranslations.missingId));
+          addTriggerDetail(triggerDetails, this.base.translate(kMiscTranslations.warning), this.base.translate(kMiscTranslations.missingId));
         }
+
         if (trig.overriddenByFile) {
           const baseText = this.base.translate(kMiscTranslations.overriddenByFile);
           const detailText = baseText.replace('${file}', trig.overriddenByFile);
-          addTriggerDetail(triggerDetails,
-              this.base.translate(kMiscTranslations.warning),
-              detailText);
-        }
+          addTriggerDetail(triggerDetails, this.base.translate(kMiscTranslations.warning), detailText);
+        } // Append some details about the trigger so it's more obvious what it is.
 
-        // Append some details about the trigger so it's more obvious what it is.
+
         for (const detailKey in kDetailKeys) {
-          if (kDetailKeys[detailKey].generatedManually)
-            continue;
-          if (!this.base.developerOptions && kDetailKeys[detailKey].debugOnly)
-            continue;
-          if (!trig[detailKey] && !trig.output[detailKey])
-            continue;
-
+          if (kDetailKeys[detailKey].generatedManually) continue;
+          if (!this.base.developerOptions && kDetailKeys[detailKey].debugOnly) continue;
+          if (!trig[detailKey] && !trig.output[detailKey]) continue;
           const detailCls = [kDetailKeys[detailKey].cls];
           let detailText;
+
           if (trig.output[detailKey]) {
             detailText = trig.output[detailKey];
           } else if (typeof trig[detailKey] === 'function') {
@@ -11694,116 +11669,100 @@ class RaidbossConfigurator {
             detailText = trig[detailKey];
           }
 
-          addTriggerDetail(triggerDetails,
-              this.base.translate(kDetailKeys[detailKey].label),
-              detailText,
-              detailCls);
+          addTriggerDetail(triggerDetails, this.base.translate(kDetailKeys[detailKey].label), detailText, detailCls);
         }
 
-        if (!canBeConfigured(trig))
-          continue;
+        if (!canBeConfigured(trig)) continue; // Add beforeSeconds manually for timeline triggers.
 
-        // Add beforeSeconds manually for timeline triggers.
         if (trig.isTimelineTrigger) {
           const detailKey = 'beforeSeconds';
           const optionKey = kOptionKeys.beforeSeconds;
-
           const label = document.createElement('div');
           label.innerText = this.base.translate(kDetailKeys[detailKey].label);
           label.classList.add('trigger-label');
           triggerDetails.appendChild(label);
-
           const div = document.createElement('div');
           div.classList.add('option-input-container', 'trigger-before-seconds');
-
           const input = document.createElement('input');
           div.appendChild(input);
           input.type = 'text';
-          input.step = 'any';
+          input.step = 'any'; // Say "(default)" for more complicated things like functions.
 
-          // Say "(default)" for more complicated things like functions.
           let defaultValue = kMiscTranslations.valueDefault;
-          if (trig.beforeSeconds === undefined)
-            defaultValue = 0;
-          else if (typeof trig.beforeSeconds === 'number')
-            defaultValue = trig.beforeSeconds;
-
+          if (trig.beforeSeconds === undefined) defaultValue = 0;else if (typeof trig.beforeSeconds === 'number') defaultValue = trig.beforeSeconds;
           input.placeholder = this.base.translate(defaultValue);
           input.value = this.base.getOption('raidboss', 'triggers', trig.id, optionKey, '');
+
           const setFunc = () => {
             const val = validDurationOrUndefined(input.value) || '';
             this.base.setOption('raidboss', 'triggers', trig.id, optionKey, val);
           };
+
           input.onchange = setFunc;
           input.oninput = setFunc;
-
           triggerDetails.appendChild(div);
-        }
+        } // Add duration manually with an input to override.
 
-        // Add duration manually with an input to override.
+
         if (hasOutputFunc) {
           const detailKey = 'duration';
           const optionKey = kOptionKeys.duration;
-
           const label = document.createElement('div');
           label.innerText = this.base.translate(kDetailKeys[detailKey].label);
           label.classList.add('trigger-label');
           triggerDetails.appendChild(label);
-
           const div = document.createElement('div');
           div.classList.add('option-input-container', 'trigger-duration');
-
           const input = document.createElement('input');
           div.appendChild(input);
           input.type = 'text';
           input.step = 'any';
           input.placeholder = this.base.translate(kMiscTranslations.valueDefault);
           input.value = this.base.getOption('raidboss', 'triggers', trig.id, optionKey, '');
+
           const setFunc = () => {
             const val = validDurationOrUndefined(input.value) || '';
             this.base.setOption('raidboss', 'triggers', trig.id, optionKey, val);
           };
+
           input.onchange = setFunc;
           input.oninput = setFunc;
-
           triggerDetails.appendChild(div);
-        }
+        } // Add output strings manually
 
-        // Add output strings manually
+
         const outputStrings = trig.outputStrings || {};
 
         for (const key in outputStrings) {
           const optionKey = kOptionKeys.outputStrings;
           const template = this.base.translate(outputStrings[key]);
-
           const label = document.createElement('div');
           label.innerText = key;
           label.classList.add('trigger-outputstring-label');
           triggerDetails.appendChild(label);
-
           const div = document.createElement('div');
           div.classList.add('option-input-container', 'trigger-outputstring');
-
           const input = document.createElement('input');
           div.appendChild(input);
           input.type = 'text';
           input.placeholder = template;
           input.value = this.base.getOption('raidboss', 'triggers', trig.id, optionKey, key, '');
+
           const setFunc = () => this.base.setOption('raidboss', 'triggers', trig.id, optionKey, key, input.value);
+
           input.onchange = setFunc;
           input.oninput = setFunc;
-
           triggerDetails.appendChild(div);
         }
 
         const label = document.createElement('div');
         triggerDetails.appendChild(label);
-
         const div = document.createElement('div');
         div.classList.add('option-input-container', 'trigger-source');
         const baseUrl = 'https://github.com/quisquous/cactbot/blob/triggers';
         const path = key.split('-');
         let urlFilepath;
+
         if (path.length === 3) {
           // 00-misc/general.js
           urlFilepath = `${path[0]}-${path[1]}/${[...path].slice(2).join('-')}`;
@@ -11811,44 +11770,40 @@ class RaidbossConfigurator {
           // 02-arr/raids/t1.js
           urlFilepath = `${path[0]}-${path[1]}/${path[2]}/${[...path].slice(3).join('-')}`;
         }
+
         const escapedTriggerId = trig.id.replace(/'/g, '\\\'');
         const uriComponent = encodeURIComponent(`id: '${escapedTriggerId}'`).replace(/'/g, '%27');
         const urlString = `${baseUrl}/${urlFilepath}.js#:~:text=${uriComponent}`;
         div.innerHTML = `<a href="${urlString}" target="_blank">(${this.base.translate(kMiscTranslations.viewTriggerSource)})</a>`;
-
         triggerDetails.appendChild(div);
       }
     }
-  }
+  } // This duplicates the raidboss function of the same name.
 
-  // This duplicates the raidboss function of the same name.
+
   valueOrFunction(f, data, matches, output) {
-    const result = (typeof f === 'function') ? f(data, matches, output) : f;
-    if (result !== Object(result))
-      return result;
-    if (result[this.alertsLang])
-      return this.valueOrFunction(result[this.alertsLang]);
-    if (result[this.timelineLang])
-      return this.valueOrFunction(result[this.timelineLang]);
-    // For partially localized results where this localization doesn't
+    const result = typeof f === 'function' ? f(data, matches, output) : f;
+    if (result !== Object(result)) return result;
+    if (result[this.alertsLang]) return this.valueOrFunction(result[this.alertsLang]);
+    if (result[this.timelineLang]) return this.valueOrFunction(result[this.timelineLang]); // For partially localized results where this localization doesn't
     // exist, prefer English over nothing.
+
     return this.valueOrFunction(result['en']);
   }
 
   processTrigger(trig) {
     // TODO: with some hackiness (e.g. regexes?) we could figure out which
     // output string came from which alert type (alarm, alert, info, tts).
-    trig.output = new DoNothingFuncProxy((outputStrings) => {
+    trig.output = new DoNothingFuncProxy(outputStrings => {
       trig.outputStrings = trig.outputStrings || {};
       Object.assign(trig.outputStrings, outputStrings);
     });
-
     const kBaseFakeData = {
       party: new PartyTracker(),
       lang: this.base.lang,
       currentHP: 1000,
       options: this.base.configOptions,
-      ShortName: (x) => x,
+      ShortName: x => x,
       StopCombat: () => {},
       ParseLocaleFloat: parseFloat,
       CanStun: () => util/* default.canStun */.Z.canStun(this.job),
@@ -11856,46 +11811,36 @@ class RaidbossConfigurator {
       CanSleep: () => util/* default.canSleep */.Z.canSleep(this.job),
       CanCleanse: () => util/* default.canCleanse */.Z.canCleanse(this.job),
       CanFeint: () => util/* default.canFeint */.Z.canFeint(this.job),
-      CanAddle: () => util/* default.canAddle */.Z.canAddle(this.job),
+      CanAddle: () => util/* default.canAddle */.Z.canAddle(this.job)
     };
+    const kFakeData = [{
+      me: 'Tini Poutini',
+      job: 'GNB',
+      role: 'tank'
+    }, {
+      me: 'Potato Chippy',
+      job: 'WHM',
+      role: 'healer'
+    }, {
+      me: 'Tater Tot',
+      job: 'BLM',
+      role: 'dps'
+    }, {
+      me: 'Hash Brown',
+      job: 'DRG',
+      role: 'dps'
+    }, {
+      me: 'Aloo Gobi',
+      job: 'BLU',
+      role: 'dps'
+    }];
 
-    const kFakeData = [
-      {
-        me: 'Tini Poutini',
-        job: 'GNB',
-        role: 'tank',
-      },
-      {
-        me: 'Potato Chippy',
-        job: 'WHM',
-        role: 'healer',
-      },
-      {
-        me: 'Tater Tot',
-        job: 'BLM',
-        role: 'dps',
-      },
-      {
-        me: 'Hash Brown',
-        job: 'DRG',
-        role: 'dps',
-      },
-      {
-        me: 'Aloo Gobi',
-        job: 'BLU',
-        role: 'dps',
-      },
-    ];
-
-    for (let i = 0; i < kFakeData.length; ++i)
-      kFakeData[i] = Object.assign({}, kFakeData[i], kBaseFakeData);
-
+    for (let i = 0; i < kFakeData.length; ++i) kFakeData[i] = Object.assign({}, kFakeData[i], kBaseFakeData);
 
     const kFakeMatches = {
       // TODO: really should convert all triggers to use regexes.js.
       // Mooooost triggers use matches[1] to be a name.
       1: kFakeData[0].me,
-
       sourceId: '41234567',
       source: 'Enemy',
       id: '1234',
@@ -11913,25 +11858,18 @@ class RaidbossConfigurator {
       code: '00',
       line: '',
       name: 'Name',
-      capture: true,
+      capture: true
     };
-
-
     const output = {};
-    const keys = ['alarmText', 'alertText', 'infoText', 'tts', 'sound'];
-
-    // Try to determine some sample output?
+    const keys = ['alarmText', 'alertText', 'infoText', 'tts', 'sound']; // Try to determine some sample output?
     // This could get much more complicated if we wanted it to.
+
     const evalTrigger = (trig, key, idx) => {
       try {
         const result = this.valueOrFunction(trig[key], kFakeData[idx], kFakeMatches, trig.output);
-        if (!result)
-          return false;
+        if (!result) return false; // Super hack:
 
-        // Super hack:
-        if (result.includes('undefined') || result.includes('NaN'))
-          return false;
-
+        if (result.includes('undefined') || result.includes('NaN')) return false;
         output[key] = result;
         return true;
       } catch (e) {
@@ -11940,59 +11878,57 @@ class RaidbossConfigurator {
         // So just silently ignore.
         return false;
       }
-    };
+    }; // Handle 'response' first.
 
-    // Handle 'response' first.
+
     if (trig.response) {
       const r = trig.response;
+
       for (let d = 0; d < kFakeData.length; ++d) {
         try {
           // Can't use ValueOrFunction here as r returns a non-localizable object.
           // FIXME: this hackily replicates some raidboss logic too.
           let response = r;
+
           while (typeof response === 'function') {
             // TODO: check if this has builtInResponseStr first.
             response = response(kFakeData[d], kFakeMatches, trig.output);
           }
-          if (!response)
-            continue;
+
+          if (!response) continue;
 
           if (!trig.outputStrings) {
-            for (const key of keys)
-              evalTrigger(response, key, d);
+            for (const key of keys) evalTrigger(response, key, d);
           }
+
           break;
         } catch (e) {
           continue;
         }
       }
-    }
-
-    // Only evaluate fields if there are not outputStrings.
+    } // Only evaluate fields if there are not outputStrings.
     // outputStrings will indicate more clearly what the trigger says.
+
+
     if (!trig.outputStrings) {
       for (const key of keys) {
-        if (!trig[key])
-          continue;
+        if (!trig[key]) continue;
+
         for (let d = 0; d < kFakeData.length; ++d) {
-          if (evalTrigger(trig, key, d))
-            break;
+          if (evalTrigger(trig, key, d)) break;
         }
       }
     }
 
     trig.output = output;
-
     const lang = this.base.lang;
 
-    const getRegex = (baseField) => {
+    const getRegex = baseField => {
       const shortLanguage = lang.charAt(0).toUpperCase() + lang.slice(1);
       const langSpecificRegex = trig[baseField + shortLanguage] || trig[baseField];
-      if (!langSpecificRegex)
-        return;
+      if (!langSpecificRegex) return;
       const baseRegex = resources_regexes/* default.parse */.Z.parse(langSpecificRegex);
-      if (!baseRegex)
-        return;
+      if (!baseRegex) return;
       return resources_regexes/* default.parse */.Z.parse(baseRegex);
     };
 
@@ -12010,10 +11946,9 @@ class RaidbossConfigurator {
     // `files` is map of filename => triggerSet (for trigger files)
     // `map` is a sorted map of shortened zone key => { various fields, triggerSet }
     const map = this.base.processFiles(files, userOptions.Triggers);
-    let triggerIdx = 0;
-
-    // While walking through triggers, record any previous triggers with the same
+    let triggerIdx = 0; // While walking through triggers, record any previous triggers with the same
     // id so that the ui can disable overriding information.
+
     const previousTriggerWithId = {};
 
     for (const item of Object.values(map)) {
@@ -12021,38 +11956,36 @@ class RaidbossConfigurator {
       // use that instead of the filename???
       const rawTriggers = {
         trigger: [],
-        timeline: [],
+        timeline: []
       };
       const triggerSet = item.triggerSet;
-      if (triggerSet.triggers)
-        rawTriggers.trigger.push(...triggerSet.triggers);
-      if (triggerSet.timelineTriggers)
-        rawTriggers.timeline.push(...triggerSet.timelineTriggers);
-
+      if (triggerSet.triggers) rawTriggers.trigger.push(...triggerSet.triggers);
+      if (triggerSet.timelineTriggers) rawTriggers.timeline.push(...triggerSet.timelineTriggers);
       item.triggers = {};
+
       for (const key in rawTriggers) {
         for (const trig of rawTriggers[key]) {
           triggerIdx++;
+
           if (!trig.id) {
             // Give triggers with no id some "unique" string so that they can
             // still be added to the set and show up in the ui.
             trig.id = `!!NoIdTrigger${triggerIdx}`;
             trig.isMissingId = true;
-          }
+          } // Track if this trigger overrides any previous trigger.
 
-          // Track if this trigger overrides any previous trigger.
+
           const previous = previousTriggerWithId[trig.id];
-          if (previous)
-            previous.overriddenByFile = triggerSet.filename;
+          if (previous) previous.overriddenByFile = triggerSet.filename;
           previousTriggerWithId[trig.id] = trig;
-
-          trig.isTimelineTrigger = key === 'timeline';
-          // Also, if a user has two of the same id in the same triggerSet (?!)
+          trig.isTimelineTrigger = key === 'timeline'; // Also, if a user has two of the same id in the same triggerSet (?!)
           // then only the second trigger will show up.
+
           item.triggers[trig.id] = this.processTrigger(trig);
         }
       }
     }
+
     return map;
   }
 
@@ -12061,77 +11994,66 @@ class RaidbossConfigurator {
     const div = document.createElement('div');
     div.classList.add('trigger-options');
 
-    const updateLabel = (input) => {
-      if (input.value === 'hidden' || input.value === 'disabled')
-        labelDiv.classList.add('disabled');
-      else
-        labelDiv.classList.remove('disabled');
+    const updateLabel = input => {
+      if (input.value === 'hidden' || input.value === 'disabled') labelDiv.classList.add('disabled');else labelDiv.classList.remove('disabled');
     };
 
     const input = document.createElement('select');
     div.appendChild(input);
-
     const selectValue = this.base.getOption('raidboss', 'triggers', trig.id, optionKey, 'default');
 
     for (const key in kTriggerOptions) {
       // Hide debug only options unless they are selected.
       // Otherwise, it will look weird to pick something like 'Disabled',
       // but then not show it when developer options are turned off.
-      if (!this.base.developerOptions && kTriggerOptions[key].debugOnly && key !== selectValue)
-        continue;
+      if (!this.base.developerOptions && kTriggerOptions[key].debugOnly && key !== selectValue) continue;
       const elem = document.createElement('option');
       elem.innerHTML = this.base.translate(kTriggerOptions[key].label);
       elem.value = key;
       elem.selected = key === selectValue;
       input.appendChild(elem);
-
       updateLabel(input);
 
       input.onchange = () => {
         updateLabel(input);
         let value = input.value;
-        if (value.includes('default'))
-          value = 'default';
+        if (value.includes('default')) value = 'default';
         this.base.setOption('raidboss', 'triggers', trig.id, optionKey, input.value);
       };
     }
 
     return div;
   }
-}
 
-// Raidboss needs to do some extra processing of user files.
+} // Raidboss needs to do some extra processing of user files.
+
+
 const userFileHandler = (name, files, options, basePath) => {
-  if (!options.Triggers)
-    return;
+  if (!options.Triggers) return;
 
   for (const set of options.Triggers) {
     // Annotate triggers with where they came from.  Note, options is passed in repeatedly
     // as multiple sets of user files add triggers, so only process each file once.
-    if (set.isUserTriggerSet)
-      continue;
-
-    // `filename` here is just cosmetic for better debug printing to make it more clear
+    if (set.isUserTriggerSet) continue; // `filename` here is just cosmetic for better debug printing to make it more clear
     // where a trigger or an override is coming from.
+
     set.filename = `${basePath}${name}`;
-    set.isUserTriggerSet = true;
+    set.isUserTriggerSet = true; // Convert set.timelineFile to set.timeline.
 
-    // Convert set.timelineFile to set.timeline.
     if (set.timelineFile) {
-      const lastIndex = Math.max(name.lastIndexOf('/'), name.lastIndexOf('\\'));
-      // If lastIndex === -1, truncate name to the empty string.
+      const lastIndex = Math.max(name.lastIndexOf('/'), name.lastIndexOf('\\')); // If lastIndex === -1, truncate name to the empty string.
       // if lastIndex > -1, truncate name after the final slash.
-      const dir = name.substring(0, lastIndex + 1);
 
+      const dir = name.substring(0, lastIndex + 1);
       const timelineFile = `${dir}${set.timelineFile}`;
       delete set.timelineFile;
 
       if (!(timelineFile in files)) {
         console.log(`ERROR: '${name}' specifies non-existent timeline file '${timelineFile}'.`);
         continue;
-      }
+      } // set.timeline is processed recursively.
 
-      // set.timeline is processed recursively.
+
       set.timeline = [set.timeline, files[timelineFile]];
     }
   }
@@ -12140,7 +12062,8 @@ const userFileHandler = (name, files, options, basePath) => {
 const templateOptions = {
   buildExtraUI: (base, container) => {
     const builder = new RaidbossConfigurator(base);
-    const userOptions = { ...raidboss_options };
+    const userOptions = { ...raidboss_options
+    };
     user_config/* default.loadUserFiles */.Z.loadUserFiles('raidboss', userOptions, () => {
       builder.buildUI(container, raidboss_manifest/* default */.Z, userOptions);
     });
@@ -12148,16 +12071,13 @@ const templateOptions = {
   processExtraOptions: (options, savedConfig) => {
     // raidboss will look up this.options.PerTriggerAutoConfig to find these values.
     const optionName = 'PerTriggerAutoConfig';
-
     options[optionName] = options[optionName] || {};
     const triggers = savedConfig.triggers;
-    if (!triggers)
-      return;
-
+    if (!triggers) return;
     const perTrigger = options[optionName];
-
     const outputObjs = {};
     const keys = Object.keys(kTriggerOptions);
+
     for (const key of keys) {
       outputObjs[key] = {};
       setOptionsFromOutputValue(outputObjs[key], key);
@@ -12165,494 +12085,458 @@ const templateOptions = {
 
     for (const id in triggers) {
       const autoConfig = {};
-
       const output = triggers[id][kOptionKeys.output];
-      if (output)
-        Object.assign(autoConfig, outputObjs[output]);
-
+      if (output) Object.assign(autoConfig, outputObjs[output]);
       const duration = validDurationOrUndefined(triggers[id][kOptionKeys.duration]);
-      if (duration)
-        autoConfig[kOptionKeys.duration] = duration;
-
+      if (duration) autoConfig[kOptionKeys.duration] = duration;
       const beforeSeconds = validDurationOrUndefined(triggers[id][kOptionKeys.beforeSeconds]);
-      if (beforeSeconds)
-        autoConfig[kOptionKeys.beforeSeconds] = beforeSeconds;
-
+      if (beforeSeconds) autoConfig[kOptionKeys.beforeSeconds] = beforeSeconds;
       const outputStrings = triggers[id][kOptionKeys.outputStrings];
-      if (outputStrings)
-        autoConfig[kOptionKeys.outputStrings] = outputStrings;
-
-      if (output || duration || outputStrings)
-        perTrigger[id] = autoConfig;
+      if (outputStrings) autoConfig[kOptionKeys.outputStrings] = outputStrings;
+      if (output || duration || outputStrings) perTrigger[id] = autoConfig;
     }
   },
-  options: [
-    {
-      id: 'Debug',
-      name: {
-        en: 'Enable debug mode',
-        de: 'Aktiviere Debugmodus',
-        fr: 'Activer le mode debug',
-        ja: 'デバッグモードを有効にする',
-        cn: '启用调试模式',
-        ko: '디버그 모드 활성화',
-      },
-      type: 'checkbox',
-      debugOnly: true,
+  options: [{
+    id: 'Debug',
+    name: {
+      en: 'Enable debug mode',
+      de: 'Aktiviere Debugmodus',
+      fr: 'Activer le mode debug',
+      ja: 'デバッグモードを有効にする',
+      cn: '启用调试模式',
+      ko: '디버그 모드 활성화'
     },
-    {
-      id: 'DefaultAlertOutput',
-      name: {
-        en: 'Default alert output',
-        de: 'Standard Alert Ausgabe',
-        fr: 'Alerte par défaut',
-        ja: '警告情報出力既定値',
-        cn: '默认警报提示信息输出方式',
-        ko: '기본 알람 출력 방식',
-      },
-      type: 'select',
-      options: {
-        en: {
-          '🆙🔊 Text and Sound': 'textAndSound',
-          '🆙💬 Text and TTS': 'ttsAndText',
-          '💬 TTS Only': 'ttsOnly',
-          '🆙 Text Only': 'textOnly',
-          '❌ Disabled': 'disabled',
-        },
-        de: {
-          '🆙🔊 Text und Ton': 'textAndSound',
-          '🆙💬 Text und TTS': 'ttsAndText',
-          '💬 Nur TTS': 'ttsOnly',
-          '🆙 Nur Text': 'textOnly',
-          '❌ Deaktiviert': 'disabled',
-        },
-        fr: {
-          '🆙🔊 Texte et son': 'textAndSound',
-          '🆙💬 Texte et TTS': 'ttsAndText',
-          '💬 TTS seulement': 'ttsOnly',
-          '🆙 Texte seulement': 'textOnly',
-          '❌ Désactivé': 'disabled',
-        },
-        ja: {
-          '🆙🔊 テキストと音声': 'textAndSound',
-          '🆙💬 テキストとTTS': 'ttsAndText',
-          '💬 TTSのみ': 'ttsOnly',
-          '🆙 テキストのみ': 'textOnly',
-          '❌ 無効': 'disabled',
-        },
-        cn: {
-          '🆙🔊 文字显示与提示音': 'textAndSound',
-          '🆙💬 文字显示与TTS': 'ttsAndText',
-          '💬 只使用TTS': 'ttsOnly',
-          '🆙 只使用文字显示': 'textOnly',
-          '❌ 禁用': 'disabled',
-        },
-        ko: {
-          '🆙🔊 텍스트와 소리': 'textAndSound',
-          '🆙💬 텍스트와 TTS': 'ttsAndText',
-          '💬 TTS만': 'ttsOnly',
-          '🆙 텍스트만': 'textOnly',
-          '❌ 비활성화': 'disabled',
-        },
-      },
-      default: 'textAndSound',
-      setterFunc: setOptionsFromOutputValue,
+    type: 'checkbox',
+    debugOnly: true
+  }, {
+    id: 'DefaultAlertOutput',
+    name: {
+      en: 'Default alert output',
+      de: 'Standard Alert Ausgabe',
+      fr: 'Alerte par défaut',
+      ja: '警告情報出力既定値',
+      cn: '默认警报提示信息输出方式',
+      ko: '기본 알람 출력 방식'
     },
-    {
-      id: 'AlertsLanguage',
-      name: {
-        en: 'Alerts language',
-        de: 'Alert Sprache',
-        fr: 'Langue des alertes',
-        ja: '警告情報の言語',
-        cn: '警报提示文字的语言',
-        ko: '알람 언어',
+    type: 'select',
+    options: {
+      en: {
+        '🆙🔊 Text and Sound': 'textAndSound',
+        '🆙💬 Text and TTS': 'ttsAndText',
+        '💬 TTS Only': 'ttsOnly',
+        '🆙 Text Only': 'textOnly',
+        '❌ Disabled': 'disabled'
       },
-      type: 'select',
-      options: {
-        en: {
-          'Use Display Language': 'default',
-          'English (en)': 'en',
-          'Chinese (cn)': 'cn',
-          'German (de)': 'de',
-          'French (fr)': 'fr',
-          'Japanese (ja)': 'ja',
-          'Korean (ko)': 'ko',
-        },
-        fr: {
-          'Utiliser la langue d\'affichage': 'default',
-          'Anglais (en)': 'en',
-          'Chinois (cn)': 'cn',
-          'Allemand (de)': 'de',
-          'Français (fr)': 'fr',
-          'Japonais (ja)': 'ja',
-          'Coréen (ko)': 'ko',
-        },
-        ja: {
-          '表示言語既定値': 'default',
-          '英語 (en)': 'en',
-          '中国語 (cn)': 'cn',
-          'ドイツ語 (de)': 'de',
-          'フランス語 (fr)': 'fr',
-          '日本語 (ja)': 'ja',
-          '韓国語 (ko)': 'ko',
-        },
-        cn: {
-          '使用显示语言': 'default',
-          '英语 (en)': 'en',
-          '汉语 (cn)': 'cn',
-          '德语 (de)': 'de',
-          '法语 (fr)': 'fr',
-          '日语 (ja)': 'ja',
-          '韩语 (ko)': 'ko',
-        },
-        ko: {
-          '주 사용 언어 사용': 'default',
-          '영어 (en)': 'en',
-          '중국어 (cn)': 'cn',
-          '독일어 (de)': 'de',
-          '프랑스어 (fr)': 'fr',
-          '일본어 (ja)': 'ja',
-          '한국어 (ko)': 'ko',
-        },
+      de: {
+        '🆙🔊 Text und Ton': 'textAndSound',
+        '🆙💬 Text und TTS': 'ttsAndText',
+        '💬 Nur TTS': 'ttsOnly',
+        '🆙 Nur Text': 'textOnly',
+        '❌ Deaktiviert': 'disabled'
       },
-      default: 'default',
-      debug: true,
-      setterFunc: (options, value) => {
-        if (value === 'default')
-          return;
-        options['AlertsLanguage'] = value;
+      fr: {
+        '🆙🔊 Texte et son': 'textAndSound',
+        '🆙💬 Texte et TTS': 'ttsAndText',
+        '💬 TTS seulement': 'ttsOnly',
+        '🆙 Texte seulement': 'textOnly',
+        '❌ Désactivé': 'disabled'
       },
+      ja: {
+        '🆙🔊 テキストと音声': 'textAndSound',
+        '🆙💬 テキストとTTS': 'ttsAndText',
+        '💬 TTSのみ': 'ttsOnly',
+        '🆙 テキストのみ': 'textOnly',
+        '❌ 無効': 'disabled'
+      },
+      cn: {
+        '🆙🔊 文字显示与提示音': 'textAndSound',
+        '🆙💬 文字显示与TTS': 'ttsAndText',
+        '💬 只使用TTS': 'ttsOnly',
+        '🆙 只使用文字显示': 'textOnly',
+        '❌ 禁用': 'disabled'
+      },
+      ko: {
+        '🆙🔊 텍스트와 소리': 'textAndSound',
+        '🆙💬 텍스트와 TTS': 'ttsAndText',
+        '💬 TTS만': 'ttsOnly',
+        '🆙 텍스트만': 'textOnly',
+        '❌ 비활성화': 'disabled'
+      }
     },
-    {
-      id: 'TimelineLanguage',
-      name: {
-        en: 'Timeline language',
-        de: 'Timeline Sprache',
-        fr: 'Langue de la timeline',
-        ja: 'タイムラインの言語',
-        cn: '时间轴文本的语言',
-        ko: '타임라인 언어',
-      },
-      type: 'select',
-      options: {
-        en: {
-          'Use FFXIV Plugin Language': 'default',
-          'English (en)': 'en',
-          'Chinese (cn)': 'cn',
-          'German (de)': 'de',
-          'French (fr)': 'fr',
-          'Japanese (ja)': 'ja',
-          'Korean (ko)': 'ko',
-        },
-        de: {
-          'Benutze FFXIV Plugin Sprache': 'default',
-          'Englisch (en)': 'en',
-          'Chinesisch (cn)': 'cn',
-          'Deutsch (de)': 'de',
-          'Französisch (fr)': 'fr',
-          'Japanisch (ja)': 'ja',
-          'Koreanisch (ko)': 'ko',
-        },
-        fr: {
-          'Utiliser la langue du Plugin FFXIV': 'default',
-          'Anglais (en)': 'en',
-          'Chinois (cn)': 'cn',
-          'Allemand (de)': 'de',
-          'Français (fr)': 'fr',
-          'Japonais (ja)': 'ja',
-          'Coréen (ko)': 'ko',
-        },
-        ja: {
-          'FFXIV Pluginの言語設定': 'default',
-          '英語 (en)': 'en',
-          '中国語 (cn)': 'cn',
-          'ドイツ語 (de)': 'de',
-          'フランス語 (fr)': 'fr',
-          '日本語 (ja)': 'ja',
-          '韓国語 (ko)': 'ko',
-        },
-        cn: {
-          '使用最终幻想XIV解析插件设置的语言': 'default',
-          '英语 (en)': 'en',
-          '汉语 (cn)': 'cn',
-          '德语 (de)': 'de',
-          '法语 (fr)': 'fr',
-          '日语 (ja)': 'ja',
-          '韩语 (ko)': 'ko',
-        },
-        ko: {
-          'FFXIV Plugin 언어 사용': 'default',
-          '영어 (en)': 'en',
-          '중국어 (cn)': 'cn',
-          '독일어 (de)': 'de',
-          '프랑스어 (fr)': 'fr',
-          '일본어 (ja)': 'ja',
-          '한국어 (ko)': 'ko',
-        },
-      },
-      default: 'default',
-      debug: true,
-      setterFunc: (options, value) => {
-        if (value === 'default')
-          return;
-        options['TimelineLanguage'] = value;
-      },
+    default: 'textAndSound',
+    setterFunc: setOptionsFromOutputValue
+  }, {
+    id: 'AlertsLanguage',
+    name: {
+      en: 'Alerts language',
+      de: 'Alert Sprache',
+      fr: 'Langue des alertes',
+      ja: '警告情報の言語',
+      cn: '警报提示文字的语言',
+      ko: '알람 언어'
     },
-    {
-      id: 'Skin',
-      name: {
-        en: 'Raidboss Skin',
-        de: 'Raidboss Skin',
-        fr: 'Raidboss Skin',
-        ja: 'Raidbossのスキン',
-        cn: 'Raidboss皮肤',
-        ko: 'Raidboss 스킨',
+    type: 'select',
+    options: {
+      en: {
+        'Use Display Language': 'default',
+        'English (en)': 'en',
+        'Chinese (cn)': 'cn',
+        'German (de)': 'de',
+        'French (fr)': 'fr',
+        'Japanese (ja)': 'ja',
+        'Korean (ko)': 'ko'
       },
-      type: 'select',
-      options: {
-        en: {
-          'Default': 'default',
-          'lippe': 'lippe',
-        },
-        de: {
-          'Default': 'default',
-          'lippe': 'lippe',
-        },
-        fr: {
-          'Défaut': 'default',
-          'lippe': 'lippe',
-        },
-        ja: {
-          '初期設定': 'default',
-          'lippe': 'lippe',
-        },
-        cn: {
-          '默认': 'default',
-          'lippe': 'lippe',
-        },
-        ko: {
-          '기본': 'default',
-          'lippe': 'lippe',
-        },
+      fr: {
+        'Utiliser la langue d\'affichage': 'default',
+        'Anglais (en)': 'en',
+        'Chinois (cn)': 'cn',
+        'Allemand (de)': 'de',
+        'Français (fr)': 'fr',
+        'Japonais (ja)': 'ja',
+        'Coréen (ko)': 'ko'
       },
-      default: 'default',
+      ja: {
+        '表示言語既定値': 'default',
+        '英語 (en)': 'en',
+        '中国語 (cn)': 'cn',
+        'ドイツ語 (de)': 'de',
+        'フランス語 (fr)': 'fr',
+        '日本語 (ja)': 'ja',
+        '韓国語 (ko)': 'ko'
+      },
+      cn: {
+        '使用显示语言': 'default',
+        '英语 (en)': 'en',
+        '汉语 (cn)': 'cn',
+        '德语 (de)': 'de',
+        '法语 (fr)': 'fr',
+        '日语 (ja)': 'ja',
+        '韩语 (ko)': 'ko'
+      },
+      ko: {
+        '주 사용 언어 사용': 'default',
+        '영어 (en)': 'en',
+        '중국어 (cn)': 'cn',
+        '독일어 (de)': 'de',
+        '프랑스어 (fr)': 'fr',
+        '일본어 (ja)': 'ja',
+        '한국어 (ko)': 'ko'
+      }
     },
-    {
-      id: 'TimelineEnabled',
-      name: {
-        en: 'Timeline enabled',
-        de: 'Timeline aktiviert',
-        fr: 'Timeline activée',
-        ja: 'タイムラインを有効にする',
-        cn: '启用时间轴',
-        ko: '타임라인 활성화',
-      },
-      type: 'checkbox',
-      default: true,
+    default: 'default',
+    debug: true,
+    setterFunc: (options, value) => {
+      if (value === 'default') return;
+      options['AlertsLanguage'] = value;
+    }
+  }, {
+    id: 'TimelineLanguage',
+    name: {
+      en: 'Timeline language',
+      de: 'Timeline Sprache',
+      fr: 'Langue de la timeline',
+      ja: 'タイムラインの言語',
+      cn: '时间轴文本的语言',
+      ko: '타임라인 언어'
     },
-    {
-      id: 'AlertsEnabled',
-      name: {
-        en: 'Alerts enabled',
-        de: 'Alerts aktiviert',
-        fr: 'Alertes activées',
-        ja: '警告情報を有効にする',
-        cn: '启用提示文本显示',
-        ko: '알람 활성화',
+    type: 'select',
+    options: {
+      en: {
+        'Use FFXIV Plugin Language': 'default',
+        'English (en)': 'en',
+        'Chinese (cn)': 'cn',
+        'German (de)': 'de',
+        'French (fr)': 'fr',
+        'Japanese (ja)': 'ja',
+        'Korean (ko)': 'ko'
       },
-      type: 'checkbox',
-      default: true,
-    },
-    {
-      id: 'ShowTimerBarsAtSeconds',
-      name: {
-        en: 'Timer bar show window (seconds)',
-        de: 'Timer-Bar Anzeigedauer (in Sekunden)',
-        fr: 'Fenêtre d\'affichage de la barre de temps (secondes)',
-        ja: 'タイムバーに時間表示 (秒)',
-        cn: '计时条显示时长 (秒)',
-        ko: '타임라인을 표시할 기준 시간 (초 이하)',
+      de: {
+        'Benutze FFXIV Plugin Sprache': 'default',
+        'Englisch (en)': 'en',
+        'Chinesisch (cn)': 'cn',
+        'Deutsch (de)': 'de',
+        'Französisch (fr)': 'fr',
+        'Japanisch (ja)': 'ja',
+        'Koreanisch (ko)': 'ko'
       },
-      type: 'float',
-      default: 30,
-    },
-    {
-      id: 'KeepExpiredTimerBarsForSeconds',
-      name: {
-        en: 'Keep expired timer bar (seconds)',
-        de: 'Behalte abgelaufene Timer-Bar (in Sekunden)',
-        fr: 'Garder la barre de temps expirée (secondes)',
-        ja: '終了したタイムバーが消えるまでの待ち時間 (秒)',
-        cn: '已失效的计时条的淡出时间 (秒)',
-        ko: '만료된 타임라인이 사라지기까지의 시간 (초)',
+      fr: {
+        'Utiliser la langue du Plugin FFXIV': 'default',
+        'Anglais (en)': 'en',
+        'Chinois (cn)': 'cn',
+        'Allemand (de)': 'de',
+        'Français (fr)': 'fr',
+        'Japonais (ja)': 'ja',
+        'Coréen (ko)': 'ko'
       },
-      type: 'float',
-      default: 0.7,
-    },
-    {
-      id: 'BarExpiresSoonSeconds',
-      name: {
-        en: 'Time to recolor timer as expiring soon (seconds)',
-        de: 'Zeit bis ein bald auslaufender Timer umgefärbt wird (in Sekunden)',
-        fr: 'Recolorisation de la barre de temps avant expiration (secondes)',
-        ja: 'タイムバーが終了前に再度色付けの残り時間 (秒)',
-        cn: '倒计时小于该值时当前计时条变色 (秒)',
-        ko: '타임라인의 색상을 바꿀 기준 시간 (초 이하)',
+      ja: {
+        'FFXIV Pluginの言語設定': 'default',
+        '英語 (en)': 'en',
+        '中国語 (cn)': 'cn',
+        'ドイツ語 (de)': 'de',
+        'フランス語 (fr)': 'fr',
+        '日本語 (ja)': 'ja',
+        '韓国語 (ko)': 'ko'
       },
-      type: 'integer',
-      default: 6,
-    },
-    {
-      id: 'MaxNumberOfTimerBars',
-      name: {
-        en: 'Max number of timer bars',
-        de: 'Max Anzahl an Timer-Bars',
-        fr: 'Nombre max de barres de temps',
-        ja: 'タイムバーの最大数',
-        cn: '计时条最大数量',
-        ko: '표시할 타임라인의 최대 개수',
+      cn: {
+        '使用最终幻想XIV解析插件设置的语言': 'default',
+        '英语 (en)': 'en',
+        '汉语 (cn)': 'cn',
+        '德语 (de)': 'de',
+        '法语 (fr)': 'fr',
+        '日语 (ja)': 'ja',
+        '韩语 (ko)': 'ko'
       },
-      type: 'integer',
-      default: 6,
+      ko: {
+        'FFXIV Plugin 언어 사용': 'default',
+        '영어 (en)': 'en',
+        '중국어 (cn)': 'cn',
+        '독일어 (de)': 'de',
+        '프랑스어 (fr)': 'fr',
+        '일본어 (ja)': 'ja',
+        '한국어 (ko)': 'ko'
+      }
     },
-    {
-      id: 'DisplayAlarmTextForSeconds',
-      name: {
-        en: 'Alarm text display duration (seconds)',
-        de: 'Alarm-Text Anzeigedauer (in Sekunden)',
-        fr: 'Durée d\'affichage du texte d\'alarme (secondes)',
-        ja: '警報テキスト表示時間の長さ (秒)',
-        cn: '警报文字显示持续时间 (秒)',
-        ko: '경고 텍스트를 표시할 시간 (초)',
+    default: 'default',
+    debug: true,
+    setterFunc: (options, value) => {
+      if (value === 'default') return;
+      options['TimelineLanguage'] = value;
+    }
+  }, {
+    id: 'Skin',
+    name: {
+      en: 'Raidboss Skin',
+      de: 'Raidboss Skin',
+      fr: 'Raidboss Skin',
+      ja: 'Raidbossのスキン',
+      cn: 'Raidboss皮肤',
+      ko: 'Raidboss 스킨'
+    },
+    type: 'select',
+    options: {
+      en: {
+        'Default': 'default',
+        'lippe': 'lippe'
       },
-      type: 'float',
-      default: 3,
-    },
-    {
-      id: 'DisplayAlertTextForSeconds',
-      name: {
-        en: 'Alert text display duration (seconds)',
-        de: 'Alert-Text Anzeigedauer (in Sekunden)',
-        fr: 'Durée d\'affichage du texte d\'alerte (secondes)',
-        ja: '警告テキスト表示時間の長さ (秒)',
-        cn: '警告文字显示持续时间 (秒)',
-        ko: '주의 텍스트를 표시할 시간 (초)',
+      de: {
+        'Default': 'default',
+        'lippe': 'lippe'
       },
-      type: 'float',
-      default: 3,
-    },
-    {
-      id: 'DisplayInfoTextForSeconds',
-      name: {
-        en: 'Info text display duration (seconds)',
-        de: 'Info-Text Anzeigedauer (in Sekunden)',
-        fr: 'Durée d\'affichage du texte d\'information (secondes)',
-        ja: '情報テキスト表示時間の長さ (秒)',
-        cn: '信息文字显示持续时间 (秒)',
-        ko: '안내 텍스트를 표시할 시간 (초)',
+      fr: {
+        'Défaut': 'default',
+        'lippe': 'lippe'
       },
-      type: 'float',
-      default: 3,
-    },
-    {
-      id: 'AlarmSoundVolume',
-      name: {
-        en: 'Alarm sound volume (0-1)',
-        de: 'Alarm Lautstärke (0-1)',
-        fr: 'Volume de l\'alarme (0-1)',
-        ja: '警報音声の音量 (0-1)',
-        cn: '警报提示音的音量 (0-1)',
-        ko: '경고 소리 크기 (0-1)',
+      ja: {
+        '初期設定': 'default',
+        'lippe': 'lippe'
       },
-      type: 'float',
-      default: 1,
-    },
-    {
-      id: 'AlertSoundVolume',
-      name: {
-        en: 'Alert sound volume (0-1)',
-        de: 'Alert Lautstärke (0-1)',
-        fr: 'Volume de l\'alerte (0-1)',
-        ja: '警告音声の音量 (0-1)',
-        cn: '警告提示音的音量 (0-1)',
-        ko: '주의 소리 크기 (0-1)',
+      cn: {
+        '默认': 'default',
+        'lippe': 'lippe'
       },
-      type: 'float',
-      default: 1,
+      ko: {
+        '기본': 'default',
+        'lippe': 'lippe'
+      }
     },
-    {
-      id: 'InfoSoundVolume',
-      name: {
-        en: 'Info sound volume (0-1)',
-        de: 'Info Lautstärke (0-1)',
-        fr: 'Volume de l\'info (0-1)',
-        ja: '情報音声の音量 (0-1)',
-        cn: '信息提示音的音量 (0-1)',
-        ko: '안내 소리 크기 (0-1)',
-      },
-      type: 'float',
-      default: 1,
+    default: 'default'
+  }, {
+    id: 'TimelineEnabled',
+    name: {
+      en: 'Timeline enabled',
+      de: 'Timeline aktiviert',
+      fr: 'Timeline activée',
+      ja: 'タイムラインを有効にする',
+      cn: '启用时间轴',
+      ko: '타임라인 활성화'
     },
-    {
-      id: 'LongSoundVolume',
-      name: {
-        en: 'Long sound volume (0-1)',
-        de: 'Langer Ton Lautstärke (0-1)',
-        fr: 'Volume du son long (0-1)',
-        ja: '長い音声の音量 (0-1)',
-        cn: '长提示音的音量 (0-1)',
-        ko: '긴 소리 크기 (0-1)',
-      },
-      type: 'float',
-      default: 1,
+    type: 'checkbox',
+    default: true
+  }, {
+    id: 'AlertsEnabled',
+    name: {
+      en: 'Alerts enabled',
+      de: 'Alerts aktiviert',
+      fr: 'Alertes activées',
+      ja: '警告情報を有効にする',
+      cn: '启用提示文本显示',
+      ko: '알람 활성화'
     },
-    {
-      id: 'PullSoundVolume',
-      name: {
-        en: 'Pull sound volume (0-1)',
-        de: 'Pull Lautstärke (0-1)',
-        fr: 'Volume du son de pull (0-1)',
-        ja: 'タゲ取る効果音の音量 (0-1)',
-        cn: '开怪提示音的音量 (0-1)',
-        ko: '풀링 소리 크기 (0-1)',
-      },
-      type: 'float',
-      default: 1,
+    type: 'checkbox',
+    default: true
+  }, {
+    id: 'ShowTimerBarsAtSeconds',
+    name: {
+      en: 'Timer bar show window (seconds)',
+      de: 'Timer-Bar Anzeigedauer (in Sekunden)',
+      fr: 'Fenêtre d\'affichage de la barre de temps (secondes)',
+      ja: 'タイムバーに時間表示 (秒)',
+      cn: '计时条显示时长 (秒)',
+      ko: '타임라인을 표시할 기준 시간 (초 이하)'
     },
-    {
-      id: 'cactbotWormholeStrat',
-      // TODO: maybe need some way to group these kinds of
-      // options if we end up having a lot?
-      name: {
-        en: 'Alex Ultimate: enable cactbot Wormhole strat',
-        de: 'Alex Ultimate: aktiviere cactbot Wormhole Strategie',
-        fr: 'Alex fatal : activer cactbot pour Wormhole strat',
-        ja: '絶アレキサンダー討滅戦：cactbot「次元断絶のマーチ」ギミック',
-        cn: '亚历山大绝境战：cactbot灵泉辅助功能',
-        ko: '절 알렉: cactbot 웜홀 공략방식 활성화',
-      },
-      type: 'checkbox',
-      default: false,
+    type: 'float',
+    default: 30
+  }, {
+    id: 'KeepExpiredTimerBarsForSeconds',
+    name: {
+      en: 'Keep expired timer bar (seconds)',
+      de: 'Behalte abgelaufene Timer-Bar (in Sekunden)',
+      fr: 'Garder la barre de temps expirée (secondes)',
+      ja: '終了したタイムバーが消えるまでの待ち時間 (秒)',
+      cn: '已失效的计时条的淡出时间 (秒)',
+      ko: '만료된 타임라인이 사라지기까지의 시간 (초)'
     },
-    {
-      id: 'cactbote8sUptimeKnockbackStrat',
-      name: {
-        en: 'e8s: enable cactbot Uptime Knockback strat',
-        de: 'e8s: aktiviere cactbot Uptime Knockback Strategie',
-        fr: 'e8s : activer cactbot pour Uptime Knockback strat',
-        ja: 'エデン零式共鳴編４層：cactbot「ヘヴンリーストライク (ノックバック)」ギミック',
-        cn: 'E8S: 启用cactbot的击退提示功能',
-        ko: '공명 영웅 4층: cactbot 정확한 타이밍 넉백방지 공략 활성화',
-      },
-      type: 'checkbox',
-      default: false,
+    type: 'float',
+    default: 0.7
+  }, {
+    id: 'BarExpiresSoonSeconds',
+    name: {
+      en: 'Time to recolor timer as expiring soon (seconds)',
+      de: 'Zeit bis ein bald auslaufender Timer umgefärbt wird (in Sekunden)',
+      fr: 'Recolorisation de la barre de temps avant expiration (secondes)',
+      ja: 'タイムバーが終了前に再度色付けの残り時間 (秒)',
+      cn: '倒计时小于该值时当前计时条变色 (秒)',
+      ko: '타임라인의 색상을 바꿀 기준 시간 (초 이하)'
     },
-  ],
+    type: 'integer',
+    default: 6
+  }, {
+    id: 'MaxNumberOfTimerBars',
+    name: {
+      en: 'Max number of timer bars',
+      de: 'Max Anzahl an Timer-Bars',
+      fr: 'Nombre max de barres de temps',
+      ja: 'タイムバーの最大数',
+      cn: '计时条最大数量',
+      ko: '표시할 타임라인의 최대 개수'
+    },
+    type: 'integer',
+    default: 6
+  }, {
+    id: 'DisplayAlarmTextForSeconds',
+    name: {
+      en: 'Alarm text display duration (seconds)',
+      de: 'Alarm-Text Anzeigedauer (in Sekunden)',
+      fr: 'Durée d\'affichage du texte d\'alarme (secondes)',
+      ja: '警報テキスト表示時間の長さ (秒)',
+      cn: '警报文字显示持续时间 (秒)',
+      ko: '경고 텍스트를 표시할 시간 (초)'
+    },
+    type: 'float',
+    default: 3
+  }, {
+    id: 'DisplayAlertTextForSeconds',
+    name: {
+      en: 'Alert text display duration (seconds)',
+      de: 'Alert-Text Anzeigedauer (in Sekunden)',
+      fr: 'Durée d\'affichage du texte d\'alerte (secondes)',
+      ja: '警告テキスト表示時間の長さ (秒)',
+      cn: '警告文字显示持续时间 (秒)',
+      ko: '주의 텍스트를 표시할 시간 (초)'
+    },
+    type: 'float',
+    default: 3
+  }, {
+    id: 'DisplayInfoTextForSeconds',
+    name: {
+      en: 'Info text display duration (seconds)',
+      de: 'Info-Text Anzeigedauer (in Sekunden)',
+      fr: 'Durée d\'affichage du texte d\'information (secondes)',
+      ja: '情報テキスト表示時間の長さ (秒)',
+      cn: '信息文字显示持续时间 (秒)',
+      ko: '안내 텍스트를 표시할 시간 (초)'
+    },
+    type: 'float',
+    default: 3
+  }, {
+    id: 'AlarmSoundVolume',
+    name: {
+      en: 'Alarm sound volume (0-1)',
+      de: 'Alarm Lautstärke (0-1)',
+      fr: 'Volume de l\'alarme (0-1)',
+      ja: '警報音声の音量 (0-1)',
+      cn: '警报提示音的音量 (0-1)',
+      ko: '경고 소리 크기 (0-1)'
+    },
+    type: 'float',
+    default: 1
+  }, {
+    id: 'AlertSoundVolume',
+    name: {
+      en: 'Alert sound volume (0-1)',
+      de: 'Alert Lautstärke (0-1)',
+      fr: 'Volume de l\'alerte (0-1)',
+      ja: '警告音声の音量 (0-1)',
+      cn: '警告提示音的音量 (0-1)',
+      ko: '주의 소리 크기 (0-1)'
+    },
+    type: 'float',
+    default: 1
+  }, {
+    id: 'InfoSoundVolume',
+    name: {
+      en: 'Info sound volume (0-1)',
+      de: 'Info Lautstärke (0-1)',
+      fr: 'Volume de l\'info (0-1)',
+      ja: '情報音声の音量 (0-1)',
+      cn: '信息提示音的音量 (0-1)',
+      ko: '안내 소리 크기 (0-1)'
+    },
+    type: 'float',
+    default: 1
+  }, {
+    id: 'LongSoundVolume',
+    name: {
+      en: 'Long sound volume (0-1)',
+      de: 'Langer Ton Lautstärke (0-1)',
+      fr: 'Volume du son long (0-1)',
+      ja: '長い音声の音量 (0-1)',
+      cn: '长提示音的音量 (0-1)',
+      ko: '긴 소리 크기 (0-1)'
+    },
+    type: 'float',
+    default: 1
+  }, {
+    id: 'PullSoundVolume',
+    name: {
+      en: 'Pull sound volume (0-1)',
+      de: 'Pull Lautstärke (0-1)',
+      fr: 'Volume du son de pull (0-1)',
+      ja: 'タゲ取る効果音の音量 (0-1)',
+      cn: '开怪提示音的音量 (0-1)',
+      ko: '풀링 소리 크기 (0-1)'
+    },
+    type: 'float',
+    default: 1
+  }, {
+    id: 'cactbotWormholeStrat',
+    // TODO: maybe need some way to group these kinds of
+    // options if we end up having a lot?
+    name: {
+      en: 'Alex Ultimate: enable cactbot Wormhole strat',
+      de: 'Alex Ultimate: aktiviere cactbot Wormhole Strategie',
+      fr: 'Alex fatal : activer cactbot pour Wormhole strat',
+      ja: '絶アレキサンダー討滅戦：cactbot「次元断絶のマーチ」ギミック',
+      cn: '亚历山大绝境战：cactbot灵泉辅助功能',
+      ko: '절 알렉: cactbot 웜홀 공략방식 활성화'
+    },
+    type: 'checkbox',
+    default: false
+  }, {
+    id: 'cactbote8sUptimeKnockbackStrat',
+    name: {
+      en: 'e8s: enable cactbot Uptime Knockback strat',
+      de: 'e8s: aktiviere cactbot Uptime Knockback Strategie',
+      fr: 'e8s : activer cactbot pour Uptime Knockback strat',
+      ja: 'エデン零式共鳴編４層：cactbot「ヘヴンリーストライク (ノックバック)」ギミック',
+      cn: 'E8S: 启用cactbot的击退提示功能',
+      ko: '공명 영웅 4층: cactbot 정확한 타이밍 넉백방지 공략 활성화'
+    },
+    type: 'checkbox',
+    default: false
+  }]
 };
-
 user_config/* default.registerOptions */.Z.registerOptions('raidboss', templateOptions, userFileHandler);
-
 ;// CONCATENATED MODULE: ./resources/timerbar.ts
 class TimerBar extends HTMLElement {
     // This would be used with window.customElements.
@@ -13251,7 +13135,7 @@ class BrowserTTSEngine {
 
 
 // @TODO: Swap the order of these arguments, make playerName optional instead
-const addPlayerChangedOverrideListener = (playerName, func) => {
+const addPlayerChangedOverrideListener = (func, playerName) => {
     if (!func)
         return;
     let lastPlayerChangedEvent = null;
@@ -13433,7 +13317,9 @@ const addRemotePlayerSelectUI = (lang) => {
 
 // EXTERNAL MODULE: ./resources/zone_id.ts
 var zone_id = __webpack_require__(438);
-;// CONCATENATED MODULE: ./ui/raidboss/popup-text.js
+// EXTERNAL MODULE: ./resources/not_reached.ts
+var not_reached = __webpack_require__(500);
+;// CONCATENATED MODULE: ./ui/raidboss/popup-text.ts
 
 
 
@@ -13443,78 +13329,116 @@ var zone_id = __webpack_require__(438);
 
 
 
-
+const isRaidbossLooseTimelineTrigger = (trigger) => {
+    return 'isTimelineTrigger' in trigger;
+};
+const isNetRegexTrigger = (trigger) => {
+    if (trigger && !isRaidbossLooseTimelineTrigger(trigger))
+        return 'netRegex' in trigger;
+    return false;
+};
+const isRegexTrigger = (trigger) => {
+    if (trigger && !isRaidbossLooseTimelineTrigger(trigger))
+        return 'regex' in trigger;
+    return false;
+};
 // There should be (at most) six lines of instructions.
 const raidbossInstructions = {
-  en: [
-    'Instructions as follows:',
-    'This is debug text for resizing.',
-    'It goes away when you lock the overlay',
-    'along with the blue background.',
-    'Timelines and triggers will show up in supported zones.',
-    'Test raidboss with a /countdown in Summerford Farms.',
-  ],
-  de: [
-    'Anweisungen wie folgt:',
-    'Dies ist ein Debug-Text zur Größenänderung.',
-    'Er verschwindet, wenn du das Overlay sperrst,',
-    'zusammen mit dem blauen Hintergrund.',
-    'Timeline und Trigger werden in den unterstützten Zonen angezeigt.',
-    'Testen Sie Raidboss mit einem /countdown in Sommerfurt-Höfe.',
-  ],
-  ja: [
-    '操作手順：',
-    'デバッグ用のテキストです。',
-    '青色のオーバーレイを',
-    'ロックすれば消える。',
-    'サポートするゾーンにタイムラインとトリガーテキストが表示できる。',
-    'サマーフォード庄に/countdownコマンドを実行し、raidbossをテストできる。',
-  ],
-  cn: [
-    '请按以下步骤操作：',
-    '这是供用户调整悬浮窗大小的调试用文本',
-    '当你锁定此蓝色背景的悬浮窗',
-    '该文本即会消失。',
-    '在支持的区域中会自动加载时间轴和触发器。',
-    '可在盛夏农庄使用/countdown命令测试该raidboss模块。',
-  ],
-  ko: [
-    '<조작 설명>',
-    '크기 조정을 위한 디버그 창입니다',
-    '파란 배경과 이 텍스트는',
-    '오버레이를 위치잠금하면 사라집니다',
-    '지원되는 구역에서 타임라인과 트리거가 표시됩니다',
-    '여름여울 농장에서 초읽기를 실행하여 테스트 해볼 수 있습니다',
-  ],
+    en: [
+        'Instructions as follows:',
+        'This is debug text for resizing.',
+        'It goes away when you lock the overlay',
+        'along with the blue background.',
+        'Timelines and triggers will show up in supported zones.',
+        'Test raidboss with a /countdown in Summerford Farms.',
+    ],
+    de: [
+        'Anweisungen wie folgt:',
+        'Dies ist ein Debug-Text zur Größenänderung.',
+        'Er verschwindet, wenn du das Overlay sperrst,',
+        'zusammen mit dem blauen Hintergrund.',
+        'Timeline und Trigger werden in den unterstützten Zonen angezeigt.',
+        'Testen Sie Raidboss mit einem /countdown in Sommerfurt-Höfe.',
+    ],
+    fr: [
+        'Instructions :',
+        'Ceci est un texte de test pour redimensionner.',
+        'Il disparaitra \(ainsi que le fond bleu\) quand',
+        'l\'overlay sera bloqué.',
+        'Les timelines et triggers seront affichés dans les zones supportées.',
+        'Testez raidboss avec un /countdown aux Vergers d\'Estival',
+    ],
+    ja: [
+        '操作手順：',
+        'デバッグ用のテキストです。',
+        '青色のオーバーレイを',
+        'ロックすれば消える。',
+        'サポートするゾーンにタイムラインとトリガーテキストが表示できる。',
+        'サマーフォード庄に/countdownコマンドを実行し、raidbossをテストできる。',
+    ],
+    cn: [
+        '请按以下步骤操作：',
+        '这是供用户调整悬浮窗大小的调试用文本',
+        '当你锁定此蓝色背景的悬浮窗',
+        '该文本即会消失。',
+        '在支持的区域中会自动加载时间轴和触发器。',
+        '可在盛夏农庄使用/countdown命令测试该raidboss模块。',
+    ],
+    ko: [
+        '<조작 설명>',
+        '크기 조정을 위한 디버그 창입니다',
+        '파란 배경과 이 텍스트는',
+        '오버레이를 위치잠금하면 사라집니다',
+        '지원되는 구역에서 타임라인과 트리거가 표시됩니다',
+        '여름여울 농장에서 초읽기를 실행하여 테스트 해볼 수 있습니다',
+    ],
 };
-
 // Because apparently people don't understand uppercase greek letters,
 // add a special case to not uppercase them.
-function triggerUpperCase(str) {
-  if (!str)
-    return str;
-  if (typeof str === 'number')
-    return str;
-  return str.replace(/[^αβγδ]/g, (x) => x.toUpperCase());
-}
-
-function onTriggerException(trigger, e) {
-  // When a fight ends and there are open promises, from delaySeconds or promise itself,
-  // all promises will be rejected.  In this case there is no error; simply return without logging.
-  if (!e)
-    return;
-
-  let str = 'Error in trigger: ' + (trigger.id ? trigger.id : '[unknown trigger id]');
-
-  if (trigger.filename)
-    str += ' (' + trigger.filename + ')';
-  console.error(str);
-
-  const lines = e.stack.split('\n');
-  for (let i = 0; i < lines.length; ++i)
-    console.error(lines[i]);
-}
-
+const triggerUpperCase = (str) => {
+    return str.replace(/[^αβγδ]/g, (x) => x.toUpperCase());
+};
+// Disable no-explicit-any due to catch clauses requiring any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const onTriggerException = (trigger, e) => {
+    var _a, _b;
+    // When a fight ends and there are open promises, from delaySeconds or promise itself,
+    // all promises will be rejected.  In this case there is no error; simply return without logging.
+    if (!e)
+        return;
+    let str = 'Error in trigger: ' + (trigger.id ? trigger.id : '[unknown trigger id]');
+    if (trigger.filename)
+        str += ' (' + trigger.filename + ')';
+    console.error(str);
+    if (e instanceof Error) {
+        const lines = (_b = (_a = e.stack) === null || _a === void 0 ? void 0 : _a.split('\n')) !== null && _b !== void 0 ? _b : [];
+        for (let i = 0; i < lines.length; ++i)
+            console.error(lines[i]);
+    }
+};
+const sounds = ['Alarm', 'Alert', 'Info', 'Long', 'Pull'];
+const soundStrs = sounds;
+const texts = (/* unused pure expression or super */ null && (['info', 'alert', 'alarm']));
+const textMap = {
+    info: {
+        text: 'infoText',
+        upperText: 'InfoText',
+        upperSound: 'InfoSound',
+        upperSoundVolume: 'InfoSoundVolume',
+    },
+    alert: {
+        text: 'alertText',
+        upperText: 'AlertText',
+        upperSound: 'AlertSound',
+        upperSoundVolume: 'AlertSoundVolume',
+    },
+    alarm: {
+        text: 'alarmText',
+        upperText: 'AlarmText',
+        upperSound: 'AlarmSound',
+        upperSoundVolume: 'AlarmSoundVolume',
+    },
+};
 // Helper for handling trigger overrides.
 //
 // asList will return a list of triggers in the same order as append was called, except:
@@ -13525,1005 +13449,1030 @@ function onTriggerException(trigger, e) {
 // JavaScript dictionaries are *almost* ordered automatically as we would want,
 // but want to handle missing ids and integer ids (you shouldn't, but just in case).
 class OrderedTriggerList {
-  constructor() {
-    this.idToIndex = {};
-    this.triggers = [];
-  }
-
-  push(trigger) {
-    if (trigger.id && trigger.id in this.idToIndex) {
-      const idx = this.idToIndex[trigger.id];
-
-      // TODO: be verbose now while this is fresh, but hide this output behind debug flags later.
-      const triggerFile = (trigger) => trigger.filename ? `'${trigger.filename}'` : 'user override';
-      const oldFile = triggerFile(this.triggers[idx]);
-      const newFile = triggerFile(trigger);
-      console.log(`Overriding '${trigger.id}' from ${oldFile} with ${newFile}.`);
-
-      this.triggers[idx] = trigger;
-      return;
+    constructor() {
+        this.triggers = [];
+        this.idToIndex = {};
     }
-
-    // Normal case of a new trigger, with no overriding.
-    if (trigger.id)
-      this.idToIndex[trigger.id] = this.triggers.length;
-    this.triggers.push(trigger);
-  }
-
-  asList() {
-    return this.triggers;
-  }
+    push(trigger) {
+        const idx = trigger.id ? this.idToIndex[trigger.id] : undefined;
+        if (idx && trigger.id) {
+            const oldTrigger = this.triggers[idx];
+            if (oldTrigger === undefined)
+                throw new not_reached/* UnreachableCode */.$();
+            // TODO: be verbose now while this is fresh, but hide this output behind debug flags later.
+            const triggerFile = (trigger) => trigger.filename ? `'${trigger.filename}'` : 'user override';
+            const oldFile = triggerFile(oldTrigger);
+            const newFile = triggerFile(trigger);
+            console.log(`Overriding '${trigger.id}' from ${oldFile} with ${newFile}.`);
+            this.triggers[idx] = trigger;
+            return;
+        }
+        // Normal case of a new trigger, with no overriding.
+        if (trigger.id)
+            this.idToIndex[trigger.id] = this.triggers.length;
+        this.triggers.push(trigger);
+    }
+    asList() {
+        return this.triggers;
+    }
 }
-
+const isObject = (x) => x instanceof Object;
 class TriggerOutputProxy {
-  constructor(trigger, displayLang, perTriggerAutoConfig) {
-    this.trigger = trigger;
-    this.outputStrings = trigger.outputStrings || {};
-    this.responseOutputStrings = {};
-    this.displayLang = displayLang;
-    this.unknownValue = '???';
-    this.overrideStrings = {};
-
-    if (this.trigger.id && perTriggerAutoConfig && perTriggerAutoConfig[trigger.id])
-      this.overrideStrings = perTriggerAutoConfig[trigger.id]['OutputStrings'] || {};
-
-    return new Proxy(this, {
-      // Response output string subtlety:
-      // Take this example response:
-      //
-      //    response: (data, matches, output) => {
-      //      return {
-      //        alarmText: output.someAlarm(),
-      //        outputStrings: { someAlarm: 'string' }, // <- impossible
-      //      };
-      //    },
-      //
-      // Because the object being returned is evaluated all at once, the object
-      // cannot simultaneously define outputStrings and use those outputStrings.
-      // So, instead, responses need to set `output.responseOutputStrings`.
-      // HOWEVER, this also has its own issues!  This value is set for the trigger
-      // (which may have multiple active in flight instances).  This *should* be
-      // ok because we guarantee that response/alarmText/alertText/infoText/tts
-      // are evaluated sequentially for a single trigger before any other trigger
-      // instance evaluates that set of triggers.  Finally, for ease of automating
-      // the config ui, the response should return the exact same set of
-      // outputStrings every time.  Thank you for coming to my TED talk.
-      set(target, property, value) {
-        if (property === 'responseOutputStrings') {
-          target[property] = value;
-          return true;
+    constructor(trigger, displayLang, perTriggerAutoConfig) {
+        var _a;
+        this.trigger = trigger;
+        this.displayLang = displayLang;
+        this.perTriggerAutoConfig = perTriggerAutoConfig;
+        this.overrideStrings = {};
+        this.responseOutputStrings = {};
+        this.unknownValue = '???';
+        this.outputStrings = (_a = trigger.outputStrings) !== null && _a !== void 0 ? _a : {};
+        if (trigger.id && perTriggerAutoConfig) {
+            const config = perTriggerAutoConfig[trigger.id];
+            if (config && config.OutputStrings)
+                this.overrideStrings = config.OutputStrings;
         }
-
-        // Be kind to user triggers that do weird things, and just console error this
-        // instead of throwing an exception.
-        console.error(`Invalid property '${property}' on output.`);
-      },
-
-      get(target, name) {
-        // TODO: add a test that verifies nobody does this.
-        if (name === 'toJSON')
-          return '{}';
-
-        // Because output.func() must exist at the time of trigger eval,
-        // always provide a function even before we know which keys are valid.
-        return (params) => {
-          // Priority: per-trigger config from ui > response > built-in trigger
-          // Ideally, response provides everything and trigger provides nothing,
-          // or there's no response and trigger provides everything.  Having
-          // this well-defined smooths out the collision edge cases.
-          let str = target.getReplacement(target.overrideStrings[name], params, name);
-          if (str === null)
-            str = target.getReplacement(target.responseOutputStrings[name], params, name);
-          if (str === null)
-            str = target.getReplacement(target.outputStrings[name], params, name);
-          if (str === null) {
-            console.error(`Trigger ${target.trigger.id} has missing outputString ${name}.`);
-            return target.unknownValue;
-          }
-          return str;
-        };
-      },
-    });
-  }
-
-  getReplacement(template, params, name) {
-    if (!template)
-      return null;
-    if (typeof template === 'object') {
-      if (this.displayLang in template)
-        template = template[this.displayLang];
-      else
-        template = template['en'];
+        return new Proxy(this, {
+            // Response output string subtlety:
+            // Take this example response:
+            //
+            //    response: (data, matches, output) => {
+            //      return {
+            //        alarmText: output.someAlarm(),
+            //        outputStrings: { someAlarm: 'string' }, // <- impossible
+            //      };
+            //    },
+            //
+            // Because the object being returned is evaluated all at once, the object
+            // cannot simultaneously define outputStrings and use those outputStrings.
+            // So, instead, responses need to set `output.responseOutputStrings`.
+            // HOWEVER, this also has its own issues!  This value is set for the trigger
+            // (which may have multiple active in flight instances).  This *should* be
+            // ok because we guarantee that response/alarmText/alertText/infoText/tts
+            // are evaluated sequentially for a single trigger before any other trigger
+            // instance evaluates that set of triggers.  Finally, for ease of automating
+            // the config ui, the response should return the exact same set of
+            // outputStrings every time.  Thank you for coming to my TED talk.
+            set(target, property, value) {
+                var _a;
+                if (property === 'responseOutputStrings') {
+                    if (isObject(value)) {
+                        target[property] = value;
+                        return true;
+                    }
+                    console.error(`Invalid responseOutputStrings on trigger ${(_a = target.trigger.id) !== null && _a !== void 0 ? _a : 'Unknown'}`);
+                    return false;
+                }
+                // Be kind to user triggers that do weird things, and just console error this
+                // instead of throwing an exception.
+                console.error(`Invalid property '${String(property)}' on output.`);
+                return false;
+            },
+            get(target, name) {
+                // TODO: add a test that verifies nobody does this.
+                if (name === 'toJSON' || typeof name !== 'string')
+                    return '{}';
+                // Because output.func() must exist at the time of trigger eval,
+                // always provide a function even before we know which keys are valid.
+                return (params) => {
+                    var _a, _b;
+                    const id = (_a = target.trigger.id) !== null && _a !== void 0 ? _a : 'Unknown Trigger';
+                    // Priority: per-trigger config from ui > response > built-in trigger
+                    // Ideally, response provides everything and trigger provides nothing,
+                    // or there's no response and trigger provides everything.  Having
+                    // this well-defined smooths out the collision edge cases.
+                    let str = target.getReplacement(target.overrideStrings[name], params, name, id);
+                    if (str === undefined) {
+                        const responseString = target.responseOutputStrings[name];
+                        if (isObject(responseString))
+                            str = target.getReplacement(responseString, params, name, id);
+                    }
+                    if (str === undefined)
+                        str = target.getReplacement(target.outputStrings[name], params, name, id);
+                    if (str === undefined) {
+                        console.error(`Trigger ${(_b = target.trigger.id) !== null && _b !== void 0 ? _b : ''} has missing outputString ${name}.`);
+                        return target.unknownValue;
+                    }
+                    return str;
+                };
+            },
+        });
     }
-    if (typeof template !== 'string') {
-      console.error(`Trigger ${this.trigger.id} has invalid outputString ${name}.`);
-      return null;
-    }
-
-    return template.replace(/\${\s*([^}\s]+)\s*}/g, (fullMatch, key) => {
-      if (params && key in params) {
-        const str = params[key];
-        if (typeof str !== 'string' && typeof str !== 'number') {
-          console.error(`Trigger ${this.trigger.id} has non-string param value ${key}.`);
-          return this.unknownValue;
-        }
-        return str;
-      }
-      console.error(`Trigger ${this.trigger.id} can't replace ${key} in ${template}.`);
-      return this.unknownValue;
-    });
-  }
-}
-
-class PopupText {
-  constructor(options, timelineLoader, raidbossDataFiles) {
-    this.options = options;
-    this.timelineLoader = timelineLoader;
-    this.ProcessDataFiles(raidbossDataFiles);
-
-    this.triggers = [];
-    this.netTriggers = [];
-    this.timers = {};
-    this.currentTriggerID = 0;
-    this.inCombat = false;
-    this.resetWhenOutOfCombat = true;
-    this.infoText = document.getElementById('popup-text-info');
-    this.alertText = document.getElementById('popup-text-alert');
-    this.alarmText = document.getElementById('popup-text-alarm');
-
-    this.parserLang = this.options.ParserLanguage || 'en';
-    this.displayLang = this.options.AlertsLanguage || this.options.DisplayLanguage || this.options.ParserLanguage || 'en';
-
-    if (this.options.IsRemoteRaidboss) {
-      this.ttsEngine = new BrowserTTSEngine(this.displayLang);
-      this.ttsSay = (text) => {
-        this.ttsEngine.play(this.options.TransformTts(text));
-      };
-    } else {
-      this.ttsSay = (text) => {
-        const cmd = {
-          'call': 'cactbotSay',
-          'text': this.options.TransformTts(text),
-        };
-        (0,overlay_plugin_api/* callOverlayHandler */.ae)(cmd);
-      };
-    }
-
-    // check to see if we need user interaction to play audio
-    // only if audio is enabled in options
-    if (this.options.AudioAllowed)
-      AutoplayHelper.CheckAndPrompt();
-
-    this.partyTracker = new PartyTracker();
-
-    this.kMaxRowsOfText = 2;
-
-    this.Reset();
-    this.AddDebugInstructions();
-    this.HookOverlays();
-  }
-
-  AddDebugInstructions() {
-    const lang = this.displayLang in raidbossInstructions ? this.displayLang : 'en';
-    const instructions = raidbossInstructions[lang];
-    for (let i = 0; i < instructions.length; ++i) {
-      const elem = document.getElementById(`instructions-${i}`);
-      if (!elem)
-        return;
-      elem.innerHTML = instructions[i];
-    }
-  }
-
-  HookOverlays() {
-    (0,overlay_plugin_api/* addOverlayListener */.PS)('PartyChanged', (e) => {
-      this.partyTracker.onPartyChanged(e);
-    });
-    addPlayerChangedOverrideListener(this.options.PlayerNameOverride, (e) => {
-      this.OnPlayerChange(e);
-    });
-    (0,overlay_plugin_api/* addOverlayListener */.PS)('ChangeZone', (e) => {
-      this.OnChangeZone(e);
-    });
-    (0,overlay_plugin_api/* addOverlayListener */.PS)('onInCombatChangedEvent', (e) => {
-      this.OnInCombatChange(e.detail.inGameCombat);
-    });
-    (0,overlay_plugin_api/* addOverlayListener */.PS)('onLogEvent', (e) => {
-      this.OnLog(e);
-    });
-    (0,overlay_plugin_api/* addOverlayListener */.PS)('LogLine', (e) => {
-      this.OnNetLog(e);
-    });
-  }
-
-  OnPlayerChange(e) {
-    if (this.job !== e.detail.job || this.me !== e.detail.name)
-      this.OnJobChange(e);
-    this.data.currentHP = e.detail.currentHP;
-  }
-
-  ProcessDataFiles(files) {
-    this.triggerSets = [];
-    for (const filename in files) {
-      if (!filename.endsWith('.js') && !filename.endsWith('.ts'))
-        continue;
-
-      const json = files[filename];
-      if (typeof json !== 'object') {
-        console.log('Unexpected JSON from ' + filename + ', expected an array');
-        continue;
-      }
-      if (!('triggers' in json)) {
-        console.log('Unexpected JSON from ' + filename + ', expected a triggers');
-        continue;
-      }
-      if (typeof json.triggers !== 'object' || !(json.triggers.length >= 0)) {
-        console.log('Unexpected JSON from ' + filename + ', expected triggers to be an array');
-        continue;
-      }
-      json.filename = filename;
-      this.triggerSets.push(json);
-    }
-
-    // User triggers must come last so that they override built-in files.
-    Array.prototype.push.apply(this.triggerSets, this.options.Triggers);
-  }
-
-  OnChangeZone(e) {
-    if (this.zoneName !== e.zoneName) {
-      this.zoneName = e.zoneName;
-      this.zoneId = e.zoneID;
-      this.ReloadTimelines();
-    }
-  }
-
-  ReloadTimelines() {
-    if (!this.triggerSets || !this.me || !this.zoneName || !this.timelineLoader.IsReady())
-      return;
-
-    this.Reset();
-
-    // Drop the triggers and timelines from the previous zone, so we can add new ones.
-    this.triggers = [];
-    this.netTriggers = [];
-    let timelineFiles = [];
-    let timelines = [];
-    const replacements = [];
-    const timelineStyles = [];
-    this.resetWhenOutOfCombat = true;
-
-    const orderedTriggers = new OrderedTriggerList();
-
-    // Recursively/iteratively process timeline entries for triggers.
-    // Functions get called with data, arrays get iterated, strings get appended.
-    const addTimeline = (function(obj) {
-      if (Array.isArray(obj)) {
-        for (let i = 0; i < obj.length; ++i)
-          addTimeline(obj[i]);
-      } else if (typeof obj === 'function') {
-        addTimeline(obj(this.data));
-      } else if (obj) {
-        timelines.push(obj);
-      }
-    }).bind(this);
-
-    // construct something like regexEn or regexFr.
-    const langSuffix = this.parserLang.charAt(0).toUpperCase() + this.parserLang.slice(1);
-    const regexParserLang = 'regex' + langSuffix;
-    const netRegexParserLang = 'netRegex' + langSuffix;
-
-    for (const set of this.triggerSets) {
-      // zoneRegex can be undefined, a regex, or translatable object of regex.
-      const haveZoneRegex = 'zoneRegex' in set;
-      const haveZoneId = 'zoneId' in set;
-      if (!haveZoneRegex && !haveZoneId || haveZoneRegex && haveZoneId) {
-        console.error(`Trigger set must include exactly one of zoneRegex or zoneId property`);
-        continue;
-      }
-      if (haveZoneId && set.zoneId === undefined) {
-        const filename = set.filename ? `'${set.filename}'` : '(user file)';
-        console.error(`Trigger set has zoneId, but with nothing specified in ${filename}.  ` +
-                      `Did you misspell the ZoneId.ZoneName?`);
-        continue;
-      }
-
-      if (set.zoneId) {
-        if (set.zoneId !== zone_id/* default.MatchAll */.Z.MatchAll && set.zoneId !== this.zoneId && !(typeof set.zoneId === 'object' && set.zoneId.includes(this.zoneId)))
-          continue;
-      } else if (set.zoneRegex) {
-        let zoneRegex = set.zoneRegex;
-        if (typeof zoneRegex !== 'object') {
-          console.error('zoneRegex must be translatable object or regexp: ' + JSON.stringify(set.zoneRegex));
-          continue;
-        } else if (!(zoneRegex instanceof RegExp)) {
-          if (this.parserLang in zoneRegex) {
-            zoneRegex = zoneRegex[this.parserLang];
-          } else if ('en' in zoneRegex) {
-            zoneRegex = zoneRegex['en'];
-          } else {
-            console.error('unknown zoneRegex parser language: ' + JSON.stringify(set.zoneRegex));
-            continue;
-          }
-
-          if (!(zoneRegex instanceof RegExp)) {
-            console.error('zoneRegex must be regexp: ' + JSON.stringify(set.zoneRegex));
-            continue;
-          }
-        }
-        if (this.zoneName.search(resources_regexes/* default.parse */.Z.parse(zoneRegex)) < 0)
-          continue;
-      }
-
-      if (this.options.Debug) {
-        if (set.filename)
-          console.log('Loading ' + set.filename);
+    getReplacement(
+    // Can't use optional modifier for this arg since the others aren't optional
+    template, params, name, id) {
+        var _a;
+        if (!template)
+            return;
+        let value;
+        if (typeof template === 'string')
+            // user config
+            value = template;
         else
-          console.log('Loading user triggers for zone');
-      }
-      // Adjust triggers for the parser language.
-      if (set.triggers && this.options.AlertsEnabled) {
-        for (const trigger of set.triggers) {
-          // Add an additional resolved regex here to save
-          // time later.  This will clobber each time we
-          // load this, but that's ok.
-          trigger.filename = set.filename;
-
-          if (!trigger.regex && !trigger.netRegex) {
-            console.error('Trigger ' + trigger.id + ': has no regex property specified');
-            continue;
-          }
-
-          this.ProcessTrigger(trigger);
-
-          // parser-language-based regex takes precedence.
-          const regex = trigger[regexParserLang] || trigger.regex;
-          if (regex) {
-            trigger.localRegex = resources_regexes/* default.parse */.Z.parse(regex);
-            orderedTriggers.push(trigger);
-          }
-
-          const netRegex = trigger[netRegexParserLang] || trigger.netRegex;
-          if (netRegex) {
-            trigger.localNetRegex = resources_regexes/* default.parse */.Z.parse(netRegex);
-            orderedTriggers.push(trigger);
-          }
-
-          if (!regex && !netRegex) {
-            console.error('Trigger ' + trigger.id + ': missing regex and netRegex');
-            continue;
-          }
+            value = (_a = template[this.displayLang]) !== null && _a !== void 0 ? _a : template['en'];
+        if (typeof value !== 'string') {
+            console.error(`Trigger ${id} has invalid outputString ${name}.`, JSON.stringify(template));
+            return;
         }
-      }
-
-      if (set.overrideTimelineFile) {
-        const filename = set.filename ? `'${set.filename}'` : '(user file)';
-        console.log(`Overriding timeline from ${filename}.`);
-
-        // If the timeline file override is set, all previously loaded timeline info is dropped.
-        // Styles, triggers, and translations are kept, as they may still apply to the new one.
-        timelineFiles = [];
-        timelines = [];
-      }
-
-      // And set the timeline files/timelines from each set that matches.
-      if (set.timelineFile) {
-        if (set.filename) {
-          const dir = set.filename.substring(0, set.filename.lastIndexOf('/'));
-          timelineFiles.push(dir + '/' + set.timelineFile);
-        } else {
-          // Note: For user files, this should get handled by raidboss_config.js,
-          // where `timelineFile` should get converted to `timeline`.
-          console.error('Can\'t specify timelineFile in non-manifest file:' + set.timelineFile);
+        return value.replace(/\${\s*([^}\s]+)\s*}/g, (_fullMatch, key) => {
+            if (params && key in params) {
+                const str = params[key];
+                if (typeof str !== 'string' && typeof str !== 'number') {
+                    console.error(`Trigger ${id} has non-string param value ${key}.`);
+                    return this.unknownValue;
+                }
+                return str;
+            }
+            console.error(`Trigger ${id} can't replace ${key} in ${JSON.stringify(template)}.`);
+            return this.unknownValue;
+        });
+    }
+    static makeOutput(trigger, displayLang, perTriggerAutoConfig) {
+        // `Output` is the common type used for the trigger data interface to support arbitrary
+        // string keys and always returns a string. However, TypeScript doesn't have good support
+        // for the Proxy representing this structure so we need to cast Proxy => unknown => Output
+        return new TriggerOutputProxy(trigger, displayLang, perTriggerAutoConfig);
+    }
+}
+const defaultOutput = TriggerOutputProxy.makeOutput({}, 'en');
+class PopupText {
+    constructor(options, timelineLoader, raidbossDataFiles) {
+        var _a, _b, _c, _d;
+        this.options = options;
+        this.timelineLoader = timelineLoader;
+        this.raidbossDataFiles = raidbossDataFiles;
+        this.triggers = [];
+        this.netTriggers = [];
+        this.timers = {};
+        this.triggerSuppress = {};
+        this.currentTriggerID = 0;
+        this.inCombat = false;
+        this.resetWhenOutOfCombat = true;
+        this.partyTracker = new PartyTracker();
+        this.kMaxRowsOfText = 2;
+        this.me = '';
+        this.job = 'NONE';
+        this.role = 'none';
+        this.triggerSets = [];
+        this.zoneName = '';
+        this.zoneId = -1;
+        this.dataInitializers = [];
+        this.options = options;
+        this.timelineLoader = timelineLoader;
+        this.ProcessDataFiles(raidbossDataFiles);
+        this.infoText = document.getElementById('popup-text-info');
+        this.alertText = document.getElementById('popup-text-alert');
+        this.alarmText = document.getElementById('popup-text-alarm');
+        this.parserLang = (_a = this.options.ParserLanguage) !== null && _a !== void 0 ? _a : 'en';
+        this.displayLang = (_d = (_c = (_b = this.options.AlertsLanguage) !== null && _b !== void 0 ? _b : this.options.DisplayLanguage) !== null && _c !== void 0 ? _c : this.options.ParserLanguage) !== null && _d !== void 0 ? _d : 'en';
+        if (this.options.IsRemoteRaidboss) {
+            this.ttsEngine = new BrowserTTSEngine(this.displayLang);
+            this.ttsSay = (text) => {
+                var _a;
+                (_a = this.ttsEngine) === null || _a === void 0 ? void 0 : _a.play(this.options.TransformTts(text));
+            };
         }
-      }
-
-      if (set.timeline)
-        addTimeline(set.timeline);
-      if (set.timelineReplace)
-        replacements.push(...set.timelineReplace);
-      if (set.timelineTriggers) {
-        for (const trigger of set.timelineTriggers) {
-          this.ProcessTrigger(trigger);
-          trigger.isTimelineTrigger = true;
-          orderedTriggers.push(trigger);
+        else {
+            this.ttsSay = (text) => {
+                void (0,overlay_plugin_api/* callOverlayHandler */.ae)({
+                    call: 'cactbotSay',
+                    text: this.options.TransformTts(text),
+                });
+            };
         }
-      }
-      if (set.timelineStyles)
-        timelineStyles.push(...set.timelineStyles);
-      if (set.resetWhenOutOfCombat !== undefined)
-        this.resetWhenOutOfCombat &= set.resetWhenOutOfCombat;
+        this.data = this.getDataObject();
+        // check to see if we need user interaction to play audio
+        // only if audio is enabled in options
+        if (this.options.AudioAllowed)
+            AutoplayHelper.CheckAndPrompt();
+        this.Reset();
+        this.AddDebugInstructions();
+        this.HookOverlays();
     }
-
-    // Store all the collected triggers in order, and filter out disabled triggers.
-    const filterEnabled = (trigger) => !('disabled' in trigger && trigger.disabled);
-    const allTriggers = orderedTriggers.asList().filter(filterEnabled);
-
-    this.triggers = allTriggers.filter((trigger) => trigger.localRegex);
-    this.netTriggers = allTriggers.filter((trigger) => trigger.localNetRegex);
-    const timelineTriggers = allTriggers.filter((trigger) => trigger.isTimelineTrigger);
-
-    this.timelineLoader.SetTimelines(
-        timelineFiles,
-        timelines,
-        replacements,
-        timelineTriggers,
-        timelineStyles,
-    );
-  }
-
-  ProcessTrigger(trigger) {
-    // These properties are used internally by ReloadTimelines only and should
-    // not exist on user triggers.  However, the trigger objects themselves are
-    // reused when reloading pages, and so it is impossible to verify that
-    // these properties don't exist.  Therefore, just delete them silently.
-    delete trigger.localRegex;
-    delete trigger.localNetRegex;
-    delete trigger.isTimelineTrigger;
-
-    trigger.output = new TriggerOutputProxy(trigger, this.options.DisplayLanguage,
-        this.options.PerTriggerAutoConfig);
-  }
-
-  OnJobChange(e) {
-    this.me = e.detail.name;
-    this.job = e.detail.job;
-    this.role = util/* default.jobToRole */.Z.jobToRole(this.job);
-    this.ReloadTimelines();
-  }
-
-  OnInCombatChange(inCombat) {
-    if (this.inCombat === inCombat)
-      return;
-
-    if (this.resetWhenOutOfCombat)
-      this.SetInCombat(inCombat);
-  }
-
-  SetInCombat(inCombat) {
-    if (this.inCombat === inCombat)
-      return;
-
-    // Stop timers when stopping combat to stop any active timers that
-    // are delayed.  However, also reset when starting combat.
-    // This prevents late attacks from affecting |data| which
-    // throws off the next run, potentially.
-    this.inCombat = inCombat;
-    if (!this.inCombat) {
-      this.StopTimers();
-      this.timelineLoader.StopCombat();
+    AddDebugInstructions() {
+        raidbossInstructions[this.displayLang].forEach((line, i) => {
+            const elem = document.getElementById(`instructions-${i}`);
+            if (!elem)
+                return;
+            elem.innerHTML = line;
+        });
     }
-    if (this.inCombat)
-      this.Reset();
-  }
-
-  ShortNamify(name) {
-    // TODO: make this unique among the party in case of first name collisions.
-    // TODO: probably this should be a general cactbot utility.
-    if (typeof name !== 'string') {
-      console.error('called ShortNamify with non-string');
-      return '???';
+    HookOverlays() {
+        (0,overlay_plugin_api/* addOverlayListener */.PS)('PartyChanged', (e) => {
+            this.partyTracker.onPartyChanged(e);
+        });
+        addPlayerChangedOverrideListener((e) => {
+            this.OnPlayerChange(e);
+        }, this.options.PlayerNameOverride);
+        (0,overlay_plugin_api/* addOverlayListener */.PS)('ChangeZone', (e) => {
+            this.OnChangeZone(e);
+        });
+        (0,overlay_plugin_api/* addOverlayListener */.PS)('onInCombatChangedEvent', (e) => {
+            this.OnInCombatChange(e.detail.inGameCombat);
+        });
+        (0,overlay_plugin_api/* addOverlayListener */.PS)('onLogEvent', (e) => {
+            this.OnLog(e);
+        });
+        (0,overlay_plugin_api/* addOverlayListener */.PS)('LogLine', (e) => {
+            this.OnNetLog(e);
+        });
     }
-
-    if (name in this.options.PlayerNicks)
-      return this.options.PlayerNicks[name];
-
-    const idx = name.indexOf(' ');
-    return idx < 0 ? name : name.substr(0, idx);
-  }
-
-  Reset() {
-    let preserveHP = 0;
-    if (this.data && this.data.currentHP)
-      preserveHP = this.data.currentHP;
-
-    // TODO: make a breaking change at some point and
-    // make all this style consistent, sorry.
-    this.data = {
-      me: this.me,
-      job: this.job,
-      role: this.role,
-      party: this.partyTracker,
-      lang: this.parserLang,
-      parserLang: this.parserLang,
-      displayLang: this.displayLang,
-      currentHP: preserveHP,
-      options: this.options,
-      ShortName: this.ShortNamify,
-      StopCombat: () => this.SetInCombat(false),
-      ParseLocaleFloat: parseFloat,
-      CanStun: () => util/* default.canStun */.Z.canStun(this.job),
-      CanSilence: () => util/* default.canSilence */.Z.canSilence(this.job),
-      CanSleep: () => util/* default.canSleep */.Z.canSleep(this.job),
-      CanCleanse: () => util/* default.canCleanse */.Z.canCleanse(this.job),
-      CanFeint: () => util/* default.canFeint */.Z.canFeint(this.job),
-      CanAddle: () => util/* default.canAddle */.Z.canAddle(this.job),
-    };
-    this.StopTimers();
-    this.triggerSuppress = {};
-  }
-
-  StopTimers() {
-    this.timers = {};
-  }
-
-  OnLog(e) {
-    // This could conceivably be determined based on the line's contents as well, but
-    // not sure if that's worth the effort
-    const currentTime = +new Date();
-    for (const log of e.detail.logs) {
-      if (log.includes('00:0038:cactbot wipe'))
-        this.SetInCombat(false);
-
-      for (const trigger of this.triggers) {
-        const r = log.match(trigger.localRegex);
-        if (r)
-          this.OnTrigger(trigger, r, currentTime);
-      }
+    OnPlayerChange(e) {
+        if (this.job !== e.detail.job || this.me !== e.detail.name)
+            this.OnJobChange(e);
+        this.data.currentHP = e.detail.currentHP;
     }
-  }
-
-  OnNetLog(e) {
-    const log = e.rawLine;
-    // This could conceivably be determined based on `new Date(e.line[1])` as well, but
-    // not sure if that's worth the effort
-    const currentTime = +new Date();
-    for (const trigger of this.netTriggers) {
-      const r = log.match(trigger.localNetRegex);
-      if (r)
-        this.OnTrigger(trigger, r, currentTime);
+    ProcessDataFiles(files) {
+        this.triggerSets = [];
+        for (const [filename, json] of Object.entries(files)) {
+            if (!filename.endsWith('.js') && !filename.endsWith('.ts'))
+                continue;
+            if (typeof json !== 'object') {
+                console.log('Unexpected JSON from ' + filename + ', expected an array');
+                continue;
+            }
+            if (!json.triggers) {
+                console.log('Unexpected JSON from ' + filename + ', expected a triggers');
+                continue;
+            }
+            if (typeof json.triggers !== 'object' || !(json.triggers.length >= 0)) {
+                console.log('Unexpected JSON from ' + filename + ', expected triggers to be an array');
+                continue;
+            }
+            this.triggerSets.push({
+                filename: filename,
+                ...json,
+            });
+        }
+        // User triggers must come last so that they override built-in files.
+        Array.prototype.push.apply(this.triggerSets, this.options.Triggers);
     }
-  }
-
-  OnTrigger(trigger, matches, currentTime) {
-    try {
-      this.OnTriggerInternal(trigger, matches, currentTime);
-    } catch (e) {
-      onTriggerException(trigger, e);
+    OnChangeZone(e) {
+        if (this.zoneName !== e.zoneName) {
+            this.zoneName = e.zoneName;
+            this.zoneId = e.zoneID;
+            this.ReloadTimelines();
+        }
     }
-  }
-
-  OnTriggerInternal(trigger, matches, currentTime) {
-    if (this._onTriggerInternalCheckSuppressed(trigger, currentTime))
-      return;
-
-    // If using named groups, treat matches.groups as matches
-    // so triggers can do things like matches.target.
-    if (matches && matches.groups)
-      matches = matches.groups;
-
-    // Set up a helper object so we don't have to throw
-    // a ton of info back and forth between subfunctions
-    const triggerHelper = this._onTriggerInternalGetHelper(trigger, matches, currentTime);
-
-    if (!this._onTriggerInternalCondition(triggerHelper))
-      return;
-
-    this._onTriggerInternalPreRun(triggerHelper);
-
-    // Evaluate for delay here, but run delay later
-    const delayPromise = this._onTriggerInternalDelaySeconds(triggerHelper);
-    this._onTriggerInternalDurationSeconds(triggerHelper);
-    this._onTriggerInternalSuppressSeconds(triggerHelper);
-
-    const triggerPostDelay = () => {
-      const promise = this._onTriggerInternalPromise(triggerHelper);
-      const triggerPostPromise = () => {
-        this._onTriggerInternalSound(triggerHelper);
-        this._onTriggerInternalSoundVolume(triggerHelper);
-        this._onTriggerInternalResponse(triggerHelper);
-        this._onTriggerInternalAlarmText(triggerHelper);
-        this._onTriggerInternalAlertText(triggerHelper);
-        this._onTriggerInternalInfoText(triggerHelper);
-
-        // Priority audio order:
-        // * user disabled (play nothing)
-        // * if tts options are enabled globally or for this trigger:
-        //   * user TTS triggers tts override
-        //   * tts entries in the trigger
-        //   * default alarm tts
-        //   * default alert tts
-        //   * default info tts
-        // * if sound options are enabled globally or for this trigger:
-        //   * user trigger sound overrides
-        //   * sound entries in the trigger
-        //   * alarm noise
-        //   * alert noise
-        //   * info noise
-        // * else, nothing
-        //
-        // In general, tts comes before sounds and user overrides come
-        // before defaults.  If a user trigger or tts entry is specified as
-        // being valid but empty, this will take priority over the default
-        // tts texts from alarm/alert/info and will prevent tts from playing
-        // and allowing sounds to be played instead.
-        this._onTriggerInternalTTS(triggerHelper);
-        this._onTriggerInternalPlayAudio(triggerHelper);
-        this._onTriggerInternalRun(triggerHelper);
-      };
-
-      // The trigger body must run synchronously when there is no promise.
-      if (promise)
-        promise.then(triggerPostPromise, (e) => onTriggerException(trigger, e));
-      else
-        triggerPostPromise();
-    };
-
-    // The trigger body must run synchronously when there is no delay.
-    if (delayPromise)
-      delayPromise.then(triggerPostDelay, (e) => onTriggerException(trigger, e));
-    else
-      triggerPostDelay();
-  }
-
-  // Build a default triggerHelper object for this trigger
-  _onTriggerInternalGetHelper(trigger, matches, now) {
-    const triggerHelper = {
-      trigger: trigger,
-      now: now,
-      triggerOptions: trigger.id && this.options.PerTriggerOptions[trigger.id] || {},
-      triggerAutoConfig: trigger.id && this.options.PerTriggerAutoConfig[trigger.id] || {},
-      // This setting only suppresses output, trigger still runs for data/logic purposes
-      userSuppressedOutput: trigger.id && this.options.DisabledTriggers[trigger.id],
-      matches: matches,
-      response: undefined,
-      // Default options
-      soundUrl: undefined,
-      soundVol: undefined,
-      triggerSoundVol: undefined,
-      defaultTTSText: undefined,
-      textAlertsEnabled: this.options.TextAlertsEnabled,
-      soundAlertsEnabled: this.options.SoundAlertsEnabled,
-      spokenAlertsEnabled: this.options.SpokenAlertsEnabled,
-      GroupSpokenAlertsEnabled: this.options.GroupSpokenAlertsEnabled,
-      duration: undefined,
-      ttsText: undefined,
-    };
-
-    // Separate the creation of triggerHelper and creation of valueOrFunction
-    // method so ValueOrFunction can execute properly
-    triggerHelper.valueOrFunction = (f) => {
-      let result = f;
-      if (typeof result === 'function')
-        result = result(this.data, triggerHelper.matches, trigger.output);
-      // All triggers return either a string directly, or an object
-      // whose keys are different parser language based names.  For simplicity,
-      // this is valid to do for any trigger entry that can handle a function.
-      // In case anybody wants to encapsulate any fancy grammar, the values
-      // in this object can also be functions.
-      if (typeof result !== 'object' || result === null)
-        return result;
-      return triggerHelper.valueOrFunction(result[this.displayLang] || result['en']);
-    };
-
-    this._onTriggerInternalHelperDefaults(triggerHelper);
-
-    return triggerHelper;
-  }
-
-  _onTriggerInternalCheckSuppressed(trigger, when) {
-    if (trigger.id && trigger.id in this.triggerSuppress) {
-      if (this.triggerSuppress[trigger.id] > when)
-        return true;
-
-      delete this.triggerSuppress[trigger.id];
+    ReloadTimelines() {
+        var _a, _b, _c;
+        if (!this.triggerSets || !this.me || !this.zoneName || !this.timelineLoader.IsReady())
+            return;
+        // Drop the triggers and timelines from the previous zone, so we can add new ones.
+        this.triggers = [];
+        this.netTriggers = [];
+        let timelineFiles = [];
+        let timelines = [];
+        const replacements = [];
+        const timelineStyles = [];
+        this.resetWhenOutOfCombat = true;
+        const orderedTriggers = new OrderedTriggerList();
+        // Recursively/iteratively process timeline entries for triggers.
+        // Functions get called with data, arrays get iterated, strings get appended.
+        const addTimeline = (function (obj) {
+            if (Array.isArray(obj)) {
+                for (const objVal of obj)
+                    addTimeline(objVal);
+            }
+            else if (typeof obj === 'function') {
+                addTimeline(obj(this.data));
+            }
+            else if (obj) {
+                timelines.push(obj);
+            }
+        }).bind(this);
+        // construct something like regexDe or regexFr.
+        const langSuffix = this.parserLang.charAt(0).toUpperCase() + this.parserLang.slice(1);
+        const regexParserLang = 'regex' + langSuffix;
+        const netRegexParserLang = 'netRegex' + langSuffix;
+        for (const set of this.triggerSets) {
+            // zoneRegex can be undefined, a regex, or translatable object of regex.
+            const haveZoneRegex = 'zoneRegex' in set;
+            const haveZoneId = 'zoneId' in set;
+            if (!haveZoneRegex && !haveZoneId || haveZoneRegex && haveZoneId) {
+                console.error(`Trigger set must include exactly one of zoneRegex or zoneId property`);
+                continue;
+            }
+            if (haveZoneId && set.zoneId === undefined) {
+                const filename = set.filename ? `'${set.filename}'` : '(user file)';
+                console.error(`Trigger set has zoneId, but with nothing specified in ${filename}.  ` +
+                    `Did you misspell the ZoneId.ZoneName?`);
+                continue;
+            }
+            if (set.zoneId) {
+                if (set.zoneId !== zone_id/* default.MatchAll */.Z.MatchAll && set.zoneId !== this.zoneId && !(typeof set.zoneId === 'object' && set.zoneId.includes(this.zoneId)))
+                    continue;
+            }
+            else if (set.zoneRegex) {
+                let zoneRegex = set.zoneRegex;
+                if (typeof zoneRegex !== 'object') {
+                    console.error('zoneRegex must be translatable object or regexp: ' + JSON.stringify(set.zoneRegex));
+                    continue;
+                }
+                else if (!(zoneRegex instanceof RegExp)) {
+                    const parserLangRegex = zoneRegex[this.parserLang];
+                    if (parserLangRegex) {
+                        zoneRegex = parserLangRegex;
+                    }
+                    else if (zoneRegex['en']) {
+                        zoneRegex = zoneRegex['en'];
+                    }
+                    else {
+                        console.error('unknown zoneRegex parser language: ' + JSON.stringify(set.zoneRegex));
+                        continue;
+                    }
+                    if (!(zoneRegex instanceof RegExp)) {
+                        console.error('zoneRegex must be regexp: ' + JSON.stringify(set.zoneRegex));
+                        continue;
+                    }
+                }
+                if (this.zoneName.search(resources_regexes/* default.parse */.Z.parse(zoneRegex)) < 0)
+                    continue;
+            }
+            if (this.options.Debug) {
+                if (set.filename)
+                    console.log('Loading ' + set.filename);
+                else
+                    console.log('Loading user triggers for zone');
+            }
+            const setFilename = (_a = set.filename) !== null && _a !== void 0 ? _a : 'Unknown';
+            if (set.initData) {
+                this.dataInitializers.push({
+                    file: setFilename,
+                    func: set.initData,
+                });
+            }
+            // Adjust triggers for the parser language.
+            if (set.triggers && this.options.AlertsEnabled) {
+                for (const trigger of set.triggers) {
+                    // Add an additional resolved regex here to save
+                    // time later.  This will clobber each time we
+                    // load this, but that's ok.
+                    trigger.filename = setFilename;
+                    const id = trigger.id;
+                    if (!isRegexTrigger(trigger) && !isNetRegexTrigger(trigger)) {
+                        console.error(`Trigger ${id}: has no regex property specified`);
+                        continue;
+                    }
+                    this.ProcessTrigger(trigger);
+                    let found = false;
+                    const triggerObject = trigger;
+                    // parser-language-based regex takes precedence.
+                    if (isRegexTrigger(trigger)) {
+                        const regex = (_b = triggerObject[regexParserLang]) !== null && _b !== void 0 ? _b : trigger.regex;
+                        if (regex instanceof RegExp) {
+                            trigger.localRegex = resources_regexes/* default.parse */.Z.parse(regex);
+                            orderedTriggers.push(trigger);
+                            found = true;
+                        }
+                    }
+                    if (isNetRegexTrigger(trigger)) {
+                        const netRegex = (_c = triggerObject[netRegexParserLang]) !== null && _c !== void 0 ? _c : trigger.netRegex;
+                        if (netRegex instanceof RegExp) {
+                            trigger.localNetRegex = resources_regexes/* default.parse */.Z.parse(netRegex);
+                            orderedTriggers.push(trigger);
+                            found = true;
+                        }
+                    }
+                    if (!found) {
+                        console.error('Trigger ' + trigger.id + ': missing regex and netRegex');
+                        continue;
+                    }
+                }
+            }
+            if (set.overrideTimelineFile) {
+                const filename = set.filename ? `'${set.filename}'` : '(user file)';
+                console.log(`Overriding timeline from ${filename}.`);
+                // If the timeline file override is set, all previously loaded timeline info is dropped.
+                // Styles, triggers, and translations are kept, as they may still apply to the new one.
+                timelineFiles = [];
+                timelines = [];
+            }
+            // And set the timeline files/timelines from each set that matches.
+            if (set.timelineFile) {
+                if (set.filename) {
+                    const dir = set.filename.substring(0, set.filename.lastIndexOf('/'));
+                    timelineFiles.push(dir + '/' + set.timelineFile);
+                }
+                else {
+                    // Note: For user files, this should get handled by raidboss_config.js,
+                    // where `timelineFile` should get converted to `timeline`.
+                    console.error('Can\'t specify timelineFile in non-manifest file:' + set.timelineFile);
+                }
+            }
+            if (set.timeline)
+                addTimeline(set.timeline);
+            if (set.timelineReplace)
+                replacements.push(...set.timelineReplace);
+            if (set.timelineTriggers) {
+                for (const trigger of set.timelineTriggers) {
+                    this.ProcessTrigger(trigger);
+                    trigger.isTimelineTrigger = true;
+                    orderedTriggers.push(trigger);
+                }
+            }
+            if (set.timelineStyles)
+                timelineStyles.push(...set.timelineStyles);
+            if (set.resetWhenOutOfCombat !== undefined)
+                this.resetWhenOutOfCombat && (this.resetWhenOutOfCombat = set.resetWhenOutOfCombat);
+        }
+        // Store all the collected triggers in order, and filter out disabled triggers.
+        const filterEnabled = (trigger) => !('disabled' in trigger && trigger.disabled);
+        const allTriggers = orderedTriggers.asList().filter(filterEnabled);
+        this.triggers = allTriggers.filter(isRegexTrigger);
+        this.netTriggers = allTriggers.filter(isNetRegexTrigger);
+        const timelineTriggers = allTriggers.filter(isRaidbossLooseTimelineTrigger);
+        this.Reset();
+        this.timelineLoader.SetTimelines(timelineFiles, timelines, replacements, timelineTriggers, timelineStyles);
     }
-    return false;
-  }
-
-  _onTriggerInternalCondition(triggerHelper) {
-    const condition = triggerHelper.triggerOptions.Condition || triggerHelper.trigger.condition;
-    if (condition) {
-      if (!condition(this.data, triggerHelper.matches))
+    ProcessTrigger(trigger) {
+        // These properties are used internally by ReloadTimelines only and should
+        // not exist on user triggers.  However, the trigger objects themselves are
+        // reused when reloading pages, and so it is impossible to verify that
+        // these properties don't exist.  Therefore, just delete them silently.
+        if (isRaidbossLooseTimelineTrigger(trigger))
+            delete trigger.isTimelineTrigger;
+        delete trigger.localRegex;
+        delete trigger.localNetRegex;
+        trigger.output = TriggerOutputProxy.makeOutput(trigger, this.options.DisplayLanguage, this.options.PerTriggerAutoConfig);
+    }
+    OnJobChange(e) {
+        this.me = e.detail.name;
+        this.job = e.detail.job;
+        this.role = util/* default.jobToRole */.Z.jobToRole(this.job);
+        this.ReloadTimelines();
+    }
+    OnInCombatChange(inCombat) {
+        if (this.inCombat === inCombat)
+            return;
+        if (this.resetWhenOutOfCombat)
+            this.SetInCombat(inCombat);
+    }
+    SetInCombat(inCombat) {
+        if (this.inCombat === inCombat)
+            return;
+        // Stop timers when stopping combat to stop any active timers that
+        // are delayed.  However, also reset when starting combat.
+        // This prevents late attacks from affecting |data| which
+        // throws off the next run, potentially.
+        this.inCombat = inCombat;
+        if (!this.inCombat) {
+            this.StopTimers();
+            this.timelineLoader.StopCombat();
+        }
+        if (this.inCombat)
+            this.Reset();
+    }
+    ShortNamify(name) {
+        // TODO: make this unique among the party in case of first name collisions.
+        // TODO: probably this should be a general cactbot utility.
+        if (typeof name !== 'string') {
+            console.error('called ShortNamify with non-string');
+            return '???';
+        }
+        const nick = this.options.PlayerNicks[name];
+        if (nick)
+            return nick;
+        const idx = name.indexOf(' ');
+        return idx < 0 ? name : name.substr(0, idx);
+    }
+    Reset() {
+        this.data = this.getDataObject();
+        this.StopTimers();
+        this.triggerSuppress = {};
+        for (const initObj of this.dataInitializers) {
+            const init = initObj.func;
+            const data = init();
+            if (typeof data === 'object') {
+                this.data = {
+                    ...data,
+                    ...this.data,
+                };
+            }
+            else {
+                console.log(`Error in file: ${initObj.file}: these triggers may not work;
+        initData function returned invalid object: ${init.toString()}`);
+            }
+        }
+    }
+    StopTimers() {
+        this.timers = {};
+    }
+    OnLog(e) {
+        var _a;
+        // This could conceivably be determined based on the line's contents as well, but
+        // not sure if that's worth the effort
+        const currentTime = +new Date();
+        for (const log of e.detail.logs) {
+            if (log.includes('00:0038:cactbot wipe'))
+                this.SetInCombat(false);
+            for (const trigger of this.triggers) {
+                const r = (_a = trigger.localRegex) === null || _a === void 0 ? void 0 : _a.exec(log);
+                if (r)
+                    this.OnTrigger(trigger, r, currentTime);
+            }
+        }
+    }
+    OnNetLog(e) {
+        var _a;
+        const log = e.rawLine;
+        // This could conceivably be determined based on `new Date(e.line[1])` as well, but
+        // not sure if that's worth the effort
+        const currentTime = +new Date();
+        for (const trigger of this.netTriggers) {
+            const r = (_a = trigger.localNetRegex) === null || _a === void 0 ? void 0 : _a.exec(log);
+            if (r)
+                this.OnTrigger(trigger, r, currentTime);
+        }
+    }
+    OnTrigger(trigger, matches, currentTime) {
+        try {
+            this.OnTriggerInternal(trigger, matches, currentTime);
+        }
+        catch (e) {
+            onTriggerException(trigger, e);
+        }
+    }
+    OnTriggerInternal(trigger, matches, currentTime) {
+        if (this._onTriggerInternalCheckSuppressed(trigger, currentTime))
+            return;
+        let groups = {};
+        // If using named groups, treat matches.groups as matches
+        // so triggers can do things like matches.target.
+        if (matches && matches.groups)
+            groups = matches.groups;
+        // Set up a helper object so we don't have to throw
+        // a ton of info back and forth between subfunctions
+        const triggerHelper = this._onTriggerInternalGetHelper(trigger, groups, currentTime);
+        if (!this._onTriggerInternalCondition(triggerHelper))
+            return;
+        this._onTriggerInternalPreRun(triggerHelper);
+        // Evaluate for delay here, but run delay later
+        const delayPromise = this._onTriggerInternalDelaySeconds(triggerHelper);
+        this._onTriggerInternalDurationSeconds(triggerHelper);
+        this._onTriggerInternalSuppressSeconds(triggerHelper);
+        const triggerPostDelay = () => {
+            const promise = this._onTriggerInternalPromise(triggerHelper);
+            const triggerPostPromise = () => {
+                this._onTriggerInternalSound(triggerHelper);
+                this._onTriggerInternalSoundVolume(triggerHelper);
+                this._onTriggerInternalResponse(triggerHelper);
+                this._onTriggerInternalAlarmText(triggerHelper);
+                this._onTriggerInternalAlertText(triggerHelper);
+                this._onTriggerInternalInfoText(triggerHelper);
+                // Priority audio order:
+                // * user disabled (play nothing)
+                // * if tts options are enabled globally or for this trigger:
+                //   * user TTS triggers tts override
+                //   * tts entries in the trigger
+                //   * default alarm tts
+                //   * default alert tts
+                //   * default info tts
+                // * if sound options are enabled globally or for this trigger:
+                //   * user trigger sound overrides
+                //   * sound entries in the trigger
+                //   * alarm noise
+                //   * alert noise
+                //   * info noise
+                // * else, nothing
+                //
+                // In general, tts comes before sounds and user overrides come
+                // before defaults.  If a user trigger or tts entry is specified as
+                // being valid but empty, this will take priority over the default
+                // tts texts from alarm/alert/info and will prevent tts from playing
+                // and allowing sounds to be played instead.
+                this._onTriggerInternalTTS(triggerHelper);
+                this._onTriggerInternalPlayAudio(triggerHelper);
+                this._onTriggerInternalRun(triggerHelper);
+            };
+            // The trigger body must run synchronously when there is no promise.
+            if (promise)
+                promise.then(triggerPostPromise, (e) => onTriggerException(trigger, e));
+            else
+                triggerPostPromise();
+        };
+        // The trigger body must run synchronously when there is no delay.
+        if (delayPromise)
+            delayPromise.then(triggerPostDelay, (e) => onTriggerException(trigger, e));
+        else
+            triggerPostDelay();
+    }
+    // Build a default triggerHelper object for this trigger
+    _onTriggerInternalGetHelper(trigger, matches, now) {
+        var _a, _b, _c;
+        const id = trigger.id;
+        let options = {};
+        let config = {};
+        let suppressed = false;
+        if (id) {
+            options = (_a = this.options.PerTriggerOptions[id]) !== null && _a !== void 0 ? _a : options;
+            config = (_b = this.options.PerTriggerAutoConfig[id]) !== null && _b !== void 0 ? _b : config;
+            suppressed = (_c = this.options.DisabledTriggers[id]) !== null && _c !== void 0 ? _c : suppressed;
+        }
+        const triggerHelper = {
+            trigger: trigger,
+            now: now,
+            triggerOptions: options,
+            triggerAutoConfig: config,
+            // This setting only suppresses output, trigger still runs for data/logic purposes
+            userSuppressedOutput: suppressed,
+            matches: matches,
+            // Default options
+            textAlertsEnabled: this.options.TextAlertsEnabled,
+            soundAlertsEnabled: this.options.SoundAlertsEnabled,
+            spokenAlertsEnabled: this.options.SpokenAlertsEnabled,
+            groupSpokenAlertsEnabled: this.options.GroupSpokenAlertsEnabled,
+            valueOrFunction: (f) => {
+                var _a;
+                let result = f;
+                if (typeof result === 'function')
+                    result = result(this.data, triggerHelper.matches, triggerHelper.output);
+                // All triggers return either a string directly, or an object
+                // whose keys are different parser language based names.  For simplicity,
+                // this is valid to do for any trigger entry that can handle a function.
+                // In case anybody wants to encapsulate any fancy grammar, the values
+                // in this object can also be functions.
+                if (typeof result !== 'object' || result === null)
+                    return result;
+                return triggerHelper.valueOrFunction((_a = result[this.displayLang]) !== null && _a !== void 0 ? _a : result['en']);
+            },
+            get output() {
+                var _a;
+                if (this.trigger.output)
+                    return this.trigger.output;
+                console.log(`Missing trigger.output for trigger ${(_a = trigger.id) !== null && _a !== void 0 ? _a : 'Unknown'}`);
+                return defaultOutput;
+            },
+        };
+        this._onTriggerInternalHelperDefaults(triggerHelper);
+        return triggerHelper;
+    }
+    _onTriggerInternalCheckSuppressed(trigger, when) {
+        const id = trigger.id;
+        if (id !== undefined) {
+            const suppress = this.triggerSuppress[id];
+            if (suppress !== undefined) {
+                if (suppress > when)
+                    return true;
+                delete this.triggerSuppress[id];
+            }
+        }
         return false;
     }
-    return true;
-  }
-
-  // Set defaults for triggerHelper object (anything that won't change based on
-  // other trigger functions running)
-  _onTriggerInternalHelperDefaults(triggerHelper) {
-    if (triggerHelper.triggerAutoConfig) {
-      if ('TextAlertsEnabled' in triggerHelper.triggerAutoConfig)
-        triggerHelper.textAlertsEnabled = triggerHelper.triggerAutoConfig.TextAlertsEnabled;
-      if ('SoundAlertsEnabled' in triggerHelper.triggerAutoConfig)
-        triggerHelper.soundAlertsEnabled = triggerHelper.triggerAutoConfig.SoundAlertsEnabled;
-      if ('SpokenAlertsEnabled' in triggerHelper.triggerAutoConfig)
-        triggerHelper.spokenAlertsEnabled = triggerHelper.triggerAutoConfig.SpokenAlertsEnabled;
-    }
-
-    if (triggerHelper.triggerOptions) {
-      if ('TextAlert' in triggerHelper.triggerOptions)
-        triggerHelper.textAlertsEnabled = triggerHelper.triggerOptions.TextAlert;
-      if ('SoundAlert' in triggerHelper.triggerOptions)
-        triggerHelper.soundAlertsEnabled = triggerHelper.triggerOptions.SoundAlert;
-      if ('SpeechAlert' in triggerHelper.triggerOptions)
-        triggerHelper.spokenAlertsEnabled = triggerHelper.triggerOptions.SpeechAlert;
-      if ('GroupSpeechAlert' in triggerHelper.triggerOptions)
-        triggerHelper.groupSpokenAlertsEnabled = triggerHelper.triggerOptions.GroupSpeechAlert;
-    }
-
-    if (triggerHelper.userSuppressedOutput) {
-      triggerHelper.textAlertsEnabled = false;
-      triggerHelper.soundAlertsEnabled = false;
-      triggerHelper.spokenAlertsEnabled = false;
-      triggerHelper.groupSpokenAlertsEnabled = false;
-    }
-    if (!this.options.AudioAllowed) {
-      triggerHelper.soundAlertsEnabled = false;
-      triggerHelper.spokenAlertsEnabled = false;
-      triggerHelper.groupSpokenAlertsEnabled = false;
-    }
-  }
-
-  _onTriggerInternalPreRun(triggerHelper) {
-    if ('preRun' in triggerHelper.trigger)
-      triggerHelper.trigger.preRun(this.data, triggerHelper.matches, triggerHelper.trigger.output);
-  }
-
-  _onTriggerInternalDelaySeconds(triggerHelper) {
-    const delay = 'delaySeconds' in triggerHelper.trigger ? triggerHelper.valueOrFunction(triggerHelper.trigger.delaySeconds) : 0;
-    if (!delay || delay <= 0)
-      return null;
-
-    const triggerID = this.currentTriggerID++;
-    this.timers[triggerID] = true;
-    return new Promise((res, rej) => {
-      window.setTimeout(() => {
-        if (this.timers[triggerID])
-          res();
-        else if (rej)
-          rej();
-        delete this.timers[triggerID];
-      }, delay * 1000);
-    });
-  }
-
-  _onTriggerInternalDurationSeconds(triggerHelper) {
-    triggerHelper.duration = {
-      fromConfig: triggerHelper.triggerAutoConfig['Duration'],
-      fromTrigger: triggerHelper.valueOrFunction(triggerHelper.trigger.durationSeconds),
-      alarmText: this.options.DisplayAlarmTextForSeconds,
-      alertText: this.options.DisplayAlertTextForSeconds,
-      infoText: this.options.DisplayInfoTextForSeconds,
-    };
-  }
-
-  _onTriggerInternalSuppressSeconds(triggerHelper) {
-    const suppress = 'suppressSeconds' in triggerHelper.trigger ? triggerHelper.valueOrFunction(triggerHelper.trigger.suppressSeconds) : 0;
-    if (triggerHelper.trigger.id && suppress > 0)
-      this.triggerSuppress[triggerHelper.trigger.id] = triggerHelper.now + (suppress * 1000);
-  }
-
-  _onTriggerInternalPromise(triggerHelper) {
-    let promise = null;
-    if ('promise' in triggerHelper.trigger) {
-      if (typeof triggerHelper.trigger.promise === 'function') {
-        promise = triggerHelper.trigger.promise(
-            this.data,
-            triggerHelper.matches,
-            triggerHelper.trigger.output);
-
-        // Make sure we actually get a Promise back from the function
-        if (Promise.resolve(promise) !== promise) {
-          console.error('Trigger ' + triggerHelper.trigger.id + ': promise function did not return a promise');
-          promise = null;
+    _onTriggerInternalCondition(triggerHelper) {
+        var _a;
+        const condition = (_a = triggerHelper.triggerOptions.Condition) !== null && _a !== void 0 ? _a : triggerHelper.trigger.condition;
+        if (condition) {
+            if (condition === true)
+                return true;
+            if (!condition(this.data, triggerHelper.matches, triggerHelper.output))
+                return false;
         }
-      } else {
-        console.error('Trigger ' + triggerHelper.trigger.id + ': promise defined but not a function');
-      }
+        return true;
     }
-    return promise;
-  }
-
-  _onTriggerInternalSound(triggerHelper) {
-    triggerHelper.soundUrl = triggerHelper.valueOrFunction(triggerHelper.trigger.sound);
-  }
-
-  _onTriggerInternalSoundVolume(triggerHelper) {
-    triggerHelper.triggerSoundVol =
-      triggerHelper.valueOrFunction(triggerHelper.trigger.soundVolume);
-  }
-
-  _onTriggerInternalResponse(triggerHelper) {
-    let response = {};
-    const trigger = triggerHelper.trigger;
-    if (trigger.response) {
-      // Can't use ValueOrFunction here as r returns a non-localizable object.
-      response = trigger.response;
-      while (typeof response === 'function')
-        response = response(this.data, triggerHelper.matches, trigger.output);
-
-      // Turn falsy values into a default no-op response.
-      if (!response)
-        response = {};
-    }
-    triggerHelper.response = response;
-  }
-
-  _onTriggerInternalAlarmText(triggerHelper) {
-    this._addTextFor('alarm', triggerHelper);
-  }
-
-  _onTriggerInternalAlertText(triggerHelper) {
-    this._addTextFor('alert', triggerHelper);
-  }
-
-  _onTriggerInternalInfoText(triggerHelper) {
-    this._addTextFor('info', triggerHelper);
-  }
-
-  _onTriggerInternalTTS(triggerHelper) {
-    if (!triggerHelper.groupSpokenAlertsEnabled || typeof triggerHelper.ttsText === 'undefined') {
-      if ('TTSText' in triggerHelper.triggerOptions)
-        triggerHelper.ttsText = triggerHelper.valueOrFunction(triggerHelper.triggerOptions.TTSText);
-      else if ('tts' in triggerHelper.trigger)
-        triggerHelper.ttsText = triggerHelper.valueOrFunction(triggerHelper.trigger.tts);
-      else if ('tts' in triggerHelper.response)
-        triggerHelper.ttsText = triggerHelper.valueOrFunction(triggerHelper.response.TTSText);
-      else
-        triggerHelper.ttsText = triggerHelper.defaultTTSText;
-    }
-  }
-
-  _onTriggerInternalPlayAudio(triggerHelper) {
-    if (triggerHelper.trigger.sound && triggerHelper.soundUrl) {
-      const namedSound = triggerHelper.soundUrl + 'Sound';
-      const namedSoundVolume = triggerHelper.soundUrl + 'SoundVolume';
-      if (namedSound in this.options) {
-        triggerHelper.soundUrl = this.options[namedSound];
-        if (namedSoundVolume in this.options)
-          triggerHelper.soundVol = this.options[namedSoundVolume];
-      }
-    }
-
-    triggerHelper.soundUrl = triggerHelper.triggerOptions.SoundOverride || triggerHelper.soundUrl;
-    triggerHelper.soundVol = triggerHelper.triggerOptions.VolumeOverride ||
-      triggerHelper.triggerSoundVol || triggerHelper.soundVol;
-
-    // Text to speech overrides all other sounds.  This is so
-    // that a user who prefers tts can still get the benefit
-    // of infoText triggers without tts entries by turning
-    // on (speech=true, text=true, sound=true) but this will
-    // not cause tts to play over top of sounds or noises.
-    if (triggerHelper.ttsText && triggerHelper.spokenAlertsEnabled) {
-      // Heuristics for auto tts.
-      // * In case this is an integer.
-      triggerHelper.ttsText = triggerHelper.ttsText.toString();
-      // * Remove a bunch of chars.
-      triggerHelper.ttsText = triggerHelper.ttsText.replace(/[#!]/g, '');
-      // * slashes between mechanics
-      triggerHelper.ttsText = triggerHelper.ttsText.replace('/', ' ');
-      // * tildes at the end for emphasis
-      triggerHelper.ttsText = triggerHelper.ttsText.replace(/~+$/, '');
-      // * arrows helping visually simple to understand e.g. ↖ Front left / Back right ↘
-      triggerHelper.ttsText = triggerHelper.ttsText.replace(/[↖-↙]/g, '');
-      // * Korean TTS reads wrong with '1번째'
-      triggerHelper.ttsText = triggerHelper.ttsText.replace('1번째', '첫번째');
-      // * arrows at the front or the end are directions, e.g. "east =>"
-      triggerHelper.ttsText = triggerHelper.ttsText.replace(/[-=]>\s*$/g, '');
-      triggerHelper.ttsText = triggerHelper.ttsText.replace(/^\s*<[-=]/g, '');
-      // * arrows in the middle are a sequence, e.g. "in => out => spread"
-      const arrowReplacement = {
-        en: ' then ',
-        de: ' dann ',
-        fr: ' puis ',
-        ja: 'や',
-        cn: '然后',
-        ko: ' 그리고 ',
-      };
-      triggerHelper.ttsText = triggerHelper.ttsText.replace(/\s*(<[-=]|[=-]>)\s*/g,
-          arrowReplacement[this.displayLang]);
-      this.ttsSay(triggerHelper.ttsText);
-    } else if (triggerHelper.soundUrl && triggerHelper.soundAlertsEnabled) {
-      this._playAudioFile(triggerHelper, triggerHelper.soundUrl, triggerHelper.soundVol);
-    }
-  }
-
-  _onTriggerInternalRun(triggerHelper) {
-    if ('run' in triggerHelper.trigger)
-      triggerHelper.trigger.run(this.data, triggerHelper.matches, triggerHelper.trigger.output);
-  }
-
-  _createTextFor(triggerHelper, text, textType, lowerTextKey, duration) {
-    // info-text
-    const textElementClass = textType + '-text';
-    if (textType !== 'info')
-      text = triggerUpperCase(text);
-    const holder = this[lowerTextKey].getElementsByClassName('holder')[0];
-    const div = this._makeTextElement(triggerHelper, text, textElementClass);
-
-    holder.appendChild(div);
-    if (holder.children.length > this.kMaxRowsOfText)
-      holder.removeChild(holder.children[0]);
-
-    window.setTimeout(() => {
-      if (holder.contains(div))
-        holder.removeChild(div);
-    }, duration * 1000);
-  }
-
-  _addTextFor(textType, triggerHelper) {
-    // Info
-    const textTypeUpper = textType[0].toUpperCase() + textType.slice(1);
-    // infoText
-    const lowerTextKey = textType + 'Text';
-    // InfoText
-    const upperTextKey = textTypeUpper + 'Text';
-    const textObj = triggerHelper.triggerOptions[upperTextKey] ||
-      triggerHelper.trigger[lowerTextKey] || triggerHelper.response[lowerTextKey];
-    if (textObj) {
-      const text = triggerHelper.valueOrFunction(textObj);
-      triggerHelper.defaultTTSText = triggerHelper.defaultTTSText || text;
-      if (text && triggerHelper.textAlertsEnabled) {
-        // per-trigger option > trigger field > option duration by text type
-        const duration = triggerHelper.duration.fromConfig ||
-          triggerHelper.duration.fromTrigger || triggerHelper.duration[lowerTextKey];
-        this._createTextFor(triggerHelper, text, textType, lowerTextKey, duration);
-        if (!triggerHelper.soundUrl) {
-          triggerHelper.soundUrl = this.options[textTypeUpper + 'Sound'];
-          triggerHelper.soundVol = this.options[textTypeUpper + 'SoundVolume'];
+    // Set defaults for triggerHelper object (anything that won't change based on
+    // other trigger functions running)
+    _onTriggerInternalHelperDefaults(triggerHelper) {
+        if (triggerHelper.triggerAutoConfig) {
+            const textAlertsEnabled = triggerHelper.triggerAutoConfig.TextAlertsEnabled;
+            if (textAlertsEnabled !== undefined)
+                triggerHelper.textAlertsEnabled = textAlertsEnabled;
+            const soundAlertsEnabled = triggerHelper.triggerAutoConfig.SoundAlertsEnabled;
+            if (soundAlertsEnabled !== undefined)
+                triggerHelper.soundAlertsEnabled = soundAlertsEnabled;
+            const spokenAlertsEnabled = triggerHelper.triggerAutoConfig.SpokenAlertsEnabled;
+            if (spokenAlertsEnabled !== undefined)
+                triggerHelper.spokenAlertsEnabled = spokenAlertsEnabled;
         }
-      }
+        if (triggerHelper.triggerOptions) {
+            const textAlertsEnabled = triggerHelper.triggerOptions.TextAlert;
+            if (textAlertsEnabled !== undefined)
+                triggerHelper.textAlertsEnabled = textAlertsEnabled;
+            const soundAlertsEnabled = triggerHelper.triggerOptions.SoundAlert;
+            if (soundAlertsEnabled !== undefined)
+                triggerHelper.soundAlertsEnabled = soundAlertsEnabled;
+            const spokenAlertsEnabled = triggerHelper.triggerOptions.SpeechAlert;
+            if (spokenAlertsEnabled !== undefined)
+                triggerHelper.spokenAlertsEnabled = spokenAlertsEnabled;
+            const groupSpokenAlertsEnabled = triggerHelper.triggerOptions.GroupSpeechAlert;
+            if (groupSpokenAlertsEnabled !== undefined)
+                triggerHelper.groupSpokenAlertsEnabled = groupSpokenAlertsEnabled;
+        }
+        if (triggerHelper.userSuppressedOutput) {
+            triggerHelper.textAlertsEnabled = false;
+            triggerHelper.soundAlertsEnabled = false;
+            triggerHelper.spokenAlertsEnabled = false;
+            triggerHelper.groupSpokenAlertsEnabled = false;
+        }
+        if (!this.options.AudioAllowed) {
+            triggerHelper.soundAlertsEnabled = false;
+            triggerHelper.spokenAlertsEnabled = false;
+            triggerHelper.groupSpokenAlertsEnabled = false;
+        }
     }
-  }
-
-  _makeTextElement(triggerHelper, text, className) {
-    const div = document.createElement('div');
-    div.classList.add(className);
-    div.classList.add('animate-text');
-    div.innerText = text;
-    return div;
-  }
-
-  _playAudioFile(triggerHelper, url, volume) {
-    const audio = new Audio(url);
-    audio.volume = volume || 1;
-    audio.play();
-  }
-
-  Test(zone, log) {
-    this.OnPlayerChange({ detail: { name: 'ME' } });
-    this.OnChangeZone({ zoneName: zone });
-    this.OnLog({ detail: { logs: ['abcdefgh', log, 'hgfedcba'] } });
-  }
+    _onTriggerInternalPreRun(triggerHelper) {
+        var _a, _b;
+        (_b = (_a = triggerHelper.trigger) === null || _a === void 0 ? void 0 : _a.preRun) === null || _b === void 0 ? void 0 : _b.call(_a, this.data, triggerHelper.matches, triggerHelper.output);
+    }
+    _onTriggerInternalDelaySeconds(triggerHelper) {
+        const delay = 'delaySeconds' in triggerHelper.trigger ? triggerHelper.valueOrFunction(triggerHelper.trigger.delaySeconds) : 0;
+        if (!delay || delay <= 0 || typeof delay !== 'number')
+            return;
+        const triggerID = this.currentTriggerID++;
+        this.timers[triggerID] = true;
+        return new Promise((res, rej) => {
+            window.setTimeout(() => {
+                if (this.timers[triggerID])
+                    res();
+                else if (rej)
+                    rej();
+                delete this.timers[triggerID];
+            }, delay * 1000);
+        });
+    }
+    _onTriggerInternalDurationSeconds(triggerHelper) {
+        let valueDuration = triggerHelper.valueOrFunction(triggerHelper.trigger.durationSeconds);
+        if (typeof valueDuration !== 'number')
+            valueDuration = undefined;
+        triggerHelper.duration = {
+            fromConfig: triggerHelper.triggerAutoConfig.Duration,
+            fromTrigger: valueDuration,
+            alarmText: this.options.DisplayAlarmTextForSeconds,
+            alertText: this.options.DisplayAlertTextForSeconds,
+            infoText: this.options.DisplayInfoTextForSeconds,
+        };
+    }
+    _onTriggerInternalSuppressSeconds(triggerHelper) {
+        const suppress = 'suppressSeconds' in triggerHelper.trigger ? triggerHelper.valueOrFunction(triggerHelper.trigger.suppressSeconds) : 0;
+        if (typeof suppress !== 'number')
+            return;
+        if (triggerHelper.trigger.id && suppress > 0)
+            this.triggerSuppress[triggerHelper.trigger.id] = triggerHelper.now + (suppress * 1000);
+    }
+    _onTriggerInternalPromise(triggerHelper) {
+        var _a;
+        let promise;
+        if ('promise' in triggerHelper.trigger) {
+            const id = (_a = triggerHelper.trigger.id) !== null && _a !== void 0 ? _a : 'Unknown';
+            if (typeof triggerHelper.trigger.promise === 'function') {
+                promise = triggerHelper.trigger.promise(this.data, triggerHelper.matches, triggerHelper.output);
+                // Make sure we actually get a Promise back from the function
+                if (Promise.resolve(promise) !== promise) {
+                    console.error(`Trigger ${id}: promise function did not return a promise`);
+                    promise = undefined;
+                }
+            }
+            else {
+                console.error(`Trigger ${id}: promise defined but not a function`);
+            }
+        }
+        return promise;
+    }
+    _onTriggerInternalSound(triggerHelper) {
+        const result = triggerHelper.valueOrFunction(triggerHelper.trigger.sound);
+        if (typeof result === 'string')
+            triggerHelper.soundUrl = result;
+    }
+    _onTriggerInternalSoundVolume(triggerHelper) {
+        const result = triggerHelper.valueOrFunction(triggerHelper.trigger.soundVolume);
+        if (typeof result === 'number')
+            triggerHelper.triggerSoundVol = result;
+    }
+    _onTriggerInternalResponse(triggerHelper) {
+        let response = {};
+        const trigger = triggerHelper.trigger;
+        if (trigger.response) {
+            // Can't use ValueOrFunction here as r returns a non-localizable object.
+            response = trigger.response;
+            while (typeof response === 'function')
+                response = response(this.data, triggerHelper.matches, triggerHelper.output);
+            // Turn falsy values into a default no-op response.
+            if (!response)
+                response = {};
+        }
+        triggerHelper.response = response;
+    }
+    _onTriggerInternalAlarmText(triggerHelper) {
+        this._addTextFor('alarm', triggerHelper);
+    }
+    _onTriggerInternalAlertText(triggerHelper) {
+        this._addTextFor('alert', triggerHelper);
+    }
+    _onTriggerInternalInfoText(triggerHelper) {
+        this._addTextFor('info', triggerHelper);
+    }
+    _onTriggerInternalTTS(triggerHelper) {
+        if (!triggerHelper.groupSpokenAlertsEnabled || typeof triggerHelper.ttsText === 'undefined') {
+            let result = undefined;
+            if (triggerHelper.triggerOptions.TTSText) {
+                result = triggerHelper.valueOrFunction(triggerHelper.triggerOptions.TTSText);
+            }
+            else if (triggerHelper.trigger.tts) {
+                result = triggerHelper.valueOrFunction(triggerHelper.trigger.tts);
+            }
+            else if (triggerHelper.response) {
+                const resp = triggerHelper.response;
+                if (resp.tts)
+                    result = triggerHelper.valueOrFunction(resp.tts);
+            }
+            // Allow false or null to disable tts entirely
+            // Undefined will fall back to defaultTTSText
+            if (result !== undefined) {
+                if (result)
+                    triggerHelper.ttsText = result === null || result === void 0 ? void 0 : result.toString();
+            }
+            else {
+                triggerHelper.ttsText = triggerHelper.defaultTTSText;
+            }
+        }
+    }
+    _onTriggerInternalPlayAudio(triggerHelper) {
+        var _a, _b, _c;
+        if (triggerHelper.trigger.sound &&
+            triggerHelper.soundUrl &&
+            soundStrs.includes(triggerHelper.soundUrl)) {
+            const namedSound = triggerHelper.soundUrl + 'Sound';
+            const namedSoundVolume = triggerHelper.soundUrl + 'SoundVolume';
+            const sound = this.options[namedSound];
+            if (typeof sound === 'string') {
+                triggerHelper.soundUrl = sound;
+                const soundVol = this.options[namedSoundVolume];
+                if (typeof soundVol === 'number')
+                    triggerHelper.soundVol = soundVol;
+            }
+        }
+        triggerHelper.soundUrl = (_a = triggerHelper.triggerOptions.SoundOverride) !== null && _a !== void 0 ? _a : triggerHelper.soundUrl;
+        triggerHelper.soundVol = (_c = (_b = triggerHelper.triggerOptions.VolumeOverride) !== null && _b !== void 0 ? _b : triggerHelper.triggerSoundVol) !== null && _c !== void 0 ? _c : triggerHelper.soundVol;
+        // Text to speech overrides all other sounds.  This is so
+        // that a user who prefers tts can still get the benefit
+        // of infoText triggers without tts entries by turning
+        // on (speech=true, text=true, sound=true) but this will
+        // not cause tts to play over top of sounds or noises.
+        if (triggerHelper.ttsText && triggerHelper.spokenAlertsEnabled) {
+            // Heuristics for auto tts.
+            // * In case this is an integer.
+            triggerHelper.ttsText = triggerHelper.ttsText.toString();
+            // * Remove a bunch of chars.
+            triggerHelper.ttsText = triggerHelper.ttsText.replace(/[#!]/g, '');
+            // * slashes between mechanics
+            triggerHelper.ttsText = triggerHelper.ttsText.replace('/', ' ');
+            // * tildes at the end for emphasis
+            triggerHelper.ttsText = triggerHelper.ttsText.replace(/~+$/, '');
+            // * arrows helping visually simple to understand e.g. ↖ Front left / Back right ↘
+            triggerHelper.ttsText = triggerHelper.ttsText.replace(/[↖-↙]/g, '');
+            // * Korean TTS reads wrong with '1번째'
+            triggerHelper.ttsText = triggerHelper.ttsText.replace('1번째', '첫번째');
+            // * arrows at the front or the end are directions, e.g. "east =>"
+            triggerHelper.ttsText = triggerHelper.ttsText.replace(/[-=]>\s*$/g, '');
+            triggerHelper.ttsText = triggerHelper.ttsText.replace(/^\s*<[-=]/g, '');
+            // * arrows in the middle are a sequence, e.g. "in => out => spread"
+            const arrowReplacement = {
+                en: ' then ',
+                de: ' dann ',
+                fr: ' puis ',
+                ja: 'や',
+                cn: '然后',
+                ko: ' 그리고 ',
+            };
+            triggerHelper.ttsText = triggerHelper.ttsText.replace(/\s*(<[-=]|[=-]>)\s*/g, arrowReplacement[this.displayLang]);
+            this.ttsSay(triggerHelper.ttsText);
+        }
+        else if (triggerHelper.soundUrl && triggerHelper.soundAlertsEnabled) {
+            this._playAudioFile(triggerHelper, triggerHelper.soundUrl, triggerHelper.soundVol);
+        }
+    }
+    _onTriggerInternalRun(triggerHelper) {
+        var _a, _b;
+        (_b = (_a = triggerHelper.trigger) === null || _a === void 0 ? void 0 : _a.run) === null || _b === void 0 ? void 0 : _b.call(_a, this.data, triggerHelper.matches, triggerHelper.output);
+    }
+    _createTextFor(triggerHelper, text, textType, lowerTextKey, duration) {
+        var _a, _b;
+        // info-text
+        const textElementClass = textType + '-text';
+        if (textType !== 'info')
+            text = triggerUpperCase(text);
+        const holder = (_a = this[lowerTextKey]) === null || _a === void 0 ? void 0 : _a.getElementsByClassName('holder')[0];
+        const div = this._makeTextElement(triggerHelper, text, textElementClass);
+        if (!holder)
+            throw new not_reached/* UnreachableCode */.$();
+        holder.appendChild(div);
+        if (holder.children.length > this.kMaxRowsOfText)
+            (_b = holder.firstChild) === null || _b === void 0 ? void 0 : _b.remove();
+        window.setTimeout(() => {
+            if (holder.contains(div))
+                holder.removeChild(div);
+        }, duration * 1000);
+    }
+    _addTextFor(textType, triggerHelper) {
+        var _a, _b, _c, _d;
+        // infoText
+        const lowerTextKey = textMap[textType].text;
+        // InfoText
+        const upperTextKey = textMap[textType].upperText;
+        // InfoSound
+        const upperSound = textMap[textType].upperSound;
+        // InfoSoundVolume
+        const upperSoundVolume = textMap[textType].upperSoundVolume;
+        let textObj = triggerHelper.triggerOptions[upperTextKey];
+        if (!textObj && triggerHelper.trigger[lowerTextKey])
+            textObj = triggerHelper.trigger[lowerTextKey];
+        if (!textObj && triggerHelper.response)
+            textObj = triggerHelper.response[lowerTextKey];
+        if (textObj) {
+            let text = triggerHelper.valueOrFunction(textObj);
+            if (!text)
+                return;
+            if (typeof text === 'number')
+                text = text.toString();
+            if (typeof text !== 'string')
+                text = String(text);
+            triggerHelper.defaultTTSText = (_a = triggerHelper.defaultTTSText) !== null && _a !== void 0 ? _a : text;
+            if (text && typeof text === 'string' && triggerHelper.textAlertsEnabled) {
+                // per-trigger option > trigger field > option duration by text type
+                let duration = (_c = (_b = triggerHelper.duration) === null || _b === void 0 ? void 0 : _b.fromConfig) !== null && _c !== void 0 ? _c : (_d = triggerHelper.duration) === null || _d === void 0 ? void 0 : _d.fromTrigger;
+                if (duration === undefined && triggerHelper.duration)
+                    duration = triggerHelper.duration[lowerTextKey];
+                if (duration === undefined)
+                    duration = 0;
+                this._createTextFor(triggerHelper, text, textType, lowerTextKey, duration);
+                if (!triggerHelper.soundUrl) {
+                    triggerHelper.soundUrl = this.options[upperSound];
+                    triggerHelper.soundVol = this.options[upperSoundVolume];
+                }
+            }
+        }
+    }
+    _makeTextElement(_triggerHelper, text, className) {
+        const div = document.createElement('div');
+        div.classList.add(className);
+        div.classList.add('animate-text');
+        div.innerText = text;
+        return div;
+    }
+    _playAudioFile(triggerHelper, url, volume) {
+        const audio = new Audio(url);
+        audio.volume = volume !== null && volume !== void 0 ? volume : 1;
+        void audio.play();
+    }
+    getDataObject() {
+        let preserveHP = 0;
+        if (this.data && this.data.currentHP)
+            preserveHP = this.data.currentHP;
+        // TODO: make a breaking change at some point and
+        // make all this style consistent, sorry.
+        return {
+            me: this.me,
+            job: this.job,
+            role: this.role,
+            party: this.partyTracker,
+            lang: this.parserLang,
+            parserLang: this.parserLang,
+            displayLang: this.displayLang,
+            currentHP: preserveHP,
+            options: this.options,
+            ShortName: this.ShortNamify.bind(this),
+            StopCombat: () => this.SetInCombat(false),
+            ParseLocaleFloat: parseFloat,
+            CanStun: () => util/* default.canStun */.Z.canStun(this.job),
+            CanSilence: () => util/* default.canSilence */.Z.canSilence(this.job),
+            CanSleep: () => util/* default.canSleep */.Z.canSleep(this.job),
+            CanCleanse: () => util/* default.canCleanse */.Z.canCleanse(this.job),
+            CanFeint: () => util/* default.canFeint */.Z.canFeint(this.job),
+            CanAddle: () => util/* default.canAddle */.Z.canAddle(this.job),
+        };
+    }
 }
-
 class PopupTextGenerator {
-  constructor(popupText) {
-    this.popupText = popupText;
-  }
-
-  Info(text) {
-    this.popupText.OnTrigger({
-      infoText: text,
-      tts: text,
-    });
-  }
-
-  Alert(text) {
-    this.popupText.OnTrigger({
-      alertText: text,
-      tts: text,
-    });
-  }
-
-  Alarm(text) {
-    this.popupText.OnTrigger({
-      alarmText: text,
-      tts: text,
-    });
-  }
-
-  TTS(text) {
-    this.popupText.OnTrigger({
-      infoText: text,
-      tts: text,
-    });
-  }
-
-  Trigger(trigger, matches) {
-    const currentTime = +new Date();
-    this.popupText.OnTrigger(trigger, matches, currentTime);
-  }
+    constructor(popupText) {
+        this.popupText = popupText;
+    }
+    Info(text, currentTime) {
+        this.popupText.OnTrigger({
+            infoText: text,
+            tts: text,
+        }, null, currentTime);
+    }
+    Alert(text, currentTime) {
+        this.popupText.OnTrigger({
+            alertText: text,
+            tts: text,
+        }, null, currentTime);
+    }
+    Alarm(text, currentTime) {
+        this.popupText.OnTrigger({
+            alarmText: text,
+            tts: text,
+        }, null, currentTime);
+    }
+    TTS(text, currentTime) {
+        this.popupText.OnTrigger({
+            infoText: text,
+            tts: text,
+        }, null, currentTime);
+    }
+    Trigger(trigger, matches, currentTime) {
+        this.popupText.OnTrigger(trigger, matches, currentTime);
+    }
 }
 
 ;// CONCATENATED MODULE: ./ui/raidboss/common_replacement.ts
@@ -15104,8 +15053,6 @@ const regexSet = new RegexSet();
 const LocaleRegex = regexSet.localeRegex;
 const LocaleNetRegex = regexSet.localeNetRegex;
 
-// EXTERNAL MODULE: ./resources/not_reached.ts
-var not_reached = __webpack_require__(500);
 ;// CONCATENATED MODULE: ./ui/raidboss/timeline.ts
 
 
@@ -15676,23 +15623,23 @@ class Timeline {
                 break;
             if (t.type === 'info') {
                 if (this.showInfoTextCallback)
-                    this.showInfoTextCallback(t.text);
+                    this.showInfoTextCallback(t.text, this.timebase);
             }
             else if (t.type === 'alert') {
                 if (this.showAlertTextCallback)
-                    this.showAlertTextCallback(t.text);
+                    this.showAlertTextCallback(t.text, this.timebase);
             }
             else if (t.type === 'alarm') {
                 if (this.showAlarmTextCallback)
-                    this.showAlarmTextCallback(t.text);
+                    this.showAlarmTextCallback(t.text, this.timebase);
             }
             else if (t.type === 'tts') {
                 if (this.speakTTSCallback)
-                    this.speakTTSCallback(t.text);
+                    this.speakTTSCallback(t.text, this.timebase);
             }
             else if (t.type === 'trigger') {
                 if (this.triggerCallback)
-                    this.triggerCallback(t.trigger, t.matches);
+                    this.triggerCallback(t.trigger, t.matches, this.timebase);
             }
             ++this.nextText;
         }
@@ -15968,25 +15915,25 @@ class TimelineUI {
             removeBar();
         }
     }
-    OnShowInfoText(text) {
+    OnShowInfoText(text, currentTime) {
         if (this.popupText)
-            this.popupText.Info(text);
+            this.popupText.Info(text, currentTime);
     }
-    OnShowAlertText(text) {
+    OnShowAlertText(text, currentTime) {
         if (this.popupText)
-            this.popupText.Alert(text);
+            this.popupText.Alert(text, currentTime);
     }
-    OnShowAlarmText(text) {
+    OnShowAlarmText(text, currentTime) {
         if (this.popupText)
-            this.popupText.Alarm(text);
+            this.popupText.Alarm(text, currentTime);
     }
-    OnSpeakTTS(text) {
+    OnSpeakTTS(text, currentTime) {
         if (this.popupText)
-            this.popupText.TTS(text);
+            this.popupText.TTS(text, currentTime);
     }
-    OnTrigger(trigger, matches) {
+    OnTrigger(trigger, matches, currentTime) {
         if (this.popupText)
-            this.popupText.Trigger(trigger, matches);
+            this.popupText.Trigger(trigger, matches, currentTime);
     }
     OnSyncTime(fightNow, running) {
         if (!this.options.Debug || !this.debugElement)
@@ -16324,7 +16271,7 @@ user_config/* default.getUserConfigLocation */.Z.getUserConfigLocation('raidboss
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [890], () => (__webpack_require__(448)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [890], () => (__webpack_require__(550)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
