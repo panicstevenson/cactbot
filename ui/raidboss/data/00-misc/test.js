@@ -27,11 +27,11 @@ export default {
         return 'hideall "Almagest"';
       return 'alarmtext "Almagest" before 0';
     },
-    (data) => {
+    (_data) => {
       // <_<
-      const shortName = data.me.indexOf(' ') >= 0 ? data.me.substring(0, data.me.indexOf(' ')) : data.me;
+      // const shortName = data.me.indexOf(' ') >= 0 ? data.me.substring(0, data.me.indexOf(' ')) : data.me;
       return [
-        '40 "Death To ' + shortName + '!!"',
+        '40 "Death To dummy!!"',
         'hideall "Death"',
       ];
     },
@@ -42,6 +42,7 @@ export default {
       style: {
         'color': 'red',
         'font-family': 'Impact',
+        'order': '100',
       },
     },
   ],

@@ -1034,6 +1034,14 @@ export class TimelineUI {
     if (!force)
       element.classList.add('animate-timer-bar-removed');
     if (window.getComputedStyle(element).animationName !== 'none') {
+      const timerbars = document.getElementsByClassName('timer-bar') as HTMLCollectionOf<HTMLElement>;
+      const currentOrder = parseInt(element.style.order);
+      for (const timerbar of timerbars) {
+        // Only translate the timerbars after the current one
+        if (parseInt(timerbar.style.order) > currentOrder)
+          timerbar.animate([{ transform: 'translateY(0px)' }, { transform: 'translateY(-20px)' }], 500);
+      }
+
       // Wait for animation to finish
       element.addEventListener('animationend', removeBar);
     } else {
