@@ -32,7 +32,7 @@ jobs:
           fi
       - name: Check Existing Tags
         run: |
-          if ! curl -fsL https://api.github.com/repos/quisquous/cactbot/git/refs/tags/${{ env.TAG_NAME }}; then
+          if ! curl -fsL https://api.github.com/repos/panicstevenson/cactbot/git/refs/tags/${{ env.TAG_NAME }}; then
             echo "No existing tags for the version number exist. Creating new tag..."
           else
             echo "Tagged version already exists. Skipping tag creation..."
@@ -44,7 +44,7 @@ jobs:
           commit=$(git rev-parse HEAD)
 
           # POST a new ref to repo via Github API
-          curl -s -X POST https://api.github.com/repos/quisquous/cactbot/git/refs \
+          curl -s -X POST https://api.github.com/repos/panicstevenson/cactbot/git/refs \
           -H "Authorization: token $GITHUB_TOKEN" \
           -d @- << EOF
           {
