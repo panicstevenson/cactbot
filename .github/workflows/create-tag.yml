@@ -12,7 +12,7 @@ jobs:
   create-tag:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
