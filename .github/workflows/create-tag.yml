@@ -11,9 +11,8 @@ on:
 jobs:
   create-tag:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'quisquous/cactbot' }}
     env:
-      GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
